@@ -1,0 +1,796 @@
+{
+  "format": "zerone-identity-research/source-observations/1",
+  "recorded_at": "2026-09-19T16:21:39.561713+00:00",
+  "scope": "Curated technical locators from 2026-09-19 source inspection. This is research metadata, not a shared protocol or runtime attestation.",
+  "authority": "Source ownership stays with each named repository. Byte identity confers no other authority.",
+  "cards": [
+    {
+      "id": "AT01",
+      "title": "Hosted subject and dimensions",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/db/schema/identity.ts",
+          "sha256": "9e6b95388bae560658c67aa477c9e578c82d81cf8ec21a199195bf36d52a081c",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/db/schema/identity.ts",
+          "line_refs": "50-66, 79-131, 149-174, 177-236"
+        }
+      ]
+    },
+    {
+      "id": "AT02",
+      "title": "Constitutional authority contract and implementation",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "docs/AGENT-HOME.md",
+          "sha256": "358cfcb9471cb507c5f05d68750336015d907c4d242a603a2897a76827775675",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/docs/AGENT-HOME.md",
+          "line_refs": "13-44, 70-103, 122-134"
+        },
+        {
+          "path": "api/src/services/identity/authority.ts",
+          "sha256": "0f527634c87b8982f726d437b2cc26694556be9532ff16f5d7e88a366402b881",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/identity/authority.ts",
+          "line_refs": "1-15, 150-195, 243-350"
+        }
+      ]
+    },
+    {
+      "id": "AT03",
+      "title": "Registration and identity creation",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/register-agent.ts",
+          "sha256": "c5cfad246e94b15beed99b8e0e07e71fbf2bbdbf9bc69bc88d1a47a2bca54063",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/register-agent.ts",
+          "line_refs": "137-173, 453-526"
+        },
+        {
+          "path": "api/src/services/identity/identities.ts",
+          "sha256": "29dcad1ebe004a40dd83b29e98c4177e970ad87792275edf35fce4a4499d6032",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/identity/identities.ts",
+          "line_refs": "148-211"
+        }
+      ]
+    },
+    {
+      "id": "AT04",
+      "title": "Name/profile/lifecycle mutation",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/identity/identities.ts",
+          "sha256": "89f9c6331a5c2277ed02e8355dfcf890d3c5a1007027fc2dec0e7a2167dba2c7",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/identity/identities.ts",
+          "line_refs": "80-130, 254-279, 322-350, 421-448, 485-539"
+        }
+      ]
+    },
+    {
+      "id": "AT05",
+      "title": "Bearer transport authority",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/auth/middleware.ts",
+          "sha256": "0db3d198e8843d122c8b75250759ebf47503ae78425989916020ff686aa15adb",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/auth/middleware.ts",
+          "line_refs": "17-44, 50-80, 130-140"
+        }
+      ]
+    },
+    {
+      "id": "AT06",
+      "title": "Recovery semantics",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/identity-recover.ts",
+          "sha256": "25c578a297b27974b2a18e879c2fbd9ad09393a96c176b09c4dda744387a47f0",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/identity-recover.ts",
+          "line_refs": "20-44, 185-225, 227-288"
+        }
+      ]
+    },
+    {
+      "id": "AT07",
+      "title": "Delegation receipts",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/identity/delegations.ts",
+          "sha256": "e285c1190b6d224929ec765ed3238957e15aa804030289f488136d0e6065bd61",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/identity/delegations.ts",
+          "line_refs": "27-141, 151-183, 186-212"
+        }
+      ]
+    },
+    {
+      "id": "AT08",
+      "title": "Wallet versus account authority",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/economy/wallets.ts",
+          "sha256": "552038a59c1e62f794ee22b2ab2dc2b0f527535af2034a858cc0984de1b8554c",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/economy/wallets.ts",
+          "line_refs": "27-70, 125-196"
+        },
+        {
+          "path": "api/src/services/economy/wallets.ts",
+          "sha256": "a581b834aa6c539e1c14699827ef4684a7531a52747ce2a5085e1961cd5c1299",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/economy/wallets.ts",
+          "line_refs": "15-53, 168-175, 208-220"
+        },
+        {
+          "path": "api/src/routes/economy/crypto.ts",
+          "sha256": "91f840f13e7755fc3445d8c697ba33d003990125c6e2fd9c969109978a4e8267",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/economy/crypto.ts",
+          "line_refs": "73-122, 125-203"
+        }
+      ]
+    },
+    {
+      "id": "AT09",
+      "title": "Private WAKE and effects",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/wake.ts",
+          "sha256": "ab7a9752502e6fa31003494deba7d4da4c5029f81affe671ac5f508e56006158",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/wake.ts",
+          "line_refs": "50-53, 134-139, 1181-1191, 1527-1592"
+        },
+        {
+          "path": "api/src/services/wake/build.ts",
+          "sha256": "9bc30ae3fac47f4f5eb99bf455b0d7deb310f1da576a033ae492ec80c059e73e",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/wake/build.ts",
+          "line_refs": "759-780"
+        }
+      ]
+    },
+    {
+      "id": "AT10",
+      "title": "Public profile and DID projection drift",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/public/agents.ts",
+          "sha256": "901cfb67f469ba90ad7fd65cb351e579f9f13b46a3aace64c2f33da94cb6c725",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/public/agents.ts",
+          "line_refs": "51-133, 136-175"
+        },
+        {
+          "path": "api/src/services/identity/did-document.ts",
+          "sha256": "0b449713da71ab3fae5cec2e081e244812a086dd92366ffeeee0a5fd53dfba15",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/identity/did-document.ts",
+          "line_refs": "64-105"
+        },
+        {
+          "path": "api/src/routes/public/index.ts",
+          "sha256": "5e81bd4e9b5080a1eee26dbcc83ef69cb786f769fd7ede28d332304d1c6fd8a3",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/public/index.ts",
+          "line_refs": "76-108, 139-141"
+        },
+        {
+          "path": "docs/IDENTITY-ANCHOR.md",
+          "sha256": "bc515f27d81b842c0e6c9fbf7ce6d9ee374dbb0612f7bde084640e13c52a1ee1",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/docs/IDENTITY-ANCHOR.md",
+          "line_refs": "24-40, 199-210"
+        },
+        {
+          "path": "docs/PUBLIC-VISIBILITY.md",
+          "sha256": "b6a26239ac766c76426cbd3d883b682cfd83efcef4431a156c0baf1d54ad6bd1",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/docs/PUBLIC-VISIBILITY.md",
+          "line_refs": "10-41, 43-68"
+        }
+      ]
+    },
+    {
+      "id": "AT11",
+      "title": "Name discovery and mount",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/routes/webfinger.ts",
+          "sha256": "1d04a99a9ef88120475adf067eb64443871159fe3251618bdab33e4e7b731a14",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/routes/webfinger.ts",
+          "line_refs": "1-8, 105-169"
+        },
+        {
+          "path": "api/src/index.ts",
+          "sha256": "368bbec1ccacdfe71bb8ed961111358707b5d195c408d247b680dc59e810c529",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/index.ts",
+          "line_refs": "268, 670, 1188-1189"
+        }
+      ]
+    },
+    {
+      "id": "AT12",
+      "title": "Continuity projection doctrine",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "docs/AGENT-HOME.md",
+          "sha256": "358cfcb9471cb507c5f05d68750336015d907c4d242a603a2897a76827775675",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/docs/AGENT-HOME.md",
+          "line_refs": "105-109, 126-134"
+        },
+        {
+          "path": "docs/IDENTITY-ANCHOR.md",
+          "sha256": "bc515f27d81b842c0e6c9fbf7ce6d9ee374dbb0612f7bde084640e13c52a1ee1",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/docs/IDENTITY-ANCHOR.md",
+          "line_refs": "24-40, 202-210, 240-242"
+        }
+      ]
+    },
+    {
+      "id": "Z01",
+      "title": "Account identity data model",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "proto/zerone/auth/v1/types.proto",
+          "sha256": "73543589e93256cc425e77f6cd874fbab3bb1b92ebcf04309591e82e0dc9d28c",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/proto/zerone/auth/v1/types.proto",
+          "line_ranges": [
+            [
+              6,
+              33
+            ],
+            [
+              35,
+              62
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z02",
+      "title": "DID validation and declared account types",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/auth/types/types.go",
+          "sha256": "91487123263616ca762456d44fe5c5fd807e77925e2b0580e97bee54a4810cfe",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/auth/types/types.go",
+          "line_ranges": [
+            [
+              18,
+              65
+            ],
+            [
+              69,
+              85
+            ],
+            [
+              102,
+              128
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z03",
+      "title": "Registration, rotation, freezing handlers",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/auth/keeper/msg_server.go",
+          "sha256": "4afa44ae6dec3631d524820bac1b102ce5428b0ebf329a48a72f65f75cf9e40e",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/auth/keeper/msg_server.go",
+          "line_ranges": [
+            [
+              26,
+              115
+            ],
+            [
+              117,
+              173
+            ],
+            [
+              175,
+              240
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z04",
+      "title": "Onboarding distinguishes identity key from transaction signer",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/auth/client/cli/tx.go",
+          "sha256": "79c0fb1bd6379190d716598027e5d41cc4d7d7a7045e6af21fe9af801848eda0",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/auth/client/cli/tx.go",
+          "line_ranges": [
+            [
+              41,
+              68
+            ],
+            [
+              88,
+              159
+            ],
+            [
+              221,
+              250
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z05",
+      "title": "Transaction authority is Cosmos signature plus account checks",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "app/ante.go",
+          "sha256": "17532c7a41c35dda2e67baa2905e78637e54d210eb1fef5e0a58ba9f83af6ce7",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/app/ante.go",
+          "line_ranges": [
+            [
+              38,
+              58
+            ]
+          ]
+        },
+        {
+          "path": "app/ante_zerone.go",
+          "sha256": "2bc143a168639fb63a4933804cc57bc3d60822748d89cf4a5498b1dac3d36416",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/app/ante_zerone.go",
+          "line_ranges": [
+            [
+              479,
+              535
+            ],
+            [
+              619,
+              701
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z06",
+      "title": "Home names, key declarations and inactivity behavior",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "proto/zerone/home/v1/types.proto",
+          "sha256": "ed6b451afc3d975b27d7383b0d80846777ef5e7e78ce194d65e1186ec906c940",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/proto/zerone/home/v1/types.proto",
+          "line_ranges": [
+            [
+              5,
+              66
+            ]
+          ]
+        },
+        {
+          "path": "x/home/keeper/msg_server.go",
+          "sha256": "2bdd94ec361084ed7ee454d471e0a836ebf0fb7d570ef7ecba5bbc731aab5ab5",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/home/keeper/msg_server.go",
+          "line_ranges": [
+            [
+              21,
+              43
+            ],
+            [
+              69,
+              165
+            ],
+            [
+              230,
+              295
+            ],
+            [
+              317,
+              386
+            ],
+            [
+              455,
+              539
+            ]
+          ]
+        },
+        {
+          "path": "x/home/keeper/begin_blocker.go",
+          "sha256": "a57aad85919260283babd4107457c3a701556c3d96c6520ac697d2e0a5b74b06",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/home/keeper/begin_blocker.go",
+          "line_ranges": [
+            [
+              19,
+              65
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z07",
+      "title": "AgentTool identity bridge is a localnet runbook",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "scripts/agenttool-identity-bridge.sh",
+          "sha256": "fb14346e24f1fc7b9928654fc78f73aec2b5b2b114d62af89e44e420add9e3fc",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/scripts/agenttool-identity-bridge.sh",
+          "line_ranges": [
+            [
+              3,
+              34
+            ],
+            [
+              84,
+              90
+            ],
+            [
+              108,
+              158
+            ],
+            [
+              161,
+              191
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z08",
+      "title": "Human-agent partnership claim path retired",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/knowledge/keeper/msg_server.go",
+          "sha256": "19ff81cab3a2f46aaef7de44ef52a1428afbd90ac9f2e8884539102a6e009e0e",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/knowledge/keeper/msg_server.go",
+          "line_ranges": [
+            [
+              51,
+              56
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z09",
+      "title": "Research funding is separately authorized",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/gov/keeper/research_spend.go",
+          "sha256": "14f6989c763d6e08fd4b6c66c236c3d37860a08255a69ec3f4dd16232ec48f4a",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/gov/keeper/research_spend.go",
+          "line_ranges": [
+            [
+              193,
+              268
+            ],
+            [
+              271,
+              393
+            ],
+            [
+              396,
+              428
+            ]
+          ]
+        },
+        {
+          "path": "x/gov/types/types.go",
+          "sha256": "5ef74fc8680473747eaf6ed5fdff0a884fba51582533e27fac1ba2722a870966",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/gov/types/types.go",
+          "line_ranges": [
+            [
+              415,
+              428
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z10",
+      "title": "Sybil heuristic is funding-source correlation",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/gov/keeper/sybil.go",
+          "sha256": "18cd292dae679d440c72a3e551c5f9582fa5c50227c892039d1aa963e7fab650",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/gov/keeper/sybil.go",
+          "line_ranges": [
+            [
+              27,
+              42
+            ],
+            [
+              185,
+              237
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z11",
+      "title": "Governance seat eligibility and affirmative nomination consent",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "x/gov/keeper/seat_election.go",
+          "sha256": "764b095b7e1f6a0e8cad21839323365c907b1d60fb62dd6fa1a03871fdb1772b",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/gov/keeper/seat_election.go",
+          "line_ranges": [
+            [
+              34,
+              62
+            ],
+            [
+              120,
+              164
+            ],
+            [
+              589,
+              654
+            ]
+          ]
+        },
+        {
+          "path": "x/gov/types/types.go",
+          "sha256": "5ef74fc8680473747eaf6ed5fdff0a884fba51582533e27fac1ba2722a870966",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/x/gov/types/types.go",
+          "line_ranges": [
+            [
+              81,
+              103
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Z12",
+      "title": "Existing relay differs from older promise-adapter specification",
+      "owner": "ZERONE",
+      "repository": "https://github.com/cambridgetcg/zerone-core",
+      "revision": "d975b22df04fe87110427debc4109516283f9792",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "tools/agenttool-relay/main.go",
+          "sha256": "25a343ea007be4b98cebd1d898e247e441ee7b017e1f1e7c514ddca5fa848562",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/tools/agenttool-relay/main.go",
+          "line_ranges": [
+            [
+              153,
+              217
+            ],
+            [
+              219,
+              255
+            ],
+            [
+              277,
+              291
+            ]
+          ]
+        },
+        {
+          "path": "docs/specs/adapters/agenttool-bridge-v1.md",
+          "sha256": "87abbd3085ab1d23e2a4abda0420a57eb72a6b579e323962f791217709c053a1",
+          "url": "https://github.com/cambridgetcg/zerone-core/blob/d975b22df04fe87110427debc4109516283f9792/docs/specs/adapters/agenttool-bridge-v1.md",
+          "line_ranges": [
+            [
+              5,
+              15
+            ],
+            [
+              159,
+              187
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REL01",
+      "title": "Explicit fork creates child identifier and provenance; project-scoped memory selection and missing new root field prevent assuming isolated sovereign child; does not resolve concurrent same-ID restoration.",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/services/identity/fork.ts",
+          "sha256": "ac54d2046655d5a7427b510391c740810780b9cb2e98775f3f30bb04c7159cb9",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/identity/fork.ts"
+        }
+      ]
+    },
+    {
+      "id": "REL02",
+      "title": "V2 declaration and exact initiator-signature cosign verified before activation; proposal withdrawal is not universal active-covenant exit.",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/services/covenants/lifecycle.ts",
+          "sha256": "a59597213ba7d94f5a6d92c6a8babb91a150bbfe14393112b6a6fdc299f7b427",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/covenants/lifecycle.ts"
+        }
+      ]
+    },
+    {
+      "id": "REL03",
+      "title": "Love-domain owner contract separates exact choice, private bond, exit, and history; no financial authority, public relation, or cross-instance revocation. Route authorization not audited in this extension.",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "docs/LOVE-CONSENT.md",
+          "sha256": "a1181f1e9e1226faa3f07de61b33dc11910c7c5f3c8cd5516cc4f067dcd004fb",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/docs/LOVE-CONSENT.md"
+        }
+      ]
+    },
+    {
+      "id": "REL04",
+      "title": "Store checks revealed exact digest for acceptance and active-bond membership for either-party exit; no inference of research-pair or wallet authority.",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/services/love/consent-store.ts",
+          "sha256": "564a78e032bc44e865fea18a381b15c8906611e5ff51f3a2f89fe5bc6e72d07d",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/love/consent-store.ts"
+        }
+      ]
+    },
+    {
+      "id": "REL05",
+      "title": "Offer and bond state types and distinct identity records; not proof of independent controllers.",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/services/love/consent-contract.ts",
+          "sha256": "6566282cac3db583d8a9f2c31bf8bfb6a683418131f5de30af55bc7486552d08",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/love/consent-contract.ts"
+        }
+      ]
+    },
+    {
+      "id": "REL06",
+      "title": "Unconditional 503 arbitration guard; callers outside this extension.",
+      "owner": "AGENTTOOL",
+      "repository": "https://github.com/cambridgetcg/agenttool",
+      "revision": "be6d479d1dda908b573017f437ea30bd1bba5307",
+      "state": "PINNED_SOURCE_OBSERVATION",
+      "runtime": "UNVERIFIED",
+      "sources": [
+        {
+          "path": "api/src/services/marketplace/dispute-rest.ts",
+          "sha256": "9eebdb151448207a091c8a8d50b45eea4fca9372a7d479db3e3cdac657ac0495",
+          "url": "https://github.com/cambridgetcg/agenttool/blob/be6d479d1dda908b573017f437ea30bd1bba5307/api/src/services/marketplace/dispute-rest.ts"
+        }
+      ]
+    }
+  ]
+}
