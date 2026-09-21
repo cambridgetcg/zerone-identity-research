@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-21",
+  "primary_protocol_commit": "df1bf8d8d6d0924d94cfbe0b207d1aee90ef9b2e",
+  "hardware": {
+    "architecture": "arm64",
+    "hardware_model": "Mac16,9",
+    "physical_memory_bytes": 38654705664,
+    "cpu_cores": 14
+  },
+  "primary_runner_sha256": "10febf8eb267268cbaa9e0c845a9f45fa80a4ec9b0baad317953f8f6c6f140dc",
+  "primary_result_sha256": "c29daf0a3e1094dbe8923216d3c14d937029df67e3650fff29d4647ae0872943",
+  "checkpoint_runner_sha256": "acaed188add34ba9b6016762eb39a5597e17e73ac8adcf44c8a36e05f9be5228",
+  "environment_lock_sha256": "491b1abd7b73a288eaf9ee1b2a34abca4c45fd4af7fc8091a554fba6fd0d7124",
+  "repairs_before_primary_scoring": [
+    "CPU float64 conversion order in checkpoint metric repaired after MPS rejected direct float64 conversion; no model/task change.",
+    "Native Qwen3 thought-marker tokenizer exceptions documented before scoring.",
+    "All facts isolated by newlines and missing token changed from ? to UNKNOWN after token-only shape validation; all24cases retained."
+  ],
+  "primary_run_status": "COMPLETE, first scored C2C run; no failed partial task run",
+  "followup_status": "PLANNED AFTER PRIMARY OUTCOMES",
+  "private_state_exported": false,
+  "upstream_source_modified": false,
+  "automatic_backend_fallback": false
+}
