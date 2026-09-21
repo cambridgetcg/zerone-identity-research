@@ -1,0 +1,35 @@
+{
+  "schema": "checkpoint-branches-receipt-v1",
+  "date": "2026-09-21",
+  "protocol_commit": "319db8e03bf731078c0b3940f012cd831ae22b5c",
+  "initial_protocol_commit": "a3b4f1646c1b932791db9f4f240c40d53e79dbdc",
+  "source_base_commit": "362f0ffedcf658df5fad10d72186abc397636446",
+  "hardware": {
+    "architecture": "arm64",
+    "hardware_model": "Mac16,9",
+    "physical_memory_bytes": 38654705664,
+    "cpu_cores": 14
+  },
+  "new_model_downloads": false,
+  "training_performed": false,
+  "private_state_exported": false,
+  "runs": "One complete scored execution; no failed or discarded scored run.",
+  "repairs_before_scoring": [
+    "Converted PyTorch version metadata from TorchVersion to a plain string so weights_only=True can safely reload the checkpoint; verified a synthetic metadata/tensor roundtrip before inference.",
+    "Checked byte equality with tensor digests independently of numeric equality, including signed-zero behavior."
+  ],
+  "scope": "Eight parents in four paired families, two restored branches each, 240 arm observations, 64 references and16 bounded continuation controls. No entire-agent, cross-model or sampled RNG restoration.",
+  "artifact_sha256": {
+    "experiments/checkpoint_branches/run_experiment.py": "a042f34544e0b686dce3bbddd3ef9e336d119ef441552899df95a681a79eac4d",
+    "experiments/checkpoint_branches/analyze_results.py": "b1be8c52953d5f0131884ef55162efbd737c2e9b65d91d8d310bb991950bc88c",
+    "experiments/checkpoint_branches/fixtures.json": "e235110e5f46d079ccadebf7cee2547443ee389a85eaf90ddf0c3457a4fc47f6",
+    "experiments/checkpoint_branches/PROTOCOL.md": "aedebb726df90c1c2ffac2ba9ed5a056567def5bfac495c3f3018a94d0506586",
+    "experiments/c2c_fidelity/checkpoint_control.py": "6c09e299948be11bb4953cada371063a9edc5ac5b19d899ff67007a276db6d06",
+    "experiments/c2c_fidelity/requirements-lock.txt": "491b1abd7b73a288eaf9ee1b2a34abca4c45fd4af7fc8091a554fba6fd0d7124",
+    "evidence/c2c-fidelity-sources.json": "43f7814f6e3c76b90b295dfefbbdb6ce1e1c99b86f4bce55031fbee1ddde67cf",
+    "evidence/checkpoint-branches-results.json": "0c7ceabc96fa6fb61bd7c1fa39a2c2b2f00dcea28b3ef905734a9325df2a37f3",
+    "evidence/checkpoint-branches-summary.json": "fa3ff61c14d8ca0c72907145aa68cfab9679411695b2cd693a2185717967aa60",
+    "evidence/checkpoint-branches-run.log": "c02ecb64989f1128c6cf30f1a5c03fabc4c23a4b93726ecf82b0a84bb04aa708"
+  },
+  "verification": "Completed run reviewed independently; all swapped-arm logit digests equal corresponding twin restored runs. Summary regenerated after completing choice-count and conditional-subset reporting; neural observations unchanged. Seven corrupted artifact variants rejected and a consistent negative-fidelity variant retained."
+}

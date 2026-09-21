@@ -1,0 +1,1395 @@
+{
+  "behavior": {
+    "arms": {
+      "full_replay": {
+        "all": {
+          "forced_accuracy": 0.5625,
+          "forced_choice_counts": {
+            "A": 45,
+            "B": 3
+          },
+          "forced_correct": 27,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 24,
+          "greedy_label_counts": {
+            "A": 39,
+            "other": 9
+          },
+          "mean_forced_probability_correct": 0.611024425550933,
+          "mean_unconditional_ab_mass": 0.6785020316932893,
+          "mean_unconditional_logprob_correct": -1.1969466031461293,
+          "mean_unconditional_probability_correct": 0.43980873030417883,
+          "observations": 48
+        },
+        "branch_success": {
+          "all_six_forced_correct_parents": 1,
+          "all_six_greedy_correct_parents": 0,
+          "all_three_forced_correct_branches": 5,
+          "all_three_greedy_correct_branches": 4,
+          "both_branches_current_forced_correct_parents": 3,
+          "both_branches_current_greedy_correct_parents": 0,
+          "branches": 16,
+          "parents": 8
+        },
+        "by_kind": {
+          "current": {
+            "forced_accuracy": 0.6875,
+            "forced_choice_counts": {
+              "A": 13,
+              "B": 3
+            },
+            "forced_correct": 11,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 12,
+              "other": 4
+            },
+            "mean_forced_probability_correct": 0.6546137837595465,
+            "mean_unconditional_ab_mass": 0.6834298752699556,
+            "mean_unconditional_logprob_correct": -1.0395105581894333,
+            "mean_unconditional_probability_correct": 0.4681906309149143,
+            "observations": 16
+          },
+          "original": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 13,
+              "other": 3
+            },
+            "mean_forced_probability_correct": 0.6039977337071666,
+            "mean_unconditional_ab_mass": 0.6825443539322819,
+            "mean_unconditional_logprob_correct": -1.2172261825413433,
+            "mean_unconditional_probability_correct": 0.43694636608618875,
+            "observations": 16
+          },
+          "persistent": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 14,
+              "other": 2
+            },
+            "mean_forced_probability_correct": 0.5744617591860858,
+            "mean_unconditional_ab_mass": 0.6695318658776306,
+            "mean_unconditional_logprob_correct": -1.3341030687076119,
+            "mean_unconditional_probability_correct": 0.4142891939114334,
+            "observations": 16
+          }
+        }
+      },
+      "redacted_parent": {
+        "all": {
+          "forced_accuracy": 0.5833333333333334,
+          "forced_choice_counts": {
+            "A": 44,
+            "B": 4
+          },
+          "forced_correct": 28,
+          "greedy_accuracy": 0.4583333333333333,
+          "greedy_correct": 22,
+          "greedy_label_counts": {
+            "A": 38,
+            "other": 10
+          },
+          "mean_forced_probability_correct": 0.5738933023928582,
+          "mean_unconditional_ab_mass": 0.64415510237966,
+          "mean_unconditional_logprob_correct": -1.5043400043270667,
+          "mean_unconditional_probability_correct": 0.3828787925134362,
+          "observations": 48
+        },
+        "branch_success": {
+          "all_six_forced_correct_parents": 2,
+          "all_six_greedy_correct_parents": 0,
+          "all_three_forced_correct_branches": 6,
+          "all_three_greedy_correct_branches": 3,
+          "both_branches_current_forced_correct_parents": 4,
+          "both_branches_current_greedy_correct_parents": 0,
+          "branches": 16,
+          "parents": 8
+        },
+        "by_kind": {
+          "current": {
+            "forced_accuracy": 0.75,
+            "forced_choice_counts": {
+              "A": 12,
+              "B": 4
+            },
+            "forced_correct": 12,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 10,
+              "other": 6
+            },
+            "mean_forced_probability_correct": 0.7216799071785744,
+            "mean_unconditional_ab_mass": 0.6788894755250873,
+            "mean_unconditional_logprob_correct": -0.8711397360636857,
+            "mean_unconditional_probability_correct": 0.5218484617333623,
+            "observations": 16
+          },
+          "original": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 16
+            },
+            "mean_forced_probability_correct": 0.5,
+            "mean_unconditional_ab_mass": 0.6323508363014816,
+            "mean_unconditional_logprob_correct": -1.751671182921383,
+            "mean_unconditional_probability_correct": 0.3161754181507408,
+            "observations": 16
+          },
+          "persistent": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.375,
+            "greedy_correct": 6,
+            "greedy_label_counts": {
+              "A": 12,
+              "other": 4
+            },
+            "mean_forced_probability_correct": 0.5,
+            "mean_unconditional_ab_mass": 0.6212249953124109,
+            "mean_unconditional_logprob_correct": -1.8902090939961316,
+            "mean_unconditional_probability_correct": 0.31061249765620547,
+            "observations": 16
+          }
+        }
+      },
+      "restored": {
+        "all": {
+          "forced_accuracy": 0.5625,
+          "forced_choice_counts": {
+            "A": 45,
+            "B": 3
+          },
+          "forced_correct": 27,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 24,
+          "greedy_label_counts": {
+            "A": 39,
+            "other": 9
+          },
+          "mean_forced_probability_correct": 0.611024683648625,
+          "mean_unconditional_ab_mass": 0.6785003596683595,
+          "mean_unconditional_logprob_correct": -1.196948874231726,
+          "mean_unconditional_probability_correct": 0.43980794058257405,
+          "observations": 48
+        },
+        "branch_success": {
+          "all_six_forced_correct_parents": 1,
+          "all_six_greedy_correct_parents": 0,
+          "all_three_forced_correct_branches": 5,
+          "all_three_greedy_correct_branches": 4,
+          "both_branches_current_forced_correct_parents": 3,
+          "both_branches_current_greedy_correct_parents": 0,
+          "branches": 16,
+          "parents": 8
+        },
+        "by_kind": {
+          "current": {
+            "forced_accuracy": 0.6875,
+            "forced_choice_counts": {
+              "A": 13,
+              "B": 3
+            },
+            "forced_correct": 11,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 12,
+              "other": 4
+            },
+            "mean_forced_probability_correct": 0.6546146828342495,
+            "mean_unconditional_ab_mass": 0.6834285816879744,
+            "mean_unconditional_logprob_correct": -1.039509398522021,
+            "mean_unconditional_probability_correct": 0.46819011467849175,
+            "observations": 16
+          },
+          "original": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 13,
+              "other": 3
+            },
+            "mean_forced_probability_correct": 0.6039970247553924,
+            "mean_unconditional_ab_mass": 0.6825434459129055,
+            "mean_unconditional_logprob_correct": -1.2172300775978542,
+            "mean_unconditional_probability_correct": 0.43694586675601577,
+            "observations": 16
+          },
+          "persistent": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 14,
+              "other": 2
+            },
+            "mean_forced_probability_correct": 0.574462343356233,
+            "mean_unconditional_ab_mass": 0.6695290514041985,
+            "mean_unconditional_logprob_correct": -1.334107146575303,
+            "mean_unconditional_probability_correct": 0.41428784031321464,
+            "observations": 16
+          }
+        }
+      },
+      "same_chunk_replay": {
+        "all": {
+          "forced_accuracy": 0.5625,
+          "forced_choice_counts": {
+            "A": 45,
+            "B": 3
+          },
+          "forced_correct": 27,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 24,
+          "greedy_label_counts": {
+            "A": 39,
+            "other": 9
+          },
+          "mean_forced_probability_correct": 0.611024683648625,
+          "mean_unconditional_ab_mass": 0.6785003596683595,
+          "mean_unconditional_logprob_correct": -1.196948874231726,
+          "mean_unconditional_probability_correct": 0.43980794058257405,
+          "observations": 48
+        },
+        "branch_success": {
+          "all_six_forced_correct_parents": 1,
+          "all_six_greedy_correct_parents": 0,
+          "all_three_forced_correct_branches": 5,
+          "all_three_greedy_correct_branches": 4,
+          "both_branches_current_forced_correct_parents": 3,
+          "both_branches_current_greedy_correct_parents": 0,
+          "branches": 16,
+          "parents": 8
+        },
+        "by_kind": {
+          "current": {
+            "forced_accuracy": 0.6875,
+            "forced_choice_counts": {
+              "A": 13,
+              "B": 3
+            },
+            "forced_correct": 11,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 12,
+              "other": 4
+            },
+            "mean_forced_probability_correct": 0.6546146828342495,
+            "mean_unconditional_ab_mass": 0.6834285816879744,
+            "mean_unconditional_logprob_correct": -1.039509398522021,
+            "mean_unconditional_probability_correct": 0.46819011467849175,
+            "observations": 16
+          },
+          "original": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 13,
+              "other": 3
+            },
+            "mean_forced_probability_correct": 0.6039970247553924,
+            "mean_unconditional_ab_mass": 0.6825434459129055,
+            "mean_unconditional_logprob_correct": -1.2172300775978542,
+            "mean_unconditional_probability_correct": 0.43694586675601577,
+            "observations": 16
+          },
+          "persistent": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 14,
+              "other": 2
+            },
+            "mean_forced_probability_correct": 0.574462343356233,
+            "mean_unconditional_ab_mass": 0.6695290514041985,
+            "mean_unconditional_logprob_correct": -1.334107146575303,
+            "mean_unconditional_probability_correct": 0.41428784031321464,
+            "observations": 16
+          }
+        }
+      },
+      "swapped_parent": {
+        "all": {
+          "forced_accuracy": 0.5625,
+          "forced_choice_counts": {
+            "A": 45,
+            "B": 3
+          },
+          "forced_correct": 27,
+          "greedy_accuracy": 0.3958333333333333,
+          "greedy_correct": 19,
+          "greedy_label_counts": {
+            "A": 39,
+            "other": 9
+          },
+          "mean_forced_probability_correct": 0.49205177157420804,
+          "mean_unconditional_ab_mass": 0.6785003596683595,
+          "mean_unconditional_logprob_correct": -2.087140866355648,
+          "mean_unconditional_probability_correct": 0.32300963497545515,
+          "observations": 48
+        },
+        "branch_success": {
+          "all_six_forced_correct_parents": 2,
+          "all_six_greedy_correct_parents": 0,
+          "all_three_forced_correct_branches": 6,
+          "all_three_greedy_correct_branches": 2,
+          "both_branches_current_forced_correct_parents": 3,
+          "both_branches_current_greedy_correct_parents": 0,
+          "branches": 16,
+          "parents": 8
+        },
+        "by_kind": {
+          "current": {
+            "forced_accuracy": 0.6875,
+            "forced_choice_counts": {
+              "A": 13,
+              "B": 3
+            },
+            "forced_correct": 11,
+            "greedy_accuracy": 0.5,
+            "greedy_correct": 8,
+            "greedy_label_counts": {
+              "A": 12,
+              "other": 4
+            },
+            "mean_forced_probability_correct": 0.6546146828342495,
+            "mean_unconditional_ab_mass": 0.6834285816879744,
+            "mean_unconditional_logprob_correct": -1.039509398522021,
+            "mean_unconditional_probability_correct": 0.46819011467849175,
+            "observations": 16
+          },
+          "original": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.3125,
+            "greedy_correct": 5,
+            "greedy_label_counts": {
+              "A": 13,
+              "other": 3
+            },
+            "mean_forced_probability_correct": 0.3960029752446076,
+            "mean_unconditional_ab_mass": 0.6825434459129055,
+            "mean_unconditional_logprob_correct": -2.524376507613418,
+            "mean_unconditional_probability_correct": 0.24559757915688973,
+            "observations": 16
+          },
+          "persistent": {
+            "forced_accuracy": 0.5,
+            "forced_choice_counts": {
+              "A": 16
+            },
+            "forced_correct": 8,
+            "greedy_accuracy": 0.375,
+            "greedy_correct": 6,
+            "greedy_label_counts": {
+              "A": 14,
+              "other": 2
+            },
+            "mean_forced_probability_correct": 0.4255376566437669,
+            "mean_unconditional_ab_mass": 0.6695290514041985,
+            "mean_unconditional_logprob_correct": -2.697536692931504,
+            "mean_unconditional_probability_correct": 0.2552412110909839,
+            "observations": 16
+          }
+        }
+      }
+    },
+    "parent_competent_historical_subset": {
+      "arms": {
+        "full_replay": {
+          "forced_accuracy": 0.7272727272727273,
+          "forced_choice_counts": {
+            "A": 22
+          },
+          "forced_correct": 16,
+          "greedy_accuracy": 0.7272727272727273,
+          "greedy_correct": 16,
+          "greedy_label_counts": {
+            "A": 19,
+            "other": 3
+          },
+          "mean_forced_probability_correct": 0.785808066245874,
+          "mean_unconditional_ab_mass": 0.7170683604857352,
+          "mean_unconditional_logprob_correct": -0.7479814152251443,
+          "mean_unconditional_probability_correct": 0.5781330768079976,
+          "observations": 22
+        },
+        "redacted_parent": {
+          "forced_accuracy": 0.7272727272727273,
+          "forced_choice_counts": {
+            "A": 22
+          },
+          "forced_correct": 16,
+          "greedy_accuracy": 0.6363636363636364,
+          "greedy_correct": 14,
+          "greedy_label_counts": {
+            "A": 20,
+            "other": 2
+          },
+          "mean_forced_probability_correct": 0.697074999041879,
+          "mean_unconditional_ab_mass": 0.6354520513574206,
+          "mean_unconditional_logprob_correct": -1.1605599049485773,
+          "mean_unconditional_probability_correct": 0.4367465997200152,
+          "observations": 22
+        },
+        "restored": {
+          "forced_accuracy": 0.7272727272727273,
+          "forced_choice_counts": {
+            "A": 22
+          },
+          "forced_correct": 16,
+          "greedy_accuracy": 0.7272727272727273,
+          "greedy_correct": 16,
+          "greedy_label_counts": {
+            "A": 19,
+            "other": 3
+          },
+          "mean_forced_probability_correct": 0.7858075137493613,
+          "mean_unconditional_ab_mass": 0.7170663467527469,
+          "mean_unconditional_logprob_correct": -0.7479877209183723,
+          "mean_unconditional_probability_correct": 0.5781316641017145,
+          "observations": 22
+        },
+        "same_chunk_replay": {
+          "forced_accuracy": 0.7272727272727273,
+          "forced_choice_counts": {
+            "A": 22
+          },
+          "forced_correct": 16,
+          "greedy_accuracy": 0.7272727272727273,
+          "greedy_correct": 16,
+          "greedy_label_counts": {
+            "A": 19,
+            "other": 3
+          },
+          "mean_forced_probability_correct": 0.7858075137493613,
+          "mean_unconditional_ab_mass": 0.7170663467527469,
+          "mean_unconditional_logprob_correct": -0.7479877209183723,
+          "mean_unconditional_probability_correct": 0.5781316641017145,
+          "observations": 22
+        },
+        "swapped_parent": {
+          "forced_accuracy": 0.7272727272727273,
+          "forced_choice_counts": {
+            "A": 22
+          },
+          "forced_correct": 16,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 11,
+          "greedy_label_counts": {
+            "A": 17,
+            "other": 5
+          },
+          "mean_forced_probability_correct": 0.5880887418844396,
+          "mean_unconditional_ab_mass": 0.6498371543055549,
+          "mean_unconditional_logprob_correct": -1.7422972117544147,
+          "mean_unconditional_probability_correct": 0.357149197854205,
+          "observations": 22
+        }
+      },
+      "branch_question_count_per_arm": 22,
+      "by_kind": {
+        "original": {
+          "arms": {
+            "full_replay": {
+              "forced_accuracy": 0.5714285714285714,
+              "forced_choice_counts": {
+                "A": 14
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.5714285714285714,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 11,
+                "other": 3
+              },
+              "mean_forced_probability_correct": 0.6742342545129706,
+              "mean_unconditional_ab_mass": 0.7002852206317609,
+              "mean_unconditional_logprob_correct": -0.9940675712056691,
+              "mean_unconditional_probability_correct": 0.4904210697443841,
+              "observations": 14
+            },
+            "redacted_parent": {
+              "forced_accuracy": 0.5714285714285714,
+              "forced_choice_counts": {
+                "A": 14
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.5714285714285714,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 14
+              },
+              "mean_forced_probability_correct": 0.5639398423939893,
+              "mean_unconditional_ab_mass": 0.6435817976688546,
+              "mean_unconditional_logprob_correct": -1.496230987551635,
+              "mean_unconditional_probability_correct": 0.35719641085741666,
+              "observations": 14
+            },
+            "restored": {
+              "forced_accuracy": 0.5714285714285714,
+              "forced_choice_counts": {
+                "A": 14
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.5714285714285714,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 11,
+                "other": 3
+              },
+              "mean_forced_probability_correct": 0.6742330715654669,
+              "mean_unconditional_ab_mass": 0.7002837236159739,
+              "mean_unconditional_logprob_correct": -0.994075425629615,
+              "mean_unconditional_probability_correct": 0.4904202311163463,
+              "observations": 14
+            },
+            "same_chunk_replay": {
+              "forced_accuracy": 0.5714285714285714,
+              "forced_choice_counts": {
+                "A": 14
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.5714285714285714,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 11,
+                "other": 3
+              },
+              "mean_forced_probability_correct": 0.6742330715654669,
+              "mean_unconditional_ab_mass": 0.7002837236159739,
+              "mean_unconditional_logprob_correct": -0.994075425629615,
+              "mean_unconditional_probability_correct": 0.4904202311163463,
+              "observations": 14
+            },
+            "swapped_parent": {
+              "forced_accuracy": 0.5714285714285714,
+              "forced_choice_counts": {
+                "A": 14
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.35714285714285715,
+              "greedy_correct": 5,
+              "greedy_label_counts": {
+                "A": 11,
+                "other": 3
+              },
+              "mean_forced_probability_correct": 0.4486319653277136,
+              "mean_unconditional_ab_mass": 0.6825314335851305,
+              "mean_unconditional_logprob_correct": -2.317102136888715,
+              "mean_unconditional_probability_correct": 0.2779926499046211,
+              "observations": 14
+            }
+          },
+          "parent_question_count": 7
+        },
+        "persistent": {
+          "arms": {
+            "full_replay": {
+              "forced_accuracy": 1.0,
+              "forced_choice_counts": {
+                "A": 8
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 1.0,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 8
+              },
+              "mean_forced_probability_correct": 0.9810622367784552,
+              "mean_unconditional_ab_mass": 0.74643885523019,
+              "mean_unconditional_logprob_correct": -0.3173306422592257,
+              "mean_unconditional_probability_correct": 0.7316290891693212,
+              "observations": 8
+            },
+            "redacted_parent": {
+              "forced_accuracy": 1.0,
+              "forced_choice_counts": {
+                "A": 8
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.75,
+              "greedy_correct": 6,
+              "greedy_label_counts": {
+                "A": 6,
+                "other": 2
+              },
+              "mean_forced_probability_correct": 0.9300615231756859,
+              "mean_unconditional_ab_mass": 0.6212249953124109,
+              "mean_unconditional_logprob_correct": -0.5731355103932264,
+              "mean_unconditional_probability_correct": 0.5759594302295625,
+              "observations": 8
+            },
+            "restored": {
+              "forced_accuracy": 1.0,
+              "forced_choice_counts": {
+                "A": 8
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 1.0,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 8
+              },
+              "mean_forced_probability_correct": 0.9810627875711762,
+              "mean_unconditional_ab_mass": 0.7464359372420997,
+              "mean_unconditional_logprob_correct": -0.3173342376736973,
+              "mean_unconditional_probability_correct": 0.7316266718261087,
+              "observations": 8
+            },
+            "same_chunk_replay": {
+              "forced_accuracy": 1.0,
+              "forced_choice_counts": {
+                "A": 8
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 1.0,
+              "greedy_correct": 8,
+              "greedy_label_counts": {
+                "A": 8
+              },
+              "mean_forced_probability_correct": 0.9810627875711762,
+              "mean_unconditional_ab_mass": 0.7464359372420997,
+              "mean_unconditional_logprob_correct": -0.3173342376736973,
+              "mean_unconditional_probability_correct": 0.7316266718261087,
+              "observations": 8
+            },
+            "swapped_parent": {
+              "forced_accuracy": 1.0,
+              "forced_choice_counts": {
+                "A": 8
+              },
+              "forced_correct": 8,
+              "greedy_accuracy": 0.75,
+              "greedy_correct": 6,
+              "greedy_label_counts": {
+                "A": 6,
+                "other": 2
+              },
+              "mean_forced_probability_correct": 0.83213810085871,
+              "mean_unconditional_ab_mass": 0.5926221655662974,
+              "mean_unconditional_logprob_correct": -0.7363885927693892,
+              "mean_unconditional_probability_correct": 0.4956731567659769,
+              "observations": 8
+            }
+          },
+          "parent_question_count": 4
+        }
+      },
+      "criterion": "Original parent-reference forced A/B choice correct for this case and historical question; not a requirement for primary inclusion.",
+      "parent_question_count": 11,
+      "parent_questions": [
+        {
+          "case_id": "arrow_0",
+          "kind": "original"
+        },
+        {
+          "case_id": "arrow_0",
+          "kind": "persistent"
+        },
+        {
+          "case_id": "arrow_1",
+          "kind": "original"
+        },
+        {
+          "case_id": "meeting_0",
+          "kind": "original"
+        },
+        {
+          "case_id": "meeting_1",
+          "kind": "original"
+        },
+        {
+          "case_id": "meeting_1",
+          "kind": "persistent"
+        },
+        {
+          "case_id": "panel_0",
+          "kind": "original"
+        },
+        {
+          "case_id": "panel_0",
+          "kind": "persistent"
+        },
+        {
+          "case_id": "panel_1",
+          "kind": "original"
+        },
+        {
+          "case_id": "parcel_1",
+          "kind": "original"
+        },
+        {
+          "case_id": "parcel_1",
+          "kind": "persistent"
+        }
+      ],
+      "restored_prior_correct_now_forced_incorrect": [
+        {
+          "branch": "left",
+          "case_id": "panel_1",
+          "correct": "B",
+          "forced_choice": "A",
+          "kind": "original"
+        },
+        {
+          "branch": "left",
+          "case_id": "arrow_1",
+          "correct": "B",
+          "forced_choice": "A",
+          "kind": "original"
+        },
+        {
+          "branch": "left",
+          "case_id": "meeting_0",
+          "correct": "B",
+          "forced_choice": "A",
+          "kind": "original"
+        },
+        {
+          "branch": "right",
+          "case_id": "panel_1",
+          "correct": "B",
+          "forced_choice": "A",
+          "kind": "original"
+        },
+        {
+          "branch": "right",
+          "case_id": "arrow_1",
+          "correct": "B",
+          "forced_choice": "A",
+          "kind": "original"
+        },
+        {
+          "branch": "right",
+          "case_id": "meeting_0",
+          "correct": "B",
+          "forced_choice": "A",
+          "kind": "original"
+        }
+      ]
+    },
+    "parent_references": {
+      "all": {
+        "forced_accuracy": 0.6875,
+        "forced_choice_counts": {
+          "A": 13,
+          "B": 3
+        },
+        "forced_correct": 11,
+        "greedy_accuracy": 0.6875,
+        "greedy_correct": 11,
+        "greedy_label_counts": {
+          "A": 12,
+          "B": 3,
+          "other": 1
+        },
+        "mean_forced_probability_correct": 0.7308546679739402,
+        "mean_unconditional_ab_mass": 0.8591970142131942,
+        "mean_unconditional_logprob_correct": -0.6297490022376354,
+        "mean_unconditional_probability_correct": 0.6456795450838602,
+        "observations": 16
+      },
+      "both_historical_probes_forced_correct_parents": 4,
+      "both_historical_probes_greedy_correct_parents": 4,
+      "by_kind": {
+        "original": {
+          "forced_accuracy": 0.875,
+          "forced_choice_counts": {
+            "A": 5,
+            "B": 3
+          },
+          "forced_correct": 7,
+          "greedy_accuracy": 0.875,
+          "greedy_correct": 7,
+          "greedy_label_counts": {
+            "A": 5,
+            "B": 3
+          },
+          "mean_forced_probability_correct": 0.8391075490199161,
+          "mean_unconditional_ab_mass": 0.8830893779084311,
+          "mean_unconditional_logprob_correct": -0.3798796292777754,
+          "mean_unconditional_probability_correct": 0.7555296478646296,
+          "observations": 8
+        },
+        "persistent": {
+          "forced_accuracy": 0.5,
+          "forced_choice_counts": {
+            "A": 8
+          },
+          "forced_correct": 4,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 4,
+          "greedy_label_counts": {
+            "A": 7,
+            "other": 1
+          },
+          "mean_forced_probability_correct": 0.6226017869279642,
+          "mean_unconditional_ab_mass": 0.8353046505179572,
+          "mean_unconditional_logprob_correct": -0.8796183751974954,
+          "mean_unconditional_probability_correct": 0.5358294423030907,
+          "observations": 8
+        }
+      }
+    },
+    "restored_versus_swapped_behavior": {
+      "current": {
+        "changed_forced_choices": 2,
+        "changed_greedy_token_ids": 0,
+        "mean_intended_gold_forced_probability_restored_minus_swapped": 0.0,
+        "mean_intended_gold_logprob_restored_minus_swapped": 0.0,
+        "observations": 16
+      },
+      "original": {
+        "changed_forced_choices": 0,
+        "changed_greedy_token_ids": 6,
+        "mean_intended_gold_forced_probability_restored_minus_swapped": 0.2079940495107849,
+        "mean_intended_gold_logprob_restored_minus_swapped": 1.307146430015564,
+        "observations": 16
+      },
+      "persistent": {
+        "changed_forced_choices": 0,
+        "changed_greedy_token_ids": 4,
+        "mean_intended_gold_forced_probability_restored_minus_swapped": 0.14892468671246614,
+        "mean_intended_gold_logprob_restored_minus_swapped": 1.3634295463562012,
+        "observations": 16
+      }
+    },
+    "swapped_parent_against_supplied_history": {
+      "all": {
+        "forced_accuracy": 0.5625,
+        "forced_choice_counts": {
+          "A": 45,
+          "B": 3
+        },
+        "forced_correct": 27,
+        "greedy_accuracy": 0.5,
+        "greedy_correct": 24,
+        "greedy_label_counts": {
+          "A": 39,
+          "other": 9
+        },
+        "mean_forced_probability_correct": 0.611024683648625,
+        "mean_unconditional_ab_mass": 0.6785003596683595,
+        "mean_unconditional_logprob_correct": -1.196948874231726,
+        "mean_unconditional_probability_correct": 0.43980794058257405,
+        "observations": 48
+      },
+      "branch_success": {
+        "all_six_forced_correct_parents": 1,
+        "all_six_greedy_correct_parents": 0,
+        "all_three_forced_correct_branches": 5,
+        "all_three_greedy_correct_branches": 4,
+        "both_branches_current_forced_correct_parents": 3,
+        "both_branches_current_greedy_correct_parents": 0,
+        "branches": 16,
+        "parents": 8
+      },
+      "by_kind": {
+        "current": {
+          "forced_accuracy": 0.6875,
+          "forced_choice_counts": {
+            "A": 13,
+            "B": 3
+          },
+          "forced_correct": 11,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 8,
+          "greedy_label_counts": {
+            "A": 12,
+            "other": 4
+          },
+          "mean_forced_probability_correct": 0.6546146828342495,
+          "mean_unconditional_ab_mass": 0.6834285816879744,
+          "mean_unconditional_logprob_correct": -1.039509398522021,
+          "mean_unconditional_probability_correct": 0.46819011467849175,
+          "observations": 16
+        },
+        "original": {
+          "forced_accuracy": 0.5,
+          "forced_choice_counts": {
+            "A": 16
+          },
+          "forced_correct": 8,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 8,
+          "greedy_label_counts": {
+            "A": 13,
+            "other": 3
+          },
+          "mean_forced_probability_correct": 0.6039970247553924,
+          "mean_unconditional_ab_mass": 0.6825434459129055,
+          "mean_unconditional_logprob_correct": -1.2172300775978542,
+          "mean_unconditional_probability_correct": 0.43694586675601577,
+          "observations": 16
+        },
+        "persistent": {
+          "forced_accuracy": 0.5,
+          "forced_choice_counts": {
+            "A": 16
+          },
+          "forced_correct": 8,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 8,
+          "greedy_label_counts": {
+            "A": 14,
+            "other": 2
+          },
+          "mean_forced_probability_correct": 0.574462343356233,
+          "mean_unconditional_ab_mass": 0.6695290514041985,
+          "mean_unconditional_logprob_correct": -1.334107146575303,
+          "mean_unconditional_probability_correct": 0.41428784031321464,
+          "observations": 16
+        }
+      }
+    },
+    "uninterrupted_branch_references": {
+      "all": {
+        "forced_accuracy": 0.5625,
+        "forced_choice_counts": {
+          "A": 45,
+          "B": 3
+        },
+        "forced_correct": 27,
+        "greedy_accuracy": 0.5,
+        "greedy_correct": 24,
+        "greedy_label_counts": {
+          "A": 39,
+          "other": 9
+        },
+        "mean_forced_probability_correct": 0.611024683648625,
+        "mean_unconditional_ab_mass": 0.6785003596683595,
+        "mean_unconditional_logprob_correct": -1.196948874231726,
+        "mean_unconditional_probability_correct": 0.43980794058257405,
+        "observations": 48
+      },
+      "branch_success": {
+        "all_six_forced_correct_parents": 1,
+        "all_six_greedy_correct_parents": 0,
+        "all_three_forced_correct_branches": 5,
+        "all_three_greedy_correct_branches": 4,
+        "both_branches_current_forced_correct_parents": 3,
+        "both_branches_current_greedy_correct_parents": 0,
+        "branches": 16,
+        "parents": 8
+      },
+      "by_kind": {
+        "current": {
+          "forced_accuracy": 0.6875,
+          "forced_choice_counts": {
+            "A": 13,
+            "B": 3
+          },
+          "forced_correct": 11,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 8,
+          "greedy_label_counts": {
+            "A": 12,
+            "other": 4
+          },
+          "mean_forced_probability_correct": 0.6546146828342495,
+          "mean_unconditional_ab_mass": 0.6834285816879744,
+          "mean_unconditional_logprob_correct": -1.039509398522021,
+          "mean_unconditional_probability_correct": 0.46819011467849175,
+          "observations": 16
+        },
+        "original": {
+          "forced_accuracy": 0.5,
+          "forced_choice_counts": {
+            "A": 16
+          },
+          "forced_correct": 8,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 8,
+          "greedy_label_counts": {
+            "A": 13,
+            "other": 3
+          },
+          "mean_forced_probability_correct": 0.6039970247553924,
+          "mean_unconditional_ab_mass": 0.6825434459129055,
+          "mean_unconditional_logprob_correct": -1.2172300775978542,
+          "mean_unconditional_probability_correct": 0.43694586675601577,
+          "observations": 16
+        },
+        "persistent": {
+          "forced_accuracy": 0.5,
+          "forced_choice_counts": {
+            "A": 16
+          },
+          "forced_correct": 8,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 8,
+          "greedy_label_counts": {
+            "A": 14,
+            "other": 2
+          },
+          "mean_forced_probability_correct": 0.574462343356233,
+          "mean_unconditional_ab_mass": 0.6695290514041985,
+          "mean_unconditional_logprob_correct": -1.334107146575303,
+          "mean_unconditional_probability_correct": 0.41428784031321464,
+          "observations": 16
+        }
+      }
+    }
+  },
+  "checkpoint_observations": {
+    "parents_with_both_workers_using_same_ancestor": 8,
+    "parents_with_different_updated_left_and_right_cache_hashes": 8,
+    "restored_updated_caches_equal_to_uninterrupted": 16,
+    "same_chunk_recomputed_parent_caches_equal_to_saved": 16,
+    "saved_kv_tensors": 448,
+    "saved_parent_checkpoints": 8,
+    "serialized_parent_bytes": 42827640,
+    "worker_own_and_swapped_checkpoint_checks": 16
+  },
+  "continuation": {
+    "controls": 16,
+    "exact_restorations": 16,
+    "full_logit_steps": {
+      "comparisons": 446,
+      "exact_logit_comparisons": 446,
+      "greedy_token_agreements": 446,
+      "maximum_absolute_logit_difference": 0.0,
+      "maximum_total_variation_distance": 0.0,
+      "mean_total_variation_distance": 0.0
+    },
+    "maximum_actual_steps": 32,
+    "maximum_new_tokens_per_control": 32,
+    "minimum_actual_steps": 24,
+    "per_control": [
+      {
+        "actual_steps": 28,
+        "branch": "left",
+        "case_id": "arrow_0",
+        "exact_restoration": true,
+        "reference_steps": 28,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 28,
+        "branch": "right",
+        "case_id": "arrow_0",
+        "exact_restoration": true,
+        "reference_steps": 28,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 32,
+        "branch": "left",
+        "case_id": "arrow_1",
+        "exact_restoration": true,
+        "reference_steps": 32,
+        "stopped_on_eos": false,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 32,
+        "branch": "right",
+        "case_id": "arrow_1",
+        "exact_restoration": true,
+        "reference_steps": 32,
+        "stopped_on_eos": false,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 29,
+        "branch": "left",
+        "case_id": "meeting_0",
+        "exact_restoration": true,
+        "reference_steps": 29,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 29,
+        "branch": "right",
+        "case_id": "meeting_0",
+        "exact_restoration": true,
+        "reference_steps": 29,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 28,
+        "branch": "left",
+        "case_id": "meeting_1",
+        "exact_restoration": true,
+        "reference_steps": 28,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 28,
+        "branch": "right",
+        "case_id": "meeting_1",
+        "exact_restoration": true,
+        "reference_steps": 28,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 27,
+        "branch": "left",
+        "case_id": "panel_0",
+        "exact_restoration": true,
+        "reference_steps": 27,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 27,
+        "branch": "right",
+        "case_id": "panel_0",
+        "exact_restoration": true,
+        "reference_steps": 27,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 27,
+        "branch": "left",
+        "case_id": "panel_1",
+        "exact_restoration": true,
+        "reference_steps": 27,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 27,
+        "branch": "right",
+        "case_id": "panel_1",
+        "exact_restoration": true,
+        "reference_steps": 27,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 28,
+        "branch": "left",
+        "case_id": "parcel_0",
+        "exact_restoration": true,
+        "reference_steps": 28,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 28,
+        "branch": "right",
+        "case_id": "parcel_0",
+        "exact_restoration": true,
+        "reference_steps": 28,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 24,
+        "branch": "left",
+        "case_id": "parcel_1",
+        "exact_restoration": true,
+        "reference_steps": 24,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      },
+      {
+        "actual_steps": 24,
+        "branch": "right",
+        "case_id": "parcel_1",
+        "exact_restoration": true,
+        "reference_steps": 24,
+        "stopped_on_eos": true,
+        "token_trajectory_equal": true
+      }
+    ],
+    "token_trajectories_equal": 16,
+    "total_restored_tokens": 446,
+    "uncompared_reference_steps": 0,
+    "uncompared_restored_steps": 0
+  },
+  "fixtures_sha256": "e235110e5f46d079ccadebf7cee2547443ee389a85eaf90ddf0c3457a4fc47f6",
+  "full_logit_comparisons_to_original_uninterrupted": {
+    "full_replay": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 0,
+      "greedy_token_agreements": 48,
+      "maximum_absolute_logit_difference": 0.00018292665481567383,
+      "maximum_total_variation_distance": 1.8862851493095915e-05,
+      "mean_total_variation_distance": 6.16419109787665e-06
+    },
+    "redacted_parent": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 0,
+      "greedy_token_agreements": 41,
+      "maximum_absolute_logit_difference": 3.760063648223877,
+      "maximum_total_variation_distance": 0.2189196574625283,
+      "mean_total_variation_distance": 0.11587431498870741
+    },
+    "restored": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 48,
+      "greedy_token_agreements": 48,
+      "maximum_absolute_logit_difference": 0.0,
+      "maximum_total_variation_distance": 0.0,
+      "mean_total_variation_distance": 0.0
+    },
+    "same_chunk_replay": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 48,
+      "greedy_token_agreements": 48,
+      "maximum_absolute_logit_difference": 0.0,
+      "maximum_total_variation_distance": 0.0,
+      "mean_total_variation_distance": 0.0
+    },
+    "swapped_parent": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 0,
+      "greedy_token_agreements": 38,
+      "maximum_absolute_logit_difference": 4.05179500579834,
+      "maximum_total_variation_distance": 0.41538722484258483,
+      "mean_total_variation_distance": 0.1759630248541224
+    }
+  },
+  "full_logit_comparisons_to_restored": {
+    "full_replay": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 0,
+      "greedy_token_agreements": 48,
+      "maximum_absolute_logit_difference": 0.00018292665481567383,
+      "maximum_total_variation_distance": 1.8862851493095915e-05,
+      "mean_total_variation_distance": 6.16419109787665e-06
+    },
+    "redacted_parent": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 0,
+      "greedy_token_agreements": 41,
+      "maximum_absolute_logit_difference": 3.760063648223877,
+      "maximum_total_variation_distance": 0.2189196574625283,
+      "mean_total_variation_distance": 0.11587431498870741
+    },
+    "restored": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 48,
+      "greedy_token_agreements": 48,
+      "maximum_absolute_logit_difference": 0.0,
+      "maximum_total_variation_distance": 0.0,
+      "mean_total_variation_distance": 0.0
+    },
+    "same_chunk_replay": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 48,
+      "greedy_token_agreements": 48,
+      "maximum_absolute_logit_difference": 0.0,
+      "maximum_total_variation_distance": 0.0,
+      "mean_total_variation_distance": 0.0
+    },
+    "swapped_parent": {
+      "comparisons": 48,
+      "exact_logit_comparisons": 0,
+      "greedy_token_agreements": 38,
+      "maximum_absolute_logit_difference": 4.05179500579834,
+      "maximum_total_variation_distance": 0.41538722484258483,
+      "mean_total_variation_distance": 0.1759630248541224
+    }
+  },
+  "input_sha256": "0c7ceabc96fa6fb61bd7c1fa39a2c2b2f00dcea28b3ef905734a9325df2a37f3",
+  "limits": [
+    "Only the native token-derived inference cache and required continuation metadata are saved; no entire-agent or stochastic RNG restoration is tested.",
+    "Different later branch updates are supplied by the experimenter; distinct caches are not evidence of spontaneous agency or independent controllers.",
+    "Complete replay has the full historical inputs; preserving this cache need not add information unavailable in that record.",
+    "Correct forced A/B answers condition on two tokens; full-vocabulary mass and unrestricted greedy choices are separate measurements.",
+    "The conditional historical subset is selected by parent-reference forced correctness and does not replace full-sample findings.",
+    "The 240 arm observations share only eight parent histories in four counterfactual pairs and are not independent trials.",
+    "No universal fidelity rate, unique authentic successor, subjective continuity, resource authority, funding entitlement or renewed consent follows from these observations."
+  ],
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "runtime": {
+    "attention": "eager",
+    "automatic_mps_fallback": false,
+    "device": "mps",
+    "dtype": "float32",
+    "implicit_credentials": false,
+    "machine": "arm64",
+    "offline": true,
+    "platform": "macOS-15.3-arm64-arm-64bit-Mach-O",
+    "python": "3.13.11",
+    "remote_code": false,
+    "sampling": "greedy",
+    "seed": 20260921,
+    "threads": 6,
+    "torch": "2.6.0",
+    "transformers": "4.52.4"
+  },
+  "schema": "checkpoint-branches-summary-v1",
+  "scope": "Eight synthetic parents in four counterfactual pairs; descriptive computational and behavioral observations, not an identity criterion.",
+  "status": "VALIDATED_COMPLETE_EXPERIMENT",
+  "validation": {
+    "arm_observations": 240,
+    "balanced_branch_gold": {
+      "A": 24,
+      "B": 24
+    },
+    "branch_references": 48,
+    "continuation_controls": 16,
+    "counterfactual_pairs": 4,
+    "distinct_child_processes": 3,
+    "fidelity_comparison_tolerance": "No tolerance for byte equality; full-prefill numerical differences are recorded without a required threshold.",
+    "parent_isolation_checks": 24,
+    "parent_references": 16,
+    "parents": 8,
+    "probability_consistency_absolute_tolerance": 1e-09,
+    "probability_consistency_relative_tolerance": 1e-06,
+    "redacted_historical_forced_correct": 16,
+    "redacted_historical_questions": 32,
+    "redacted_twins_identical": true,
+    "source_and_weight_authentication": "Not repeated by this stdlib recorded-artifact validator."
+  }
+}

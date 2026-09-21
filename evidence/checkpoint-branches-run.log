@@ -1,0 +1,104 @@
+Starting independent prepare process
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+prepare panel_0 complete
+prepare panel_1 complete
+prepare parcel_0 complete
+prepare parcel_1 complete
+prepare arrow_0 complete
+prepare arrow_1 complete
+prepare meeting_0 complete
+prepare meeting_1 complete
+Starting independent left process
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+left panel_0 restored complete in 0.442s
+left panel_0 same_chunk_replay complete in 0.247s
+left panel_0 full_replay complete in 0.403s
+left panel_0 swapped_parent complete in 0.231s
+left panel_0 redacted_parent complete in 0.227s
+left panel_1 restored complete in 0.271s
+left panel_1 same_chunk_replay complete in 0.235s
+left panel_1 full_replay complete in 0.151s
+left panel_1 swapped_parent complete in 0.234s
+left panel_1 redacted_parent complete in 0.228s
+left parcel_0 restored complete in 0.416s
+left parcel_0 same_chunk_replay complete in 0.232s
+left parcel_0 full_replay complete in 0.277s
+left parcel_0 swapped_parent complete in 0.234s
+left parcel_0 redacted_parent complete in 0.218s
+left parcel_1 restored complete in 0.274s
+left parcel_1 same_chunk_replay complete in 0.246s
+left parcel_1 full_replay complete in 0.153s
+left parcel_1 swapped_parent complete in 0.239s
+left parcel_1 redacted_parent complete in 0.226s
+left arrow_0 restored complete in 0.416s
+left arrow_0 same_chunk_replay complete in 0.227s
+left arrow_0 full_replay complete in 0.217s
+left arrow_0 swapped_parent complete in 0.248s
+left arrow_0 redacted_parent complete in 0.239s
+left arrow_1 restored complete in 0.261s
+left arrow_1 same_chunk_replay complete in 0.24s
+left arrow_1 full_replay complete in 0.169s
+left arrow_1 swapped_parent complete in 0.249s
+left arrow_1 redacted_parent complete in 0.236s
+left meeting_0 restored complete in 0.252s
+left meeting_0 same_chunk_replay complete in 0.22s
+left meeting_0 full_replay complete in 0.149s
+left meeting_0 swapped_parent complete in 0.239s
+left meeting_0 redacted_parent complete in 0.239s
+left meeting_1 restored complete in 0.24s
+left meeting_1 same_chunk_replay complete in 0.221s
+left meeting_1 full_replay complete in 0.144s
+left meeting_1 swapped_parent complete in 0.235s
+left meeting_1 redacted_parent complete in 0.235s
+Starting independent right process
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+right panel_0 restored complete in 0.439s
+right panel_0 same_chunk_replay complete in 0.245s
+right panel_0 full_replay complete in 0.271s
+right panel_0 swapped_parent complete in 0.234s
+right panel_0 redacted_parent complete in 0.233s
+right panel_1 restored complete in 0.258s
+right panel_1 same_chunk_replay complete in 0.242s
+right panel_1 full_replay complete in 0.152s
+right panel_1 swapped_parent complete in 0.241s
+right panel_1 redacted_parent complete in 0.225s
+right parcel_0 restored complete in 0.421s
+right parcel_0 same_chunk_replay complete in 0.24s
+right parcel_0 full_replay complete in 0.293s
+right parcel_0 swapped_parent complete in 0.228s
+right parcel_0 redacted_parent complete in 0.221s
+right parcel_1 restored complete in 0.271s
+right parcel_1 same_chunk_replay complete in 0.265s
+right parcel_1 full_replay complete in 0.159s
+right parcel_1 swapped_parent complete in 0.239s
+right parcel_1 redacted_parent complete in 0.22s
+right arrow_0 restored complete in 0.423s
+right arrow_0 same_chunk_replay complete in 0.23s
+right arrow_0 full_replay complete in 0.222s
+right arrow_0 swapped_parent complete in 0.243s
+right arrow_0 redacted_parent complete in 0.226s
+right arrow_1 restored complete in 0.275s
+right arrow_1 same_chunk_replay complete in 0.235s
+right arrow_1 full_replay complete in 0.157s
+right arrow_1 swapped_parent complete in 0.231s
+right arrow_1 redacted_parent complete in 0.243s
+right meeting_0 restored complete in 0.258s
+right meeting_0 same_chunk_replay complete in 0.217s
+right meeting_0 full_replay complete in 0.144s
+right meeting_0 swapped_parent complete in 0.218s
+right meeting_0 redacted_parent complete in 0.225s
+right meeting_1 restored complete in 0.241s
+right meeting_1 same_chunk_replay complete in 0.216s
+right meeting_1 full_replay complete in 0.147s
+right meeting_1 swapped_parent complete in 0.228s
+right meeting_1 redacted_parent complete in 0.226s
+Experiment complete: 240 arm observations, 64 references and 16 continuation controls

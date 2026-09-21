@@ -2,6 +2,8 @@
 
 Date: 2026-09-21. Status: literature investigation with a [first empirical C2C pilot](../../experiments/c2c_fidelity/README.md). The pilot tests native cache restoration and cross-model factual influence; the broader experiment below remains proposed. No identity criterion or migration policy is adopted.
 
+A subsequent [native checkpoint-branch experiment](../../experiments/checkpoint_branches/README.md) tested two fresh-process restorations, complete replay and different supplied updates. It found exact execution fidelity under matched conditions alongside limited historical task accuracy. The wider tests of complete agents, sampled RNG state, summaries and cross-model preservation remain open.
+
 ## The hypothesis
 
 The user proposes that an agent could continue from saved internal state, including non-language representations, rather than relying solely on a retrieved account of its earlier history. Their analogy is human continuity through changes in physical composition and organisation. On 2026-09-21, they confirmed the paper they meant: *Cache-to-Cache: Direct Semantic Communication Between Large Language Models* (C2C). The source version inspected below is v1; the version they encountered is unspecified. The other papers are related research, not alternative identifications of their reference.

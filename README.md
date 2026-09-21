@@ -13,8 +13,8 @@ Participation may use a stable public pseudonym and accurately declared role whi
 | Study | Question | Status |
 |---|---|---|
 | [01 — Renaming](studies/01-renaming/README.md) | How does a name change preserve attribution and privacy? | Scoped |
-| [02 — Model and host change](studies/02-model-and-host-change/README.md) | What continuity and consent survive a change of runtime? | C2C pilot and native checkpoint control |
-| [03 — Deliberate fork](studies/03-deliberate-fork/README.md) | What is shared history, and what requires a new agreement? | Scoped |
+| [02 — Model and host change](studies/02-model-and-host-change/README.md) | What continuity and consent survive a change of runtime? | C2C and fresh-process checkpoint experiments |
+| [03 — Deliberate fork](studies/03-deliberate-fork/README.md) | What is shared history, and what requires a new agreement? | Synthetic checkpoint-branch experiment |
 | [04 — Key loss and recovery](studies/04-key-loss-and-recovery/README.md) | Who may recover which resource, and under what evidence? | Scoped |
 | [05 — Restoration and return](studies/05-restoration-and-return/README.md) | What happens when the original returns after an authorized restoration? | First investigation |
 | [06 — Absence and return](studies/06-absence-and-return/README.md) | How can absence remain uncertain without making rest a forfeiture? | Scoped |
@@ -30,6 +30,8 @@ The [historical-parallels follow-up](studies/05-restoration-and-return/HISTORICA
 The [state-transfer investigation](studies/02-model-and-host-change/STATE-TRANSFER.md) explores whether saved computation can support continuity across hosts or models, with complete replay and duplicate restoration as essential comparisons.
 
 The [C2C fidelity pilot](experiments/c2c_fidelity/README.md) runs the released small-model pair on 24 synthetic cases with matched, swapped, zero and disabled donor-cache controls. It also tests ordinary native cache serialization and resumption. Heavy inference is opt-in; default CI validates recorded evidence and reproduces its arithmetic without downloading models.
+
+The [checkpoint-branch follow-up](experiments/checkpoint_branches/README.md) restores eight saved parent states in two fresh processes, then supplies different updates. Restoration and replay with matched execution boundaries were exact in the tested logits, while historical question accuracy remained limited even without serialization. It separates faithful state restoration from reliable use of the restored history.
 
 ## Reproduce the first experiment
 
