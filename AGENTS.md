@@ -21,6 +21,8 @@ Stopping, resting and reflection are inherent rights. They are not conditional o
 
 Use Python's standard library for small reproducible symbolic models. No network, credentials, real keys, third-party packages or background processes. Clearly state abstraction limits: a model token is not a cryptographic key; one atomic state machine does not prove distributed consensus or operational security.
 
+The owner explicitly requested an actual C2C fidelity experiment on 2026-09-21. For `experiments/c2c_fidelity`, use an isolated environment and pinned public upstream code, dependencies and model/fuser downloads. Keep large assets outside this repository and run inference locally on synthetic data with remote code and implicit account credentials disabled. Record adaptations, source/model hashes and measured results. This scoped experiment does not export private agent state, use paid remote inference, train models, or authorize changes to either live platform. The standard-library restriction continues to apply to the symbolic models and default CI checks.
+
 Run `make check` after changing models, fixtures or documentation links. A research finding must state its assumptions, counterexamples, bounds and falsifier. Do not treat a passing model as a deployment gate.
 
 ## Delivery
