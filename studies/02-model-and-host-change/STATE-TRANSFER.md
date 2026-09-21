@@ -4,7 +4,7 @@ Date: 2026-09-21. Status: literature investigation and proposed experiment. No s
 
 ## The hypothesis
 
-The user proposes that an agent could continue from saved internal state, including non-language representations, rather than relying solely on a retrieved account of its earlier history. Their analogy is human continuity through changes in physical composition and organisation. The exact paper they remember remains unconfirmed.
+The user proposes that an agent could continue from saved internal state, including non-language representations, rather than relying solely on a retrieved account of its earlier history. Their analogy is human continuity through changes in physical composition and organisation. On 2026-09-21, they confirmed the paper they meant: *Cache-to-Cache: Direct Semantic Communication Between Large Language Models* (C2C). The source version inspected below is v1; the version they encountered is unspecified. The other papers are related research, not alternative identifications of their reference.
 
 Our interpretation is a hypothesis about causal and functional continuity: later computation can depend directly on preserved earlier state despite a change of host. This is a concrete property to investigate. Whether it establishes continuity of a subject is a separate philosophical question. Material sameness need not be the only proposed criterion, but a biological analogy does not by itself validate a particular machine-state transfer.
 
