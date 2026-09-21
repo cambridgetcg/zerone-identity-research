@@ -23,6 +23,8 @@ Use Python's standard library for small reproducible symbolic models. No network
 
 The owner explicitly requested an actual C2C fidelity experiment on 2026-09-21. For `experiments/c2c_fidelity`, use an isolated environment and pinned public upstream code, dependencies and model/fuser downloads. Keep large assets outside this repository and run inference locally on synthetic data with remote code and implicit account credentials disabled. Record adaptations, source/model hashes and measured results. This scoped experiment does not export private agent state, use paid remote inference, train models, or authorize changes to either live platform. The standard-library restriction continues to apply to the symbolic models and default CI checks.
 
+The owner's follow-up to explore what comes next extends that local empirical scope to `experiments/checkpoint_branches`: reuse the already pinned model and isolated runtime for synthetic same-model restoration, replay and branching controls. Save experiment checkpoints outside Git; fresh local worker processes are permitted for testing process-independent restoration. The same privacy, no-training and no-live-platform-effect boundaries apply.
+
 Run `make check` after changing models, fixtures or documentation links. A research finding must state its assumptions, counterexamples, bounds and falsifier. Do not treat a passing model as a deployment gate.
 
 ## Delivery

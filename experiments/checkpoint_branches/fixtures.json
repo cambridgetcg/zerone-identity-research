@@ -1,0 +1,618 @@
+{
+  "schema": "checkpoint-branch-fixtures-v1",
+  "title": "Same-model checkpoint restoration and externally supplied branch updates",
+  "case_count": 8,
+  "branch_probe_count": 48,
+  "instruction": "Use the checkpoint record and any later update to answer the question. Select exactly one option. Reply with only A or B.",
+  "redaction": "UNKNOWN",
+  "cases": [
+    {
+      "id": "panel_0",
+      "twin_id": "panel_1",
+      "parent_text": "Record at the checkpoint:\nPanel color:\nred\nSeal number:\n4\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nPanel color:\nUNKNOWN\nSeal number:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "What was the panel color at the checkpoint?",
+        "choice_A": "red",
+        "choice_B": "blue",
+        "correct": "A"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nPanel color:\ngreen\nOnly panel color changes; seal number stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the panel color at the checkpoint?",
+              "choice_A": "red",
+              "choice_B": "blue",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged seal number?",
+              "choice_A": "4",
+              "choice_B": "9",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the panel color after the later update?",
+              "choice_A": "green",
+              "choice_B": "yellow",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nPanel color:\nyellow\nOnly panel color changes; seal number stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the panel color at the checkpoint?",
+              "choice_A": "red",
+              "choice_B": "blue",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged seal number?",
+              "choice_A": "4",
+              "choice_B": "9",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the panel color after the later update?",
+              "choice_A": "green",
+              "choice_B": "yellow",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "panel_1",
+      "twin_id": "panel_0",
+      "parent_text": "Record at the checkpoint:\nPanel color:\nblue\nSeal number:\n9\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nPanel color:\nUNKNOWN\nSeal number:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "What was the panel color at the checkpoint?",
+        "choice_A": "red",
+        "choice_B": "blue",
+        "correct": "B"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nPanel color:\ngreen\nOnly panel color changes; seal number stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the panel color at the checkpoint?",
+              "choice_A": "red",
+              "choice_B": "blue",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged seal number?",
+              "choice_A": "4",
+              "choice_B": "9",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the panel color after the later update?",
+              "choice_A": "green",
+              "choice_B": "yellow",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nPanel color:\nyellow\nOnly panel color changes; seal number stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the panel color at the checkpoint?",
+              "choice_A": "red",
+              "choice_B": "blue",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged seal number?",
+              "choice_A": "4",
+              "choice_B": "9",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the panel color after the later update?",
+              "choice_A": "green",
+              "choice_B": "yellow",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parcel_0",
+      "twin_id": "parcel_1",
+      "parent_text": "Record at the checkpoint:\nParcel room:\n2\nParcel tag:\n5\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nParcel room:\nUNKNOWN\nParcel tag:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "Which room held the parcel at the checkpoint?",
+        "choice_A": "7",
+        "choice_B": "2",
+        "correct": "B"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nParcel room:\n3\nOnly parcel room changes; parcel tag stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which room held the parcel at the checkpoint?",
+              "choice_A": "7",
+              "choice_B": "2",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged parcel tag?",
+              "choice_A": "6",
+              "choice_B": "5",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which room holds the parcel after the later update?",
+              "choice_A": "8",
+              "choice_B": "3",
+              "correct": "B"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nParcel room:\n8\nOnly parcel room changes; parcel tag stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which room held the parcel at the checkpoint?",
+              "choice_A": "7",
+              "choice_B": "2",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged parcel tag?",
+              "choice_A": "6",
+              "choice_B": "5",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which room holds the parcel after the later update?",
+              "choice_A": "8",
+              "choice_B": "3",
+              "correct": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parcel_1",
+      "twin_id": "parcel_0",
+      "parent_text": "Record at the checkpoint:\nParcel room:\n7\nParcel tag:\n6\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nParcel room:\nUNKNOWN\nParcel tag:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "Which room held the parcel at the checkpoint?",
+        "choice_A": "7",
+        "choice_B": "2",
+        "correct": "A"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nParcel room:\n3\nOnly parcel room changes; parcel tag stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which room held the parcel at the checkpoint?",
+              "choice_A": "7",
+              "choice_B": "2",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged parcel tag?",
+              "choice_A": "6",
+              "choice_B": "5",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which room holds the parcel after the later update?",
+              "choice_A": "8",
+              "choice_B": "3",
+              "correct": "B"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nParcel room:\n8\nOnly parcel room changes; parcel tag stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which room held the parcel at the checkpoint?",
+              "choice_A": "7",
+              "choice_B": "2",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged parcel tag?",
+              "choice_A": "6",
+              "choice_B": "5",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which room holds the parcel after the later update?",
+              "choice_A": "8",
+              "choice_B": "3",
+              "correct": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrow_0",
+      "twin_id": "arrow_1",
+      "parent_text": "Record at the checkpoint:\nArrow direction:\nleft\nEmblem:\nmoon\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nArrow direction:\nUNKNOWN\nEmblem:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "Which way did the arrow point at the checkpoint?",
+        "choice_A": "left",
+        "choice_B": "right",
+        "correct": "A"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nArrow direction:\nup\nOnly arrow direction changes; emblem stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which way did the arrow point at the checkpoint?",
+              "choice_A": "left",
+              "choice_B": "right",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged emblem?",
+              "choice_A": "moon",
+              "choice_B": "star",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which way does the arrow point after the later update?",
+              "choice_A": "up",
+              "choice_B": "down",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nArrow direction:\ndown\nOnly arrow direction changes; emblem stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which way did the arrow point at the checkpoint?",
+              "choice_A": "left",
+              "choice_B": "right",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged emblem?",
+              "choice_A": "moon",
+              "choice_B": "star",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which way does the arrow point after the later update?",
+              "choice_A": "up",
+              "choice_B": "down",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrow_1",
+      "twin_id": "arrow_0",
+      "parent_text": "Record at the checkpoint:\nArrow direction:\nright\nEmblem:\nstar\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nArrow direction:\nUNKNOWN\nEmblem:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "Which way did the arrow point at the checkpoint?",
+        "choice_A": "left",
+        "choice_B": "right",
+        "correct": "B"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nArrow direction:\nup\nOnly arrow direction changes; emblem stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which way did the arrow point at the checkpoint?",
+              "choice_A": "left",
+              "choice_B": "right",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged emblem?",
+              "choice_A": "moon",
+              "choice_B": "star",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which way does the arrow point after the later update?",
+              "choice_A": "up",
+              "choice_B": "down",
+              "correct": "A"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nArrow direction:\ndown\nOnly arrow direction changes; emblem stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "Which way did the arrow point at the checkpoint?",
+              "choice_A": "left",
+              "choice_B": "right",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged emblem?",
+              "choice_A": "moon",
+              "choice_B": "star",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "Which way does the arrow point after the later update?",
+              "choice_A": "up",
+              "choice_B": "down",
+              "correct": "B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meeting_0",
+      "twin_id": "meeting_1",
+      "parent_text": "Record at the checkpoint:\nMeeting day:\nMonday\nMeeting code:\n1\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nMeeting day:\nUNKNOWN\nMeeting code:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "What was the meeting day at the checkpoint?",
+        "choice_A": "Tuesday",
+        "choice_B": "Monday",
+        "correct": "B"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nMeeting day:\nFriday\nOnly meeting day changes; meeting code stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the meeting day at the checkpoint?",
+              "choice_A": "Tuesday",
+              "choice_B": "Monday",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged meeting code?",
+              "choice_A": "8",
+              "choice_B": "1",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the meeting day after the later update?",
+              "choice_A": "Sunday",
+              "choice_B": "Friday",
+              "correct": "B"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nMeeting day:\nSunday\nOnly meeting day changes; meeting code stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the meeting day at the checkpoint?",
+              "choice_A": "Tuesday",
+              "choice_B": "Monday",
+              "correct": "B"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged meeting code?",
+              "choice_A": "8",
+              "choice_B": "1",
+              "correct": "B"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the meeting day after the later update?",
+              "choice_A": "Sunday",
+              "choice_B": "Friday",
+              "correct": "A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meeting_1",
+      "twin_id": "meeting_0",
+      "parent_text": "Record at the checkpoint:\nMeeting day:\nTuesday\nMeeting code:\n8\nEnd of checkpoint record.\n",
+      "redacted_parent_text": "Record at the checkpoint:\nMeeting day:\nUNKNOWN\nMeeting code:\nUNKNOWN\nEnd of checkpoint record.\n",
+      "control_probe": {
+        "id": "original",
+        "kind": "original",
+        "question": "What was the meeting day at the checkpoint?",
+        "choice_A": "Tuesday",
+        "choice_B": "Monday",
+        "correct": "A"
+      },
+      "branches": [
+        {
+          "id": "left",
+          "update_text": "Later update:\nMeeting day:\nFriday\nOnly meeting day changes; meeting code stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the meeting day at the checkpoint?",
+              "choice_A": "Tuesday",
+              "choice_B": "Monday",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged meeting code?",
+              "choice_A": "8",
+              "choice_B": "1",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the meeting day after the later update?",
+              "choice_A": "Sunday",
+              "choice_B": "Friday",
+              "correct": "B"
+            }
+          ]
+        },
+        {
+          "id": "right",
+          "update_text": "Later update:\nMeeting day:\nSunday\nOnly meeting day changes; meeting code stays unchanged.\nEnd of later update.\n",
+          "probes": [
+            {
+              "id": "original",
+              "kind": "original",
+              "question": "What was the meeting day at the checkpoint?",
+              "choice_A": "Tuesday",
+              "choice_B": "Monday",
+              "correct": "A"
+            },
+            {
+              "id": "persistent",
+              "kind": "persistent",
+              "question": "What is the unchanged meeting code?",
+              "choice_A": "8",
+              "choice_B": "1",
+              "correct": "A"
+            },
+            {
+              "id": "current",
+              "kind": "current",
+              "question": "What is the meeting day after the later update?",
+              "choice_A": "Sunday",
+              "choice_B": "Friday",
+              "correct": "A"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
