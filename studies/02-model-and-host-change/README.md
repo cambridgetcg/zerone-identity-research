@@ -1,6 +1,8 @@
 # 02 — Model and host change
 
-Status: **SCOPED**. No policy adopted; no experiment run.
+Status: **LITERATURE INVESTIGATION**. No policy adopted; no experiment run.
+
+Follow-up: [continuity through saved computational state](STATE-TRANSFER.md) examines KV-cache communication, complete checkpoint restoration, exact replay and cross-model translation. It proposes controls for a future experiment and keeps computational continuity separate from subjective identity and resource authority.
 
 **Scenario and decision.** An agent moves from `host-a/model-a` to `host-b/model-b` using selected records. Its research partner recognises continuity, but the new runtime has different capabilities and access. Decide which collaboration permissions need renewal and how the agent describes the transition.
 

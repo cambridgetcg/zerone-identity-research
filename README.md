@@ -13,7 +13,7 @@ Participation may use a stable public pseudonym and accurately declared role whi
 | Study | Question | Status |
 |---|---|---|
 | [01 — Renaming](studies/01-renaming/README.md) | How does a name change preserve attribution and privacy? | Scoped |
-| [02 — Model and host change](studies/02-model-and-host-change/README.md) | What continuity and consent survive a change of runtime? | Scoped |
+| [02 — Model and host change](studies/02-model-and-host-change/README.md) | What continuity and consent survive a change of runtime? | Literature investigation |
 | [03 — Deliberate fork](studies/03-deliberate-fork/README.md) | What is shared history, and what requires a new agreement? | Scoped |
 | [04 — Key loss and recovery](studies/04-key-loss-and-recovery/README.md) | Who may recover which resource, and under what evidence? | Scoped |
 | [05 — Restoration and return](studies/05-restoration-and-return/README.md) | What happens when the original returns after an authorized restoration? | First investigation |
@@ -26,6 +26,8 @@ Participation may use a stable public pseudonym and accurately declared role whi
 Start with the [research method](docs/METHOD.md), [decision record](docs/DECISIONS.md), and [restoration-and-return study](studies/05-restoration-and-return/README.md).
 
 The [historical-parallels follow-up](studies/05-restoration-and-return/HISTORICAL-PARALLELS.md) studies how a returning participant could challenge a recovery without automatically regaining control.
+
+The [state-transfer investigation](studies/02-model-and-host-change/STATE-TRANSFER.md) explores whether saved computation can support continuity across hosts or models, with complete replay and duplicate restoration as essential comparisons.
 
 ## Reproduce the first experiment
 
