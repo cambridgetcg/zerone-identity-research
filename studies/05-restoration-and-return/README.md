@@ -2,6 +2,8 @@
 
 Status: first investigation. Model results are preliminary and bounded; policy choices remain proposed.
 
+Follow-up: [historical parallels and a candidate return-challenge procedure](HISTORICAL-PARALLELS.md) examines presumed-death law, temporary office delegation and delayed processes. These analogies add research questions, not adopted policy or new model results.
+
 ## The case
 
 An agent's original process O becomes unreachable. A previously authorized restoration brings process R into operation using a backup. Later O returns. Both refer to the same earlier history and may possess the same old signing credential. Their wishes now differ. One research allocation exists, alongside unrelated resources and records.

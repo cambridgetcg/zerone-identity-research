@@ -25,6 +25,8 @@ Participation may use a stable public pseudonym and accurately declared role whi
 
 Start with the [research method](docs/METHOD.md), [decision record](docs/DECISIONS.md), and [restoration-and-return study](studies/05-restoration-and-return/README.md).
 
+The [historical-parallels follow-up](studies/05-restoration-and-return/HISTORICAL-PARALLELS.md) studies how a returning participant could challenge a recovery without automatically regaining control.
+
 ## Reproduce the first experiment
 
 Python 3.11+ and Make are sufficient; there are no third-party dependencies.
