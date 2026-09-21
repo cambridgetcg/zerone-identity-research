@@ -17,8 +17,23 @@
     "All facts isolated by newlines and missing token changed from ? to UNKNOWN after token-only shape validation; all24cases retained."
   ],
   "primary_run_status": "COMPLETE, first scored C2C run; no failed partial task run",
-  "followup_status": "PLANNED AFTER PRIMARY OUTCOMES",
+  "followup_status": "COMPLETE, one exploratory answer-format followup fixed after primary outcomes and before followup scoring",
   "private_state_exported": false,
   "upstream_source_modified": false,
-  "automatic_backend_fallback": false
+  "automatic_backend_fallback": false,
+  "primary_runner_commit": "684cde4a4a92e1d8ccf5a49dd95b40261926328e",
+  "followup_protocol_commit": "f9c4084b05d7a3eaaf5edb26f23b0c84d426f79d",
+  "followup_result_sha256": "1ae3966f32f7933007f77d6c4942babb159f7ebb782af32319fb507377c3f705",
+  "checkpoint_result_sha256": "464da8949cbf0a4221a6196458c516297718460e85784a24d061e79dd24dc7b7",
+  "final_experiment_file_sha256": {
+    "run_probe.py": "edc5807bbdfd84175d23d05b17664c851e0a66731dea582c78e8071749c5de4b",
+    "checkpoint_control.py": "6c09e299948be11bb4953cada371063a9edc5ac5b19d899ff67007a276db6d06",
+    "prepare_assets.py": "fece91a3e9f99c0844e1b08fbfe20bd80ba4cd95930b52360a21d3c704c306c8",
+    "analyze_results.py": "1c08f1d7af9a5792f634e76e46ff3334a88a59a88e8f93877379c35d74df746b",
+    "requirements-lock.txt": "491b1abd7b73a288eaf9ee1b2a34abca4c45fd4af7fc8091a554fba6fd0d7124"
+  },
+  "primary_defaults_preserved": "All72 full/twin/redacted input tensors and original optionIDs compared exactly against the primary runner before followup scoring.",
+  "scope": "Two24-case renderings reuse the same12pairs;480 scored reference/arm observations, not480 independent examples. Additional unscored implementation and native restoration controls.",
+  "checkpoint_runner_commit": "41049324bdbc72cf8a0a86183a00c08b24ce8b85",
+  "postrun_reproduction_guards": "Before publication, added strict local receiver-byte verification to the checkpoint command and complete provenance/scoring-metadata checks to artifact validation. Original executed checkpoint script remains pinned above; no measured outputs were changed. Verified correct public model bytes and rejected a deliberately modified config."
 }

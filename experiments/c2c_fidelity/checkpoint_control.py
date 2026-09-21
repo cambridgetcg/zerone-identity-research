@@ -17,6 +17,21 @@ import transformers
 from transformers import AutoModelForCausalLM, AutoTokenizer, DynamicCache
 
 
+def verify_receiver(model_path):
+    manifest_path = Path(__file__).resolve().parents[2]/"evidence/c2c-fidelity-sources.json"
+    assets = json.loads(manifest_path.read_text())["assets"]
+    receiver = next(asset for asset in assets if asset["alias"] == "receiver")
+    if (receiver["repo"] != "Qwen/Qwen3-0.6B"
+            or receiver["revision"] != "c1899de289a04d12100db370d81485cdf75e47ca"):
+        raise ValueError("Manifest does not identify the fixed receiver checkpoint")
+    for item in receiver["files"]:
+        path = model_path/item["path"]
+        with path.open("rb") as stream:
+            observed = hashlib.file_digest(stream, "sha256").hexdigest()
+        if path.stat().st_size != item["bytes"] or observed != item["sha256"]:
+            raise ValueError("Receiver asset differs from pinned bytes: " + item["path"])
+
+
 def copy_cache(cache):
     return DynamicCache.from_legacy_cache(tuple(
         (key.detach().clone(), value.detach().clone())
@@ -40,6 +55,11 @@ def main():
     parser.add_argument("--device", choices=["cpu", "mps"], default="mps")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
+    verify_receiver(args.model)
+    if os.environ.get("PYTORCH_ENABLE_MPS_FALLBACK") == "1":
+        raise ValueError("Disable automatic MPS fallback; backend changes must be explicit")
+    if torch.__version__.split("+")[0] != "2.6.0" or transformers.__version__ != "4.52.4":
+        raise ValueError("Use the pinned inference package versions")
     torch.manual_seed(20260921)
     torch.set_num_threads(6)
     started = time.monotonic()

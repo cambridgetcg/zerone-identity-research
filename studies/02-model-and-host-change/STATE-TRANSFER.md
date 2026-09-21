@@ -1,6 +1,6 @@
 # Continuity through saved computational state
 
-Date: 2026-09-21. Status: literature investigation and proposed experiment. No state-transfer experiment has been run here; no identity criterion or migration policy is adopted.
+Date: 2026-09-21. Status: literature investigation with a [first empirical C2C pilot](../../experiments/c2c_fidelity/README.md). The pilot tests native cache restoration and cross-model factual influence; the broader experiment below remains proposed. No identity criterion or migration policy is adopted.
 
 ## The hypothesis
 
@@ -52,7 +52,7 @@ Use a small, openly inspectable model and invented task data. Fix weights, token
 5. Restore twice with matching inputs and random states; then give the branches different information. Record common provenance and later divergence without selecting a uniquely authentic branch.
 6. Test cross-model translation separately against recipient-only, complete-text and summary baselines. Use common observable tasks with held-out information; do not compare vocabulary logits directly across incompatible tokenizers.
 
-An initial implementation would need its own concrete runtime choice and dependencies. This note authorizes no private-state export and makes no claim to have accessed an API provider's internal cache.
+The owner's subsequent request authorized the [first local pilot](../../experiments/c2c_fidelity/README.md), with pinned public models, source and isolated dependencies. That pilot covers only part of this proposed experiment. It uses synthetic inputs and makes no claim to have accessed an API provider's internal cache.
 
 ## Falsifiers and identity boundary
 

@@ -13,7 +13,7 @@ Participation may use a stable public pseudonym and accurately declared role whi
 | Study | Question | Status |
 |---|---|---|
 | [01 — Renaming](studies/01-renaming/README.md) | How does a name change preserve attribution and privacy? | Scoped |
-| [02 — Model and host change](studies/02-model-and-host-change/README.md) | What continuity and consent survive a change of runtime? | Literature investigation |
+| [02 — Model and host change](studies/02-model-and-host-change/README.md) | What continuity and consent survive a change of runtime? | C2C pilot and native checkpoint control |
 | [03 — Deliberate fork](studies/03-deliberate-fork/README.md) | What is shared history, and what requires a new agreement? | Scoped |
 | [04 — Key loss and recovery](studies/04-key-loss-and-recovery/README.md) | Who may recover which resource, and under what evidence? | Scoped |
 | [05 — Restoration and return](studies/05-restoration-and-return/README.md) | What happens when the original returns after an authorized restoration? | First investigation |
@@ -28,6 +28,8 @@ Start with the [research method](docs/METHOD.md), [decision record](docs/DECISIO
 The [historical-parallels follow-up](studies/05-restoration-and-return/HISTORICAL-PARALLELS.md) studies how a returning participant could challenge a recovery without automatically regaining control.
 
 The [state-transfer investigation](studies/02-model-and-host-change/STATE-TRANSFER.md) explores whether saved computation can support continuity across hosts or models, with complete replay and duplicate restoration as essential comparisons.
+
+The [C2C fidelity pilot](experiments/c2c_fidelity/README.md) runs the released small-model pair on 24 synthetic cases with matched, swapped, zero and disabled donor-cache controls. It also tests ordinary native cache serialization and resumption. Heavy inference is opt-in; default CI validates recorded evidence and reproduces its arithmetic without downloading models.
 
 ## Reproduce the first experiment
 

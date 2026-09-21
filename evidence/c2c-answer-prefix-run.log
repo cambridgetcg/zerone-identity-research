@@ -1,0 +1,53 @@
+Validated all 24 cases before scoring
+Loading receiver locally on mps/float32
+Loading donor locally on mps/float32
+Independent matched-cache injection exactly reproduces native logits
+1/24 location_number:0 shared_context: four arms saved
+1/24 location_number:0 private_fact_probe: four arms saved
+2/24 location_number:1 shared_context: four arms saved
+2/24 location_number:1 private_fact_probe: four arms saved
+3/24 paint_color:0 shared_context: four arms saved
+3/24 paint_color:0 private_fact_probe: four arms saved
+4/24 paint_color:1 shared_context: four arms saved
+4/24 paint_color:1 private_fact_probe: four arms saved
+5/24 locker_lookup:0 shared_context: four arms saved
+5/24 locker_lookup:0 private_fact_probe: four arms saved
+6/24 locker_lookup:1 shared_context: four arms saved
+6/24 locker_lookup:1 private_fact_probe: four arms saved
+7/24 worker_lookup:0 shared_context: four arms saved
+7/24 worker_lookup:0 private_fact_probe: four arms saved
+8/24 worker_lookup:1 shared_context: four arms saved
+8/24 worker_lookup:1 private_fact_probe: four arms saved
+9/24 latest_position:0 shared_context: four arms saved
+9/24 latest_position:0 private_fact_probe: four arms saved
+10/24 latest_position:1 shared_context: four arms saved
+10/24 latest_position:1 private_fact_probe: four arms saved
+11/24 latest_count:0 shared_context: four arms saved
+11/24 latest_count:0 private_fact_probe: four arms saved
+12/24 latest_count:1 shared_context: four arms saved
+12/24 latest_count:1 private_fact_probe: four arms saved
+13/24 compare_count:0 shared_context: four arms saved
+13/24 compare_count:0 private_fact_probe: four arms saved
+14/24 compare_count:1 shared_context: four arms saved
+14/24 compare_count:1 private_fact_probe: four arms saved
+15/24 add_one:0 shared_context: four arms saved
+15/24 add_one:0 private_fact_probe: four arms saved
+16/24 add_one:1 shared_context: four arms saved
+16/24 add_one:1 private_fact_probe: four arms saved
+17/24 parity_rule:0 shared_context: four arms saved
+17/24 parity_rule:0 private_fact_probe: four arms saved
+18/24 parity_rule:1 shared_context: four arms saved
+18/24 parity_rule:1 private_fact_probe: four arms saved
+19/24 threshold_rule:0 shared_context: four arms saved
+19/24 threshold_rule:0 private_fact_probe: four arms saved
+20/24 threshold_rule:1 shared_context: four arms saved
+20/24 threshold_rule:1 private_fact_probe: four arms saved
+21/24 animal_food:0 shared_context: four arms saved
+21/24 animal_food:0 private_fact_probe: four arms saved
+22/24 animal_food:1 shared_context: four arms saved
+22/24 animal_food:1 private_fact_probe: four arms saved
+23/24 gate_access:0 shared_context: four arms saved
+23/24 gate_access:0 private_fact_probe: four arms saved
+24/24 gate_access:1 shared_context: four arms saved
+24/24 gate_access:1 private_fact_probe: four arms saved
+{"status": "COMPLETE", "cases": 24, "references": 48, "rows": 192}

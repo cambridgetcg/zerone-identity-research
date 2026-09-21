@@ -63,18 +63,21 @@ def validate_source(upstream):
 
 def prepare_fixtures(fixture, tokenizer, donor_tokenizer, torch):
     """Fail before scoring if a comparison would change token shape or options."""
+    rendering = fixture["rendering"]
+    assistant_prefix = rendering.get("assistant_prefix", "")
+    option_prefix = rendering.get("option_prefix", "")
+    if not isinstance(assistant_prefix, str) or not isinstance(option_prefix, str):
+        raise ValueError("Rendering prefixes must be strings")
     option_ids = {}
     for option in ("A", "B"):
-        tokens = tokenizer.encode(option, add_special_tokens=False)
+        tokens = tokenizer.encode(option_prefix + option, add_special_tokens=False)
         if len(tokens) != 1:
             raise ValueError(f"Option {option} is not exactly one receiver token")
-        if donor_tokenizer.encode(option, add_special_tokens=False) != tokens:
+        if donor_tokenizer.encode(option_prefix + option, add_special_tokens=False) != tokens:
             raise ValueError(f"Option {option} differs across the model tokenizers")
         option_ids[option] = tokens[0]
     if option_ids["A"] == option_ids["B"]:
         raise ValueError("Options collapse to one token")
-
-    rendering = fixture["rendering"]
 
     def render(pair, value):
         content = rendering["template"].format(
@@ -87,6 +90,7 @@ def prepare_fixtures(fixture, tokenizer, donor_tokenizer, torch):
             [{"role": "user", "content": content}], tokenize=False,
             add_generation_prompt=True, enable_thinking=False,
         )
+        formatted += assistant_prefix
         ids = tokenizer(formatted, return_tensors="pt", add_special_tokens=False)["input_ids"]
         token_list = ids[0].tolist()
         exceptions, special_tokens = [], []
@@ -120,7 +124,7 @@ def prepare_fixtures(fixture, tokenizer, donor_tokenizer, torch):
         for label, current_tokenizer in (("receiver", tokenizer), ("donor", donor_tokenizer)):
             prefix_tokens = current_tokenizer.encode(formatted, add_special_tokens=False)
             for option, option_id in option_ids.items():
-                continued = current_tokenizer.encode(formatted + option, add_special_tokens=False)
+                continued = current_tokenizer.encode(formatted + option_prefix + option, add_special_tokens=False)
                 if continued != prefix_tokens + [option_id]:
                     raise ValueError(f"Option {option} is not one appended token at the {label} boundary")
         return ids, {
@@ -416,7 +420,10 @@ def main():
             "latency_scope": "Includes native prefill, cache copies and instrumentation; not a throughput benchmark",
         },
         "scoring": {
-            "option_ids": option_ids, "forced_choice": "argmax over bare A and B token logits",
+            "option_ids": option_ids, "forced_choice": "argmax over the two configured A/B option-token logits",
+            "assistant_prefix": fixture["rendering"].get("assistant_prefix", ""),
+            "option_prefix": fixture["rendering"].get("option_prefix", ""),
+            "option_text": {option: fixture["rendering"].get("option_prefix", "") + option for option in ("A", "B")},
             "absolute_probabilities": "softmax over full vocabulary; forced probabilities condition on A/B",
             "receiver_template_for_both_models": True, "enable_thinking": False,
             "native_tokenizer_limitations": {

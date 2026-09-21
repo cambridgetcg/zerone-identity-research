@@ -2,7 +2,7 @@
 
 Fixed before follow-up scoring, after observing the primary pilot on 2026-09-21. This is an explicitly exploratory follow-up, not a replacement for the primary result or an independent confirmatory dataset.
 
-The primary donor reference chose the correct forced A/B token on 12/24 cases, began all 24 unrestricted responses with `The`, and assigned only 6.8653% mean probability mass to bare A/B. No pair had both donor answers correct under this probe. These observations make the primary test a weak measure of donor task knowledge.
+The primary donor reference chose the correct forced A/B token on 12/24 cases, predicted `The` as the greedy next token in all 24 cases, and assigned only 6.8653% mean probability mass to bare A/B. Full responses were not generated. No pair had both donor answers correct under this probe. These observations make the primary test a weak measure of donor task knowledge.
 
 Run the same 24 cases and all controls once more, appending `The correct answer is` after the native chat template and scoring the single-token continuations ` A` and ` B`. This format is taken from the pinned upstream `rosetta/utils/evaluate.py` (option encoding around line 578 and assistant prefix around line 621). Retain our N−1/1 split and all other settings; this adopts answer formatting, not the entire upstream evaluator or paper benchmark.
 

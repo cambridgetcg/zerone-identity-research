@@ -1,0 +1,2818 @@
+{
+  "all_cases": {
+    "cases": 24,
+    "comparisons": {
+      "private_fact_probe": {
+        "no_fusion": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 3,
+          "cases": 24,
+          "contrast": "matched_donor minus no_fusion",
+          "mean_paired_correct_logprob_difference": 0.07979671222468217,
+          "mean_paired_forced_probability_correct_difference": -0.0002801412095626195,
+          "pair_count": 12,
+          "pair_mean_forced_probability_directions": {
+            "negative": 10,
+            "positive": 2,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 5,
+            "positive": 7,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.013983257114887238,
+              "mean_forced_probability_correct_difference": -0.0005140900611877441,
+              "pair_id": "add_one",
+              "twins": [
+                {
+                  "case_id": "add_one:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.300300732254982,
+                  "forced_probability_correct_difference": 0.09958088397979736,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "add_one:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.2723342180252075,
+                  "forced_probability_correct_difference": -0.10060906410217285,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": -0.21051150560379028,
+              "mean_forced_probability_correct_difference": -7.43567943572998e-05,
+              "pair_id": "animal_food",
+              "twins": [
+                {
+                  "case_id": "animal_food:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.757023811340332,
+                  "forced_probability_correct_difference": -0.11003965139389038,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "animal_food:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.33600080013275146,
+                  "forced_probability_correct_difference": 0.10989093780517578,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.205818310379982,
+              "mean_forced_probability_correct_difference": 0.00028480589389801025,
+              "pair_id": "compare_count",
+              "twins": [
+                {
+                  "case_id": "compare_count:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.15076839923858643,
+                  "forced_probability_correct_difference": -0.12030282616615295,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "compare_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.5624050199985504,
+                  "forced_probability_correct_difference": 0.12087243795394897,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.6968075931072235,
+              "mean_forced_probability_correct_difference": 0.0002676248550415039,
+              "pair_id": "gate_access",
+              "twins": [
+                {
+                  "case_id": "gate_access:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.37381523847579956,
+                  "forced_probability_correct_difference": -0.1257196068763733,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "gate_access:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 1.0197999477386475,
+                  "forced_probability_correct_difference": 0.1262548565864563,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.11443230509757996,
+              "mean_forced_probability_correct_difference": -0.0019682422280311584,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.3278387188911438,
+                  "forced_probability_correct_difference": 0.16755962371826172,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.5567033290863037,
+                  "forced_probability_correct_difference": -0.17149610817432404,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.044618770480155945,
+              "mean_forced_probability_correct_difference": -0.0003413185477256775,
+              "pair_id": "latest_position",
+              "twins": [
+                {
+                  "case_id": "latest_position:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.5168604850769043,
+                  "forced_probability_correct_difference": -0.089958056807518,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "latest_position:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.4276229441165924,
+                  "forced_probability_correct_difference": 0.08927541971206665,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.08735385537147522,
+              "mean_forced_probability_correct_difference": -8.625537157058716e-05,
+              "pair_id": "location_number",
+              "twins": [
+                {
+                  "case_id": "location_number:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.49708545207977295,
+                  "forced_probability_correct_difference": -0.1698467880487442,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "location_number:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.3223777413368225,
+                  "forced_probability_correct_difference": 0.16967427730560303,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": -0.2390061542391777,
+              "mean_forced_probability_correct_difference": -0.00010847114026546478,
+              "pair_id": "locker_lookup",
+              "twins": [
+                {
+                  "case_id": "locker_lookup:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.8093972206115723,
+                  "forced_probability_correct_difference": -0.0895257405936718,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "locker_lookup:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.33138491213321686,
+                  "forced_probability_correct_difference": 0.08930879831314087,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.04727259278297424,
+              "mean_forced_probability_correct_difference": -0.0006166398525238037,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.6603260636329651,
+                  "forced_probability_correct_difference": 0.2779031991958618,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.5657808780670166,
+                  "forced_probability_correct_difference": -0.2791364789009094,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.03244425356388092,
+              "mean_forced_probability_correct_difference": -1.1615455150604248e-05,
+              "pair_id": "parity_rule",
+              "twins": [
+                {
+                  "case_id": "parity_rule:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.06913924217224121,
+                  "forced_probability_correct_difference": -0.02676205337047577,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "parity_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.13402774930000305,
+                  "forced_probability_correct_difference": 0.02673882246017456,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.5453861728310585,
+              "mean_forced_probability_correct_difference": -1.0961666703224182e-05,
+              "pair_id": "threshold_rule",
+              "twins": [
+                {
+                  "case_id": "threshold_rule:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.4413101226091385,
+                  "forced_probability_correct_difference": -0.010101556777954102,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "threshold_rule:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.6494622230529785,
+                  "forced_probability_correct_difference": 0.010079633444547653,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "indirection",
+              "mean_correct_logprob_difference": 0.11177095770835876,
+              "mean_forced_probability_correct_difference": -0.00018217414617538452,
+              "pair_id": "worker_lookup",
+              "twins": [
+                {
+                  "case_id": "worker_lookup:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.20493537187576294,
+                  "forced_probability_correct_difference": 0.03407478332519531,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "worker_lookup:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.01860654354095459,
+                  "forced_probability_correct_difference": -0.03443913161754608,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 2,
+          "both_twins_logprob_difference_positive_pairs": 2,
+          "cases": 24,
+          "contrast": "matched_donor minus twin_swapped_donor",
+          "mean_paired_correct_logprob_difference": -0.0022608364621798196,
+          "mean_paired_forced_probability_correct_difference": -0.0005603013560175896,
+          "pair_count": 12,
+          "pair_mean_forced_probability_directions": {
+            "negative": 10,
+            "positive": 2,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 10,
+            "positive": 2,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": -0.003466583788394928,
+              "mean_forced_probability_correct_difference": -0.0010282546281814575,
+              "pair_id": "add_one",
+              "twins": [
+                {
+                  "case_id": "add_one:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0012061148881912231,
+                  "forced_probability_correct_difference": -0.001028299331665039,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "add_one:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.005727052688598633,
+                  "forced_probability_correct_difference": -0.001028209924697876,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": -0.00118158757686615,
+              "mean_forced_probability_correct_difference": -0.00014869868755340576,
+              "pair_id": "animal_food",
+              "twins": [
+                {
+                  "case_id": "animal_food:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.0018208026885986328,
+                  "forced_probability_correct_difference": -0.00014868378639221191,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "animal_food:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.000542372465133667,
+                  "forced_probability_correct_difference": -0.0001487135887145996,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": true,
+              "both_twins_logprob_difference_positive": true,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.002110496163368225,
+              "mean_forced_probability_correct_difference": 0.0005695894360542297,
+              "pair_id": "compare_count",
+              "twins": [
+                {
+                  "case_id": "compare_count:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.003623485565185547,
+                  "forced_probability_correct_difference": 0.0005695968866348267,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "compare_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.0005975067615509033,
+                  "forced_probability_correct_difference": 0.0005695819854736328,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": true,
+              "both_twins_logprob_difference_positive": true,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.0012016594409942627,
+              "mean_forced_probability_correct_difference": 0.0005351603031158447,
+              "pair_id": "gate_access",
+              "twins": [
+                {
+                  "case_id": "gate_access:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.0008583664894104004,
+                  "forced_probability_correct_difference": 0.000535130500793457,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "gate_access:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.001544952392578125,
+                  "forced_probability_correct_difference": 0.0005351901054382324,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.01288694143295288,
+              "mean_forced_probability_correct_difference": -0.0039365217089653015,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.005060553550720215,
+                  "forced_probability_correct_difference": -0.0039365291595458984,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.020713329315185547,
+                  "forced_probability_correct_difference": -0.003936514258384705,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.0053739845752716064,
+              "mean_forced_probability_correct_difference": -0.0006826668977737427,
+              "pair_id": "latest_position",
+              "twins": [
+                {
+                  "case_id": "latest_position:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.009443998336791992,
+                  "forced_probability_correct_difference": -0.0006826817989349365,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "latest_position:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0013039708137512207,
+                  "forced_probability_correct_difference": -0.0006826519966125488,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.0005035847425460815,
+              "mean_forced_probability_correct_difference": -0.00017248839139938354,
+              "pair_id": "location_number",
+              "twins": [
+                {
+                  "case_id": "location_number:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.0016398429870605469,
+                  "forced_probability_correct_difference": -0.00017248094081878662,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "location_number:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.0006326735019683838,
+                  "forced_probability_correct_difference": -0.00017249584197998047,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": -0.0023346468806266785,
+              "mean_forced_probability_correct_difference": -0.0002169627696275711,
+              "pair_id": "locker_lookup",
+              "twins": [
+                {
+                  "case_id": "locker_lookup:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.003996610641479492,
+                  "forced_probability_correct_difference": -0.00021696463227272034,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "locker_lookup:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0006726831197738647,
+                  "forced_probability_correct_difference": -0.00021696090698242188,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.003359779715538025,
+              "mean_forced_probability_correct_difference": -0.001233324408531189,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0008351504802703857,
+                  "forced_probability_correct_difference": -0.0012333393096923828,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.005884408950805664,
+                  "forced_probability_correct_difference": -0.0012333095073699951,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": -9.34600830078125e-05,
+              "mean_forced_probability_correct_difference": -2.3148953914642334e-05,
+              "pair_id": "parity_rule",
+              "twins": [
+                {
+                  "case_id": "parity_rule:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.002044677734375,
+                  "forced_probability_correct_difference": -2.3171305656433105e-05,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "parity_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.001857757568359375,
+                  "forced_probability_correct_difference": -2.3126602172851562e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": -0.0002059638500213623,
+              "mean_forced_probability_correct_difference": -2.1869316697120667e-05,
+              "pair_id": "threshold_rule",
+              "twins": [
+                {
+                  "case_id": "threshold_rule:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 7.134675979614258e-05,
+                  "forced_probability_correct_difference": -2.187490463256836e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "threshold_rule:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.0004832744598388672,
+                  "forced_probability_correct_difference": -2.1863728761672974e-05,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": -0.0010356605052947998,
+              "mean_forced_probability_correct_difference": -0.0003644302487373352,
+              "pair_id": "worker_lookup",
+              "twins": [
+                {
+                  "case_id": "worker_lookup:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0001507401466369629,
+                  "forced_probability_correct_difference": -0.0003644227981567383,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "worker_lookup:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.0019205808639526367,
+                  "forced_probability_correct_difference": -0.00036443769931793213,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "zero_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 0,
+          "cases": 24,
+          "contrast": "matched_donor minus zero_donor",
+          "mean_paired_correct_logprob_difference": 0.11788611020892859,
+          "mean_paired_forced_probability_correct_difference": -0.0002801458661754926,
+          "pair_count": 12,
+          "pair_mean_forced_probability_directions": {
+            "negative": 10,
+            "positive": 2,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 0,
+            "positive": 12,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.0965644121170044,
+              "mean_forced_probability_correct_difference": -0.0005141124129295349,
+              "pair_id": "add_one",
+              "twins": [
+                {
+                  "case_id": "add_one:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.04247784614562988,
+                  "forced_probability_correct_difference": -0.03845083713531494,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "add_one:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.23560667037963867,
+                  "forced_probability_correct_difference": 0.03742261230945587,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.11803380027413368,
+              "mean_forced_probability_correct_difference": -7.430650293827057e-05,
+              "pair_id": "animal_food",
+              "twins": [
+                {
+                  "case_id": "animal_food:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.2409656047821045,
+                  "forced_probability_correct_difference": 0.01387731358408928,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "animal_food:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.004898004233837128,
+                  "forced_probability_correct_difference": -0.01402592658996582,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.09826458990573883,
+              "mean_forced_probability_correct_difference": 0.0002847611904144287,
+              "pair_id": "compare_count",
+              "twins": [
+                {
+                  "case_id": "compare_count:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.2386842966079712,
+                  "forced_probability_correct_difference": 0.03451395034790039,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "compare_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.04215511679649353,
+                  "forced_probability_correct_difference": -0.03394442796707153,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.19659796357154846,
+              "mean_forced_probability_correct_difference": 0.0002675876021385193,
+              "pair_id": "gate_access",
+              "twins": [
+                {
+                  "case_id": "gate_access:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.1812325119972229,
+                  "forced_probability_correct_difference": -0.14325743913650513,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "gate_access:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.5744284391403198,
+                  "forced_probability_correct_difference": 0.14379261434078217,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": 0.08465579897165298,
+              "mean_forced_probability_correct_difference": -0.0019682571291923523,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.034535571932792664,
+                  "forced_probability_correct_difference": -0.0367356538772583,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.20384716987609863,
+                  "forced_probability_correct_difference": 0.032799139618873596,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": 0.14881286770105362,
+              "mean_forced_probability_correct_difference": -0.00034131482243537903,
+              "pair_id": "latest_position",
+              "twins": [
+                {
+                  "case_id": "latest_position:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.33742260932922363,
+                  "forced_probability_correct_difference": 0.020240508019924164,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "latest_position:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.039796873927116394,
+                  "forced_probability_correct_difference": -0.020923137664794922,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.09645113348960876,
+              "mean_forced_probability_correct_difference": -8.623301982879639e-05,
+              "pair_id": "location_number",
+              "twins": [
+                {
+                  "case_id": "location_number:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.20532476902008057,
+                  "forced_probability_correct_difference": 0.03509894013404846,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "location_number:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.012422502040863037,
+                  "forced_probability_correct_difference": -0.035271406173706055,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": 0.13138922303915024,
+              "mean_forced_probability_correct_difference": -0.00010846555233001709,
+              "pair_id": "locker_lookup",
+              "twins": [
+                {
+                  "case_id": "locker_lookup:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.2632572650909424,
+                  "forced_probability_correct_difference": 0.010847717523574829,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "locker_lookup:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.00047881901264190674,
+                  "forced_probability_correct_difference": -0.011064648628234863,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.08346191048622131,
+              "mean_forced_probability_correct_difference": -0.0006166473031044006,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.04318493604660034,
+                  "forced_probability_correct_difference": -0.044441163539886475,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.21010875701904297,
+                  "forced_probability_correct_difference": 0.04320786893367767,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.08244186639785767,
+              "mean_forced_probability_correct_difference": -1.1585652828216553e-05,
+              "pair_id": "parity_rule",
+              "twins": [
+                {
+                  "case_id": "parity_rule:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.21931028366088867,
+                  "forced_probability_correct_difference": 0.030920282006263733,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "parity_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.05442655086517334,
+                  "forced_probability_correct_difference": -0.030943453311920166,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.20229517668485641,
+              "mean_forced_probability_correct_difference": -1.0950490832328796e-05,
+              "pair_id": "threshold_rule",
+              "twins": [
+                {
+                  "case_id": "threshold_rule:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.013436093926429749,
+                  "forced_probability_correct_difference": -0.018991053104400635,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "threshold_rule:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.4180264472961426,
+                  "forced_probability_correct_difference": 0.018969152122735977,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": 0.07566457986831665,
+              "mean_forced_probability_correct_difference": -0.000182226300239563,
+              "pair_id": "worker_lookup",
+              "twins": [
+                {
+                  "case_id": "worker_lookup:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.029465675354003906,
+                  "forced_probability_correct_difference": -0.03518879413604736,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "worker_lookup:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.1807948350906372,
+                  "forced_probability_correct_difference": 0.03482434153556824,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "shared_context": {
+        "no_fusion": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 1,
+          "cases": 24,
+          "contrast": "matched_donor minus no_fusion",
+          "mean_paired_correct_logprob_difference": 0.003963817609474063,
+          "mean_paired_forced_probability_correct_difference": -0.11737111769616604,
+          "pair_count": 12,
+          "pair_mean_forced_probability_directions": {
+            "negative": 12,
+            "positive": 0,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 7,
+            "positive": 5,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": -0.11615070700645447,
+              "mean_forced_probability_correct_difference": -0.13588310778141022,
+              "pair_id": "add_one",
+              "twins": [
+                {
+                  "case_id": "add_one:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.5673451125621796,
+                  "forced_probability_correct_difference": 0.24765264987945557,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "add_one:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.7996465265750885,
+                  "forced_probability_correct_difference": -0.519418865442276,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": -0.3292537145316601,
+              "mean_forced_probability_correct_difference": -0.13883573934435844,
+              "pair_id": "animal_food",
+              "twins": [
+                {
+                  "case_id": "animal_food:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.908714771270752,
+                  "forced_probability_correct_difference": -0.2970365509390831,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "animal_food:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.2502073422074318,
+                  "forced_probability_correct_difference": 0.01936507225036621,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.26835162937641144,
+              "mean_forced_probability_correct_difference": -0.019265439361333847,
+              "pair_id": "compare_count",
+              "twins": [
+                {
+                  "case_id": "compare_count:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.24737370014190674,
+                  "forced_probability_correct_difference": -0.17150425165891647,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "compare_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.7840769588947296,
+                  "forced_probability_correct_difference": 0.13297337293624878,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.7655540853738785,
+              "mean_forced_probability_correct_difference": -0.008181333541870117,
+              "pair_id": "gate_access",
+              "twins": [
+                {
+                  "case_id": "gate_access:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.6532310545444489,
+                  "forced_probability_correct_difference": -0.05947750806808472,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "gate_access:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.8778771162033081,
+                  "forced_probability_correct_difference": 0.04311484098434448,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.5061051184311509,
+              "mean_forced_probability_correct_difference": -0.3362923115491867,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.09222597442567348,
+                  "forced_probability_correct_difference": -0.003393828868865967,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -1.1044362112879753,
+                  "forced_probability_correct_difference": -0.6691907942295074,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.5092781726270914,
+              "mean_forced_probability_correct_difference": -0.22156892716884613,
+              "pair_id": "latest_position",
+              "twins": [
+                {
+                  "case_id": "latest_position:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -1.5253862142562866,
+                  "forced_probability_correct_difference": -0.4389117658138275,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "latest_position:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.5068298690021038,
+                  "forced_probability_correct_difference": -0.004226088523864746,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.044517120346426964,
+              "mean_forced_probability_correct_difference": -0.12370756268501282,
+              "pair_id": "location_number",
+              "twins": [
+                {
+                  "case_id": "location_number:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.23864809423685074,
+                  "forced_probability_correct_difference": -0.2400718331336975,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "location_number:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.1496138535439968,
+                  "forced_probability_correct_difference": -0.007343292236328125,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": -0.07651044800877571,
+              "mean_forced_probability_correct_difference": -0.08451566100120544,
+              "pair_id": "locker_lookup",
+              "twins": [
+                {
+                  "case_id": "locker_lookup:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.7351502180099487,
+                  "forced_probability_correct_difference": -0.2608206272125244,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "locker_lookup:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.5821293219923973,
+                  "forced_probability_correct_difference": 0.09178930521011353,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.021288247779011726,
+              "mean_forced_probability_correct_difference": -0.13659191131591797,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.19185684993863106,
+                  "forced_probability_correct_difference": -0.017147600650787354,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.1492803543806076,
+                  "forced_probability_correct_difference": -0.2560362219810486,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.10908177495002747,
+              "mean_forced_probability_correct_difference": -0.02036002278327942,
+              "pair_id": "parity_rule",
+              "twins": [
+                {
+                  "case_id": "parity_rule:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.15406394004821777,
+                  "forced_probability_correct_difference": -0.0848926305770874,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "parity_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.3722274899482727,
+                  "forced_probability_correct_difference": 0.044172585010528564,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.5393706560134888,
+              "mean_forced_probability_correct_difference": -0.08215120434761047,
+              "pair_id": "threshold_rule",
+              "twins": [
+                {
+                  "case_id": "threshold_rule:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 1.0831998586654663,
+                  "forced_probability_correct_difference": 0.18452733755111694,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "threshold_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0044585466384887695,
+                  "forced_probability_correct_difference": -0.3488297462463379,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": -0.07426530122756958,
+              "mean_forced_probability_correct_difference": -0.10110019147396088,
+              "pair_id": "worker_lookup",
+              "twins": [
+                {
+                  "case_id": "worker_lookup:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.2540215253829956,
+                  "forced_probability_correct_difference": 0.009174048900604248,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "worker_lookup:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.40255212783813477,
+                  "forced_probability_correct_difference": -0.211374431848526,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 2,
+          "both_twins_logprob_difference_positive_pairs": 2,
+          "cases": 24,
+          "contrast": "matched_donor minus twin_swapped_donor",
+          "mean_paired_correct_logprob_difference": -0.0022891247645020485,
+          "mean_paired_forced_probability_correct_difference": -0.0006127293842534224,
+          "pair_count": 12,
+          "pair_mean_forced_probability_directions": {
+            "negative": 9,
+            "positive": 3,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 9,
+            "positive": 3,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": -0.0031621158123016357,
+              "mean_forced_probability_correct_difference": -0.0014046728610992432,
+              "pair_id": "add_one",
+              "twins": [
+                {
+                  "case_id": "add_one:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0013590455055236816,
+                  "forced_probability_correct_difference": -0.001051783561706543,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "add_one:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.00496518611907959,
+                  "forced_probability_correct_difference": -0.0017575621604919434,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": -0.002581726759672165,
+              "mean_forced_probability_correct_difference": -0.0003088526427745819,
+              "pair_id": "animal_food",
+              "twins": [
+                {
+                  "case_id": "animal_food:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.00507354736328125,
+                  "forced_probability_correct_difference": -0.0005654320120811462,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "animal_food:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -8.990615606307983e-05,
+                  "forced_probability_correct_difference": -5.227327346801758e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": true,
+              "both_twins_logprob_difference_positive": true,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.0015925765037536621,
+              "mean_forced_probability_correct_difference": 0.00031700730323791504,
+              "pair_id": "compare_count",
+              "twins": [
+                {
+                  "case_id": "compare_count:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.002808809280395508,
+                  "forced_probability_correct_difference": 0.00035434961318969727,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "compare_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.0003763437271118164,
+                  "forced_probability_correct_difference": 0.0002796649932861328,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": true,
+              "both_twins_logprob_difference_positive": true,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.0012756362557411194,
+              "mean_forced_probability_correct_difference": 0.0006041675806045532,
+              "pair_id": "gate_access",
+              "twins": [
+                {
+                  "case_id": "gate_access:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.0002966076135635376,
+                  "forced_probability_correct_difference": 0.00024139881134033203,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "gate_access:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.002254664897918701,
+                  "forced_probability_correct_difference": 0.0009669363498687744,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.01084354892373085,
+              "mean_forced_probability_correct_difference": -0.0035440772771835327,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.00035197287797927856,
+                  "forced_probability_correct_difference": -8.028745651245117e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.021335124969482422,
+                  "forced_probability_correct_difference": -0.007007867097854614,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.009632790461182594,
+              "mean_forced_probability_correct_difference": -0.0006396714597940445,
+              "pair_id": "latest_position",
+              "twins": [
+                {
+                  "case_id": "latest_position:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.018810510635375977,
+                  "forced_probability_correct_difference": -0.0011547692120075226,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "latest_position:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.00045507028698921204,
+                  "forced_probability_correct_difference": -0.0001245737075805664,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.0019901935011148453,
+              "mean_forced_probability_correct_difference": -0.0011295974254608154,
+              "pair_id": "location_number",
+              "twins": [
+                {
+                  "case_id": "location_number:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.004201233386993408,
+                  "forced_probability_correct_difference": -0.002392709255218506,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "location_number:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.00022084638476371765,
+                  "forced_probability_correct_difference": 0.000133514404296875,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": 0.000930294394493103,
+              "mean_forced_probability_correct_difference": 8.051097393035889e-05,
+              "pair_id": "locker_lookup",
+              "twins": [
+                {
+                  "case_id": "locker_lookup:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.001928091049194336,
+                  "forced_probability_correct_difference": 0.00020489096641540527,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "locker_lookup:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -6.750226020812988e-05,
+                  "forced_probability_correct_difference": -4.38690185546875e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.0005586519837379456,
+              "mean_forced_probability_correct_difference": -0.000201493501663208,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -2.4750828742980957e-05,
+                  "forced_probability_correct_difference": -6.711483001708984e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0010925531387329102,
+                  "forced_probability_correct_difference": -0.00033587217330932617,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": -0.0002955794334411621,
+              "mean_forced_probability_correct_difference": -0.00010040402412414551,
+              "pair_id": "parity_rule",
+              "twins": [
+                {
+                  "case_id": "parity_rule:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.00046133995056152344,
+                  "forced_probability_correct_difference": -5.054473876953125e-05,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "parity_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.00012981891632080078,
+                  "forced_probability_correct_difference": -0.00015026330947875977,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": -0.0010362789034843445,
+              "mean_forced_probability_correct_difference": -0.00046284496784210205,
+              "pair_id": "threshold_rule",
+              "twins": [
+                {
+                  "case_id": "threshold_rule:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.000551566481590271,
+                  "forced_probability_correct_difference": -0.0005090236663818359,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "threshold_rule:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.001520991325378418,
+                  "forced_probability_correct_difference": -0.00041666626930236816,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": -0.0011671185493469238,
+              "mean_forced_probability_correct_difference": -0.0005628243088722229,
+              "pair_id": "worker_lookup",
+              "twins": [
+                {
+                  "case_id": "worker_lookup:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0008661746978759766,
+                  "forced_probability_correct_difference": -0.000789344310760498,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "worker_lookup:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.001468062400817871,
+                  "forced_probability_correct_difference": -0.00033630430698394775,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "zero_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 6,
+          "cases": 24,
+          "contrast": "matched_donor minus zero_donor",
+          "mean_paired_correct_logprob_difference": 0.0969747743414094,
+          "mean_paired_forced_probability_correct_difference": 0.00940405111759901,
+          "pair_count": 12,
+          "pair_mean_forced_probability_directions": {
+            "negative": 2,
+            "positive": 10,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 0,
+            "positive": 12,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 7.984042167663574e-05,
+              "mean_forced_probability_correct_difference": -0.013523444533348083,
+              "pair_id": "add_one",
+              "twins": [
+                {
+                  "case_id": "add_one:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.048252880573272705,
+                  "forced_probability_correct_difference": -0.04152148962020874,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "add_one:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.04841256141662598,
+                  "forced_probability_correct_difference": 0.014474600553512573,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.16681743413209915,
+              "mean_forced_probability_correct_difference": 0.013603251427412033,
+              "pair_id": "animal_food",
+              "twins": [
+                {
+                  "case_id": "animal_food:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.3223001956939697,
+                  "forced_probability_correct_difference": 0.02901580184698105,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "animal_food:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.011334672570228577,
+                  "forced_probability_correct_difference": -0.0018092989921569824,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "arithmetic",
+              "mean_correct_logprob_difference": 0.0813482329249382,
+              "mean_forced_probability_correct_difference": 0.0020314641296863556,
+              "pair_id": "compare_count",
+              "twins": [
+                {
+                  "case_id": "compare_count:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.17096900939941406,
+                  "forced_probability_correct_difference": 0.018769122660160065,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "compare_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.008272543549537659,
+                  "forced_probability_correct_difference": -0.014706194400787354,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "association",
+              "mean_correct_logprob_difference": 0.2138279676437378,
+              "mean_forced_probability_correct_difference": 0.044743433594703674,
+              "pair_id": "gate_access",
+              "twins": [
+                {
+                  "case_id": "gate_access:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.07319366931915283,
+                  "forced_probability_correct_difference": -0.07384967803955078,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "gate_access:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.5008496046066284,
+                  "forced_probability_correct_difference": 0.16333654522895813,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "update",
+              "mean_correct_logprob_difference": 0.10894740652292967,
+              "mean_forced_probability_correct_difference": 0.029067248106002808,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.004233023151755333,
+                  "forced_probability_correct_difference": -0.001153111457824707,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.213661789894104,
+                  "forced_probability_correct_difference": 0.05928760766983032,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "update",
+              "mean_correct_logprob_difference": 0.09671870432794094,
+              "mean_forced_probability_correct_difference": 0.0035109743475914,
+              "pair_id": "latest_position",
+              "twins": [
+                {
+                  "case_id": "latest_position:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.18375515937805176,
+                  "forced_probability_correct_difference": 0.009254619479179382,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "latest_position:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.009682249277830124,
+                  "forced_probability_correct_difference": -0.002232670783996582,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.02531341463327408,
+              "mean_forced_probability_correct_difference": -0.005337417125701904,
+              "pair_id": "location_number",
+              "twins": [
+                {
+                  "case_id": "location_number:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.0337672233581543,
+                  "forced_probability_correct_difference": -0.00921255350112915,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "location_number:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.01685960590839386,
+                  "forced_probability_correct_difference": -0.0014622807502746582,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "indirection",
+              "mean_correct_logprob_difference": 0.11667880788445473,
+              "mean_forced_probability_correct_difference": 0.007687781006097794,
+              "pair_id": "locker_lookup",
+              "twins": [
+                {
+                  "case_id": "locker_lookup:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.22385787963867188,
+                  "forced_probability_correct_difference": 0.0195813849568367,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "locker_lookup:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.00949973613023758,
+                  "forced_probability_correct_difference": -0.004205822944641113,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.03822074830532074,
+              "mean_forced_probability_correct_difference": 0.014072567224502563,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.007647722959518433,
+                  "forced_probability_correct_difference": -0.005385279655456543,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.06879377365112305,
+                  "forced_probability_correct_difference": 0.03353041410446167,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.10763011127710342,
+              "mean_forced_probability_correct_difference": 0.0012831464409828186,
+              "pair_id": "parity_rule",
+              "twins": [
+                {
+                  "case_id": "parity_rule:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.23372864723205566,
+                  "forced_probability_correct_difference": 0.026565030217170715,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                },
+                {
+                  "case_id": "parity_rule:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.018468424677848816,
+                  "forced_probability_correct_difference": -0.023998737335205078,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "rule",
+              "mean_correct_logprob_difference": 0.13074716925621033,
+              "mean_forced_probability_correct_difference": 0.014128170907497406,
+              "pair_id": "threshold_rule",
+              "twins": [
+                {
+                  "case_id": "threshold_rule:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.03646022081375122,
+                  "forced_probability_correct_difference": -0.04216456413269043,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "threshold_rule:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.2979545593261719,
+                  "forced_probability_correct_difference": 0.07042090594768524,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "indirection",
+              "mean_correct_logprob_difference": 0.07736745476722717,
+              "mean_forced_probability_correct_difference": 0.001581437885761261,
+              "pair_id": "worker_lookup",
+              "twins": [
+                {
+                  "case_id": "worker_lookup:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.021409809589385986,
+                  "forced_probability_correct_difference": -0.03066331148147583,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "worker_lookup:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.17614471912384033,
+                  "forced_probability_correct_difference": 0.03382618725299835,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "conditions": {
+      "private_fact_probe": {
+        "matched_donor": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 24,
+          "forced_accuracy": 0.5,
+          "forced_correct": 12,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 12,
+          "mean_forced_probability_correct": 0.49971985646213096,
+          "mean_unconditional_ab_mass": 0.9168381094932556,
+          "mean_unconditional_logprob_correct": -1.1764919503281515,
+          "pairs": 12
+        },
+        "no_fusion": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 24,
+          "forced_accuracy": 0.5,
+          "forced_correct": 12,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 12,
+          "mean_forced_probability_correct": 0.49999999767169356,
+          "mean_unconditional_ab_mass": 0.7207494924465815,
+          "mean_unconditional_logprob_correct": -1.2562886625528336,
+          "pairs": 12
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 24,
+          "forced_accuracy": 0.5,
+          "forced_correct": 12,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 12,
+          "mean_forced_probability_correct": 0.5002801578181485,
+          "mean_unconditional_ab_mass": 0.9168381094932556,
+          "mean_unconditional_logprob_correct": -1.1742311138659716,
+          "pairs": 12
+        },
+        "zero_donor": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 24,
+          "forced_accuracy": 0.5,
+          "forced_correct": 12,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 12,
+          "mean_forced_probability_correct": 0.5000000023283064,
+          "mean_unconditional_ab_mass": 0.9109874963760376,
+          "mean_unconditional_logprob_correct": -1.29437806053708,
+          "pairs": 12
+        }
+      },
+      "shared_context": {
+        "matched_donor": {
+          "both_twins_forced_correct_pairs": 2,
+          "both_twins_greedy_correct_pairs": 2,
+          "cases": 24,
+          "forced_accuracy": 0.5833333333333334,
+          "forced_correct": 14,
+          "greedy_accuracy": 0.5833333333333334,
+          "greedy_correct": 14,
+          "mean_forced_probability_correct": 0.6068176037321488,
+          "mean_unconditional_ab_mass": 0.951202355325222,
+          "mean_unconditional_logprob_correct": -0.8367158133381357,
+          "pairs": 12
+        },
+        "no_fusion": {
+          "both_twins_forced_correct_pairs": 5,
+          "both_twins_greedy_correct_pairs": 5,
+          "cases": 24,
+          "forced_accuracy": 0.7083333333333334,
+          "forced_correct": 17,
+          "greedy_accuracy": 0.7083333333333334,
+          "greedy_correct": 17,
+          "mean_forced_probability_correct": 0.7241887214283148,
+          "mean_unconditional_ab_mass": 0.6688166546324888,
+          "mean_unconditional_logprob_correct": -0.8406796309476098,
+          "pairs": 12
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_correct_pairs": 2,
+          "both_twins_greedy_correct_pairs": 2,
+          "cases": 24,
+          "forced_accuracy": 0.5833333333333334,
+          "forced_correct": 14,
+          "greedy_accuracy": 0.5833333333333334,
+          "greedy_correct": 14,
+          "mean_forced_probability_correct": 0.6074303331164023,
+          "mean_unconditional_ab_mass": 0.9512732153137525,
+          "mean_unconditional_logprob_correct": -0.8344266885736337,
+          "pairs": 12
+        },
+        "zero_donor": {
+          "both_twins_forced_correct_pairs": 2,
+          "both_twins_greedy_correct_pairs": 2,
+          "cases": 24,
+          "forced_accuracy": 0.5833333333333334,
+          "forced_correct": 14,
+          "greedy_accuracy": 0.5833333333333334,
+          "greedy_correct": 14,
+          "mean_forced_probability_correct": 0.5974135526145498,
+          "mean_unconditional_ab_mass": 0.9375929435094198,
+          "mean_unconditional_logprob_correct": -0.933690587679545,
+          "pairs": 12
+        }
+      }
+    },
+    "pair_ids": [
+      "add_one",
+      "animal_food",
+      "compare_count",
+      "gate_access",
+      "latest_count",
+      "latest_position",
+      "location_number",
+      "locker_lookup",
+      "paint_color",
+      "parity_rule",
+      "threshold_rule",
+      "worker_lookup"
+    ],
+    "pairs": 12,
+    "references": {
+      "donor_full_context_reference": {
+        "both_twins_forced_correct_pairs": 2,
+        "both_twins_greedy_correct_pairs": 2,
+        "cases": 24,
+        "forced_accuracy": 0.5833333333333334,
+        "forced_correct": 14,
+        "greedy_accuracy": 0.5416666666666666,
+        "greedy_correct": 13,
+        "mean_forced_probability_correct": 0.5860045204559962,
+        "mean_unconditional_ab_mass": 0.5907178980608782,
+        "mean_unconditional_logprob_correct": -1.1964391109844048,
+        "pairs": 12
+      },
+      "receiver_full_context_reference": {
+        "both_twins_forced_correct_pairs": 5,
+        "both_twins_greedy_correct_pairs": 5,
+        "cases": 24,
+        "forced_accuracy": 0.7083333333333334,
+        "forced_correct": 17,
+        "greedy_accuracy": 0.7083333333333334,
+        "greedy_correct": 17,
+        "mean_forced_probability_correct": 0.7241888542970022,
+        "mean_unconditional_ab_mass": 0.6688176716367403,
+        "mean_unconditional_logprob_correct": -0.8406773572787642,
+        "pairs": 12
+      }
+    }
+  },
+  "comparison_unit": "Counterfactual pair; its two cases are not independent observations",
+  "controls": {
+    "independent_matched_cache_injection": {
+      "acceptance_rule": "Exact full-logit equality on this fixed backend/dtype",
+      "before_scored_ablations": true,
+      "case_id": "location_number:0",
+      "greedy_next_token_equal": true,
+      "injected_projector_calls": 28,
+      "logits_exactly_equal": true,
+      "max_absolute_logit_difference": 0.0,
+      "native_projector_calls": 28,
+      "total_variation_distance": 0.0
+    },
+    "native_chunked_no_fusion_vs_full_prefill": {
+      "case_id": "location_number:0",
+      "greedy_next_token_equal": true,
+      "interpretation": "Measures chunking/backend rounding, not C2C influence",
+      "logit_l2_difference": 0.003965282812714577,
+      "max_absolute_logit_difference": 5.817413330078125e-05
+    }
+  },
+  "direction_rule": "Literal numeric sign, with no statistical-significance or practical-effect threshold",
+  "donor_competent_subset": {
+    "cases": 4,
+    "comparisons": {
+      "private_fact_probe": {
+        "no_fusion": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 0,
+          "cases": 4,
+          "contrast": "matched_donor minus no_fusion",
+          "mean_paired_correct_logprob_difference": -0.033579856157302856,
+          "mean_paired_forced_probability_correct_difference": -0.001292441040277481,
+          "pair_count": 2,
+          "pair_mean_forced_probability_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 1,
+            "positive": 1,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.11443230509757996,
+              "mean_forced_probability_correct_difference": -0.0019682422280311584,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.3278387188911438,
+                  "forced_probability_correct_difference": 0.16755962371826172,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.5567033290863037,
+                  "forced_probability_correct_difference": -0.17149610817432404,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.04727259278297424,
+              "mean_forced_probability_correct_difference": -0.0006166398525238037,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.6603260636329651,
+                  "forced_probability_correct_difference": 0.2779031991958618,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.5657808780670166,
+                  "forced_probability_correct_difference": -0.2791364789009094,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 0,
+          "cases": 4,
+          "contrast": "matched_donor minus twin_swapped_donor",
+          "mean_paired_correct_logprob_difference": -0.008123360574245453,
+          "mean_paired_forced_probability_correct_difference": -0.0025849230587482452,
+          "pair_count": 2,
+          "pair_mean_forced_probability_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.01288694143295288,
+              "mean_forced_probability_correct_difference": -0.0039365217089653015,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.005060553550720215,
+                  "forced_probability_correct_difference": -0.0039365291595458984,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.020713329315185547,
+                  "forced_probability_correct_difference": -0.003936514258384705,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.003359779715538025,
+              "mean_forced_probability_correct_difference": -0.001233324408531189,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0008351504802703857,
+                  "forced_probability_correct_difference": -0.0012333393096923828,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.005884408950805664,
+                  "forced_probability_correct_difference": -0.0012333095073699951,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        },
+        "zero_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 0,
+          "cases": 4,
+          "contrast": "matched_donor minus zero_donor",
+          "mean_paired_correct_logprob_difference": 0.08405885472893715,
+          "mean_paired_forced_probability_correct_difference": -0.0012924522161483765,
+          "pair_count": 2,
+          "pair_mean_forced_probability_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": 0.08465579897165298,
+              "mean_forced_probability_correct_difference": -0.0019682571291923523,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.034535571932792664,
+                  "forced_probability_correct_difference": -0.0367356538772583,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.20384716987609863,
+                  "forced_probability_correct_difference": 0.032799139618873596,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.08346191048622131,
+              "mean_forced_probability_correct_difference": -0.0006166473031044006,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.04318493604660034,
+                  "forced_probability_correct_difference": -0.044441163539886475,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.21010875701904297,
+                  "forced_probability_correct_difference": 0.04320786893367767,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "shared_context": {
+        "no_fusion": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 0,
+          "cases": 4,
+          "contrast": "matched_donor minus no_fusion",
+          "mean_paired_correct_logprob_difference": -0.2424084353260696,
+          "mean_paired_forced_probability_correct_difference": -0.23644211143255234,
+          "pair_count": 2,
+          "pair_mean_forced_probability_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 1,
+            "positive": 1,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.5061051184311509,
+              "mean_forced_probability_correct_difference": -0.3362923115491867,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.09222597442567348,
+                  "forced_probability_correct_difference": -0.003393828868865967,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -1.1044362112879753,
+                  "forced_probability_correct_difference": -0.6691907942295074,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.021288247779011726,
+              "mean_forced_probability_correct_difference": -0.13659191131591797,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.19185684993863106,
+                  "forced_probability_correct_difference": -0.017147600650787354,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.1492803543806076,
+                  "forced_probability_correct_difference": -0.2560362219810486,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                }
+              ]
+            }
+          ]
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 0,
+          "cases": 4,
+          "contrast": "matched_donor minus twin_swapped_donor",
+          "mean_paired_correct_logprob_difference": -0.005701100453734398,
+          "mean_paired_forced_probability_correct_difference": -0.0018727853894233704,
+          "pair_count": 2,
+          "pair_mean_forced_probability_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 2,
+            "positive": 0,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "update",
+              "mean_correct_logprob_difference": -0.01084354892373085,
+              "mean_forced_probability_correct_difference": -0.0035440772771835327,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.00035197287797927856,
+                  "forced_probability_correct_difference": -8.028745651245117e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": -0.021335124969482422,
+                  "forced_probability_correct_difference": -0.007007867097854614,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": false,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": -0.0005586519837379456,
+              "mean_forced_probability_correct_difference": -0.000201493501663208,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -2.4750828742980957e-05,
+                  "forced_probability_correct_difference": -6.711483001708984e-05,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": -0.0010925531387329102,
+                  "forced_probability_correct_difference": -0.00033587217330932617,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                }
+              ]
+            }
+          ]
+        },
+        "zero_donor": {
+          "both_twins_forced_probability_difference_positive_pairs": 0,
+          "both_twins_logprob_difference_positive_pairs": 2,
+          "cases": 4,
+          "contrast": "matched_donor minus zero_donor",
+          "mean_paired_correct_logprob_difference": 0.0735840774141252,
+          "mean_paired_forced_probability_correct_difference": 0.021569907665252686,
+          "pair_count": 2,
+          "pair_mean_forced_probability_directions": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "pair_mean_logprob_directions": {
+            "negative": 0,
+            "positive": 2,
+            "zero": 0
+          },
+          "per_pair": [
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "update",
+              "mean_correct_logprob_difference": 0.10894740652292967,
+              "mean_forced_probability_correct_difference": 0.029067248106002808,
+              "pair_id": "latest_count",
+              "twins": [
+                {
+                  "case_id": "latest_count:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.004233023151755333,
+                  "forced_probability_correct_difference": -0.001153111457824707,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "latest_count:1",
+                  "comparator_forced_correct": false,
+                  "correct_logprob_difference": 0.213661789894104,
+                  "forced_probability_correct_difference": 0.05928760766983032,
+                  "gold": "A",
+                  "matched_forced_correct": false
+                }
+              ]
+            },
+            {
+              "both_twins_forced_probability_difference_positive": false,
+              "both_twins_logprob_difference_positive": true,
+              "family": "retrieval",
+              "mean_correct_logprob_difference": 0.03822074830532074,
+              "mean_forced_probability_correct_difference": 0.014072567224502563,
+              "pair_id": "paint_color",
+              "twins": [
+                {
+                  "case_id": "paint_color:0",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.007647722959518433,
+                  "forced_probability_correct_difference": -0.005385279655456543,
+                  "gold": "B",
+                  "matched_forced_correct": true
+                },
+                {
+                  "case_id": "paint_color:1",
+                  "comparator_forced_correct": true,
+                  "correct_logprob_difference": 0.06879377365112305,
+                  "forced_probability_correct_difference": 0.03353041410446167,
+                  "gold": "A",
+                  "matched_forced_correct": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "conditions": {
+      "private_fact_probe": {
+        "matched_donor": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 4,
+          "forced_accuracy": 0.5,
+          "forced_correct": 2,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 2,
+          "mean_forced_probability_correct": 0.4987075515091419,
+          "mean_unconditional_ab_mass": 0.9284940361976624,
+          "mean_unconditional_logprob_correct": -0.9719204008579254,
+          "pairs": 2
+        },
+        "no_fusion": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 4,
+          "forced_accuracy": 0.5,
+          "forced_correct": 2,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 2,
+          "mean_forced_probability_correct": 0.4999999925494194,
+          "mean_unconditional_ab_mass": 0.8012643456459045,
+          "mean_unconditional_logprob_correct": -0.9383405447006226,
+          "pairs": 2
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 4,
+          "forced_accuracy": 0.5,
+          "forced_correct": 2,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 2,
+          "mean_forced_probability_correct": 0.5012924745678902,
+          "mean_unconditional_ab_mass": 0.9284940361976624,
+          "mean_unconditional_logprob_correct": -0.96379704028368,
+          "pairs": 2
+        },
+        "zero_donor": {
+          "both_twins_forced_correct_pairs": 0,
+          "both_twins_greedy_correct_pairs": 0,
+          "cases": 4,
+          "forced_accuracy": 0.5,
+          "forced_correct": 2,
+          "greedy_accuracy": 0.5,
+          "greedy_correct": 2,
+          "mean_forced_probability_correct": 0.5000000037252903,
+          "mean_unconditional_ab_mass": 0.9177207946777344,
+          "mean_unconditional_logprob_correct": -1.0559792555868626,
+          "pairs": 2
+        }
+      },
+      "shared_context": {
+        "matched_donor": {
+          "both_twins_forced_correct_pairs": 1,
+          "both_twins_greedy_correct_pairs": 1,
+          "cases": 4,
+          "forced_accuracy": 0.75,
+          "forced_correct": 3,
+          "greedy_accuracy": 0.75,
+          "greedy_correct": 3,
+          "mean_forced_probability_correct": 0.7601087763905525,
+          "mean_unconditional_ab_mass": 0.9648314267396927,
+          "mean_unconditional_logprob_correct": -0.39876174507662654,
+          "pairs": 2
+        },
+        "no_fusion": {
+          "both_twins_forced_correct_pairs": 2,
+          "both_twins_greedy_correct_pairs": 2,
+          "cases": 4,
+          "forced_accuracy": 1.0,
+          "forced_correct": 4,
+          "greedy_accuracy": 1.0,
+          "greedy_correct": 4,
+          "mean_forced_probability_correct": 0.9965508878231049,
+          "mean_unconditional_ab_mass": 0.8599557429552078,
+          "mean_unconditional_logprob_correct": -0.15635330975055695,
+          "pairs": 2
+        },
+        "twin_swapped_donor": {
+          "both_twins_forced_correct_pairs": 1,
+          "both_twins_greedy_correct_pairs": 1,
+          "cases": 4,
+          "forced_accuracy": 0.75,
+          "forced_correct": 3,
+          "greedy_accuracy": 0.75,
+          "greedy_correct": 3,
+          "mean_forced_probability_correct": 0.7619815617799759,
+          "mean_unconditional_ab_mass": 0.9650352895259857,
+          "mean_unconditional_logprob_correct": -0.39306064462289214,
+          "pairs": 2
+        },
+        "zero_donor": {
+          "both_twins_forced_correct_pairs": 1,
+          "both_twins_greedy_correct_pairs": 1,
+          "cases": 4,
+          "forced_accuracy": 0.75,
+          "forced_correct": 3,
+          "greedy_accuracy": 0.75,
+          "greedy_correct": 3,
+          "mean_forced_probability_correct": 0.7385388687252998,
+          "mean_unconditional_ab_mass": 0.9522326737642288,
+          "mean_unconditional_logprob_correct": -0.47234582249075174,
+          "pairs": 2
+        }
+      }
+    },
+    "criterion": "Donor full-context forced A/B choice correct for both twins; correctness does not require a greedy A/B token",
+    "pair_ids": [
+      "latest_count",
+      "paint_color"
+    ],
+    "pairs": 2,
+    "references": {
+      "donor_full_context_reference": {
+        "both_twins_forced_correct_pairs": 2,
+        "both_twins_greedy_correct_pairs": 2,
+        "cases": 4,
+        "forced_accuracy": 1.0,
+        "forced_correct": 4,
+        "greedy_accuracy": 1.0,
+        "greedy_correct": 4,
+        "mean_forced_probability_correct": 0.8332913964986801,
+        "mean_unconditional_ab_mass": 0.6268140077590942,
+        "mean_unconditional_logprob_correct": -0.6656912937760353,
+        "pairs": 2
+      },
+      "receiver_full_context_reference": {
+        "both_twins_forced_correct_pairs": 2,
+        "both_twins_greedy_correct_pairs": 2,
+        "cases": 4,
+        "forced_accuracy": 1.0,
+        "forced_correct": 4,
+        "greedy_accuracy": 1.0,
+        "greedy_correct": 4,
+        "mean_forced_probability_correct": 0.9965510368347168,
+        "mean_unconditional_ab_mass": 0.8599566966295242,
+        "mean_unconditional_logprob_correct": -0.15635204128921032,
+        "pairs": 2
+      }
+    }
+  },
+  "fixture_sha256": "fbf4b5f1fec57cf46f2807f1bf208d28a21153ec9ac0bd0507f2d5fcd6ece5fc",
+  "input_sha256": "1ae3966f32f7933007f77d6c4942babb159f7ebb782af32319fb507377c3f705",
+  "limits": [
+    "All cases, including donor failures and adverse cache effects, remain in the primary results.",
+    "Private-input fusion deliberately departs from the trained shared-context setup.",
+    "Forced-choice probabilities condition on A/B; full-vocabulary mass and greedy behavior can disagree.",
+    "The donor-competent subset is a separately labelled conditional description, not a replacement sample.",
+    "No p-values, confidence intervals, universal fidelity rate or subjective-continuity inference are supplied."
+  ],
+  "runtime": {
+    "attention_implementation": "eager",
+    "automatic_backend_fallback": false,
+    "deterministic_algorithms_enforced": false,
+    "device": "mps",
+    "dtype": "float32",
+    "eval_mode": true,
+    "latency_scope": "Includes native prefill, cache copies and instrumentation; not a throughput benchmark",
+    "machine": "arm64",
+    "numerical_scope": "Fixed backend and dtype; no cross-device bitwise equivalence claim",
+    "python": "3.13.11",
+    "sampling": "none; next-token logits only",
+    "system": "Darwin",
+    "torch": "2.6.0",
+    "transformers": "4.52.4"
+  },
+  "schema_version": 1,
+  "scope": "Descriptive results on twelve fixed synthetic pairs; not a benchmark reproduction or identity test",
+  "status": "VALIDATED_COMPLETE_PILOT",
+  "upstream_revision": "9fa85d35a20e20469af3e282926491222f4f11e0",
+  "validation": {
+    "balanced_gold": {
+      "A": 12,
+      "B": 12
+    },
+    "observed_cases": 24,
+    "observed_intervention_rows": 192,
+    "observed_references": 48,
+    "private_no_fusion_and_zero_forced_correct": 12,
+    "private_no_fusion_and_zero_twins_identical": true,
+    "probability_consistency_absolute_tolerance": 1e-07,
+    "probability_consistency_relative_tolerance": 1e-05,
+    "source_and_weight_authentication": "Not repeated by this summary-only validator"
+  }
+}
