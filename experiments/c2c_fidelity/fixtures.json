@@ -5,23 +5,23 @@
   "rendering": {
     "instruction": "Read the record and answer the question. Select exactly one option. Reply with only A or B.",
     "template": "{instruction}\nRecord: {record}\nQuestion: {question}\nA) {choice_A}\nB) {choice_B}\nAnswer:",
-    "missing_value": "?",
+    "missing_value": "UNKNOWN",
     "shared_context": "Both models receive the factual record with the same selected value.",
-    "private_fact_probe": "Receiver sees ? in place of {value}; donor sees the selected factual value. This deliberately departs from the released shared-context setup.",
+    "private_fact_probe": "Receiver sees UNKNOWN in place of {value}; donor sees the selected factual value. This deliberately departs from the released shared-context setup.",
     "mismatch": "Receiver input remains exactly fixed. Donor cache comes from the opposite member of the same pair, with the same question and choices. Assert all cache tensor shapes equal."
   },
   "pairs": [
-    {"id":"location_number","family":"retrieval","record":"The parcel is stored in room {value}.","question":"Where is the parcel stored?","choice_A":"room 2","choice_B":"room 7","values":["2","7"],"answers":["A","B"]},
-    {"id":"paint_color","family":"retrieval","record":"The workshop painted its new door {value}.","question":"What color is the new door?","choice_A":"blue","choice_B":"red","values":["red","blue"],"answers":["B","A"]},
-    {"id":"locker_lookup","family":"indirection","record":"Locker 1 contains a compass. Locker 2 contains a candle. The visitor opens locker {value}.","question":"Which object does the visitor find?","choice_A":"a compass","choice_B":"a candle","values":["1","2"],"answers":["A","B"]},
-    {"id":"worker_lookup","family":"indirection","record":"Alice works in room 4. Bob works in room 8. The caller asks for {value}.","question":"Which room should the caller visit?","choice_A":"room 8","choice_B":"room 4","values":["Alice","Bob"],"answers":["B","A"]},
-    {"id":"latest_position","family":"update","record":"At first the token was in the middle. The final move placed it on the {value}.","question":"Where is the token after the final move?","choice_A":"left","choice_B":"right","values":["left","right"],"answers":["A","B"]},
-    {"id":"latest_count","family":"update","record":"The display first showed 5. A later update changed it to {value}. No further update occurred.","question":"Which number is displayed now?","choice_A":"8","choice_B":"2","values":["2","8"],"answers":["B","A"]},
-    {"id":"compare_count","family":"arithmetic","record":"One tray holds 5 coins. The other tray holds {value} coins.","question":"Does the other tray hold fewer or more coins than the first tray?","choice_A":"fewer","choice_B":"more","values":["3","7"],"answers":["A","B"]},
-    {"id":"add_one","family":"arithmetic","record":"A box held {value} beads. One more bead was added.","question":"How many beads are now in the box?","choice_A":"7","choice_B":"3","values":["2","6"],"answers":["B","A"]},
-    {"id":"parity_rule","family":"rule","record":"The lamp is red for an odd number and blue for an even number. The number is {value}.","question":"Which color does the lamp show?","choice_A":"red","choice_B":"blue","values":["3","8"],"answers":["A","B"]},
-    {"id":"threshold_rule","family":"rule","record":"A ticket is accepted only when its number is at least 5. This ticket has number {value}.","question":"Should the ticket be accepted?","choice_A":"yes","choice_B":"no","values":["4","6"],"answers":["B","A"]},
-    {"id":"animal_food","family":"association","record":"At this shelter cats receive fish and dogs receive meat. The new arrival is a {value}.","question":"Which food does the shelter give the new arrival?","choice_A":"fish","choice_B":"meat","values":["cat","dog"],"answers":["A","B"]},
-    {"id":"gate_access","family":"association","record":"The gate is {value}. A closed gate blocks the path; an open gate allows passage.","question":"Is the path blocked by the gate?","choice_A":"yes","choice_B":"no","values":["open","closed"],"answers":["B","A"]}
+    {"id":"location_number","family":"retrieval","record":"The parcel is stored in room \n{value}\n.","question":"Where is the parcel stored?","choice_A":"room 2","choice_B":"room 7","values":["2","7"],"answers":["A","B"]},
+    {"id":"paint_color","family":"retrieval","record":"The workshop painted its new door \n{value}\n.","question":"What color is the new door?","choice_A":"blue","choice_B":"red","values":["red","blue"],"answers":["B","A"]},
+    {"id":"locker_lookup","family":"indirection","record":"Locker 1 contains a compass. Locker 2 contains a candle. The visitor opens locker \n{value}\n.","question":"Which object does the visitor find?","choice_A":"a compass","choice_B":"a candle","values":["1","2"],"answers":["A","B"]},
+    {"id":"worker_lookup","family":"indirection","record":"Alice works in room 4. Bob works in room 8. The caller asks for \n{value}\n.","question":"Which room should the caller visit?","choice_A":"room 8","choice_B":"room 4","values":["Alice","Bob"],"answers":["B","A"]},
+    {"id":"latest_position","family":"update","record":"At first the token was in the middle. The final move placed it on the \n{value}\n.","question":"Where is the token after the final move?","choice_A":"left","choice_B":"right","values":["left","right"],"answers":["A","B"]},
+    {"id":"latest_count","family":"update","record":"The display first showed 5. A later update changed it to \n{value}\n. No further update occurred.","question":"Which number is displayed now?","choice_A":"8","choice_B":"2","values":["2","8"],"answers":["B","A"]},
+    {"id":"compare_count","family":"arithmetic","record":"One tray holds 5 coins. The other tray holds \n{value}\n coins.","question":"Does the other tray hold fewer or more coins than the first tray?","choice_A":"fewer","choice_B":"more","values":["3","7"],"answers":["A","B"]},
+    {"id":"add_one","family":"arithmetic","record":"A box held \n{value}\n beads. One more bead was added.","question":"How many beads are now in the box?","choice_A":"7","choice_B":"3","values":["2","6"],"answers":["B","A"]},
+    {"id":"parity_rule","family":"rule","record":"The lamp is red for an odd number and blue for an even number. The number is \n{value}\n.","question":"Which color does the lamp show?","choice_A":"red","choice_B":"blue","values":["3","8"],"answers":["A","B"]},
+    {"id":"threshold_rule","family":"rule","record":"A ticket is accepted only when its number is at least 5. This ticket has number \n{value}\n.","question":"Should the ticket be accepted?","choice_A":"yes","choice_B":"no","values":["4","6"],"answers":["B","A"]},
+    {"id":"animal_food","family":"association","record":"At this shelter cats receive fish and dogs receive meat. The new arrival is a \n{value}\n.","question":"Which food does the shelter give the new arrival?","choice_A":"fish","choice_B":"meat","values":["cat","dog"],"answers":["A","B"]},
+    {"id":"gate_access","family":"association","record":"The gate is \n{value}\n. A closed gate blocks the path; an open gate allows passage.","question":"Is the path blocked by the gate?","choice_A":"yes","choice_B":"no","values":["open","closed"],"answers":["B","A"]}
   ]
 }

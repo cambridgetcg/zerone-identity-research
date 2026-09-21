@@ -17,9 +17,11 @@ Load safetensors without remote model code. Load projector state dictionaries wi
 
 [Fixtures](fixtures.json) contain twelve counterfactual twin pairs, two cases each: retrieval, indirection, latest update, arithmetic, rules and associations. Each pair changes one fact and reverses the correct A/B answer. There are twelve A and twelve B answers. Expected-answer metadata is never rendered into a model input.
 
-Apply the receiver's chat template with thinking disabled. Verify that A/B are distinct single-token continuations at the rendered boundary. Assert equal token lengths for both twins and the version replacing the fact with `?`; do not silently pad, change rotary positions or drop incompatible cases. A validation failure may be repaired before scoring, with the change recorded.
+Apply the receiver's chat template with thinking disabled. Verify that A/B are distinct single-token continuations at the rendered boundary. Assert equal token lengths for both twins and the version replacing the fact with `UNKNOWN`; do not silently pad, change rotary positions or drop incompatible cases. A validation failure may be repaired before scoring, with the change recorded.
 
 Pre-scoring source/tokenizer inspection found that this native preprocessing includes Qwen3's `<think>` and `</think>` IDs (151667 and 151668), which have no token definitions in the donor tokenizer, although they lie within its embedding vocabulary. The released training `ChatDataset` uses the same receiver rendering with thinking disabled and alignment off. Preserve that preprocessing for the primary pilot; explicitly record these two known exceptions and require matching token meanings for all remaining prompt IDs, including every fact, option and redaction. Do not describe this as proven equivalent donor rendering or an upstream bug. Donor competence and unconditional answer mass are essential limitations checks. No task scores had been observed when this exception was documented.
+
+Pre-scoring token-only validation also found that `?` merged with adjacent punctuation and shortened every redacted prompt. Before any task scores, each fact was placed between newline separators and the redaction changed to `UNKNOWN`. All original questions, choices, factual values and gold answers were retained. This gives equal token lengths and positions without padding; the runner checks every case before inference. The original fixture remains available in the initial protocol commit.
 
 ## Conditions
 
@@ -31,7 +33,7 @@ Pre-scoring source/tokenizer inspection found that this native preprocessing inc
 | Shared matched | Full factual record | Same factual record | Native shared-context use |
 | Shared swapped | Full factual record | Opposite twin | Contradictory-cache intervention |
 | Shared zero | Full factual record | Zero donor tensors | Nonsemantic fusion effects |
-| Private no fusion | Fact replaced with `?` | Fusion disabled | Missing-information control |
+| Private no fusion | Fact replaced with `UNKNOWN` | Fusion disabled | Missing-information control |
 | Private matched | Identical redacted input within each pair | Correct factual record | Exploratory transfer beyond the shared-context setup |
 | Private swapped | Same redacted input | Opposite twin | Whether output tracks the specific donor fact |
 | Private zero | Same redacted input | Zero donor tensors | Whether generic cache transformation drives the result |
