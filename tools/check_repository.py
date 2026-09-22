@@ -37,7 +37,7 @@ def check() -> dict:
     for path in ROOT.rglob("*"):
         if not path.is_file() or any(p in {".git", "__pycache__"} for p in path.relative_to(ROOT).parts):
             continue
-        if path.suffix not in {".md", ".json", ".py", ".yml", ".yaml"}:
+        if path.suffix not in {".md", ".json", ".py", ".yml", ".yaml", ".html"}:
             continue
         text = path.read_text(encoding="utf-8")
         checked_files += 1

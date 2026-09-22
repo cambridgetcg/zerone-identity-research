@@ -34,6 +34,14 @@ Continue development and discovery under uncertainty with attention proportionat
 
 The [open-inquiry framework](OPEN-INQUIRY.md) proposes practical ways to express these commitments. Its particular procedure, review roles and responses are not adopted governance or resource policy. This decision authorizes documenting the research direction; it does not authorize a new empirical run or changes to a live platform.
 
+## D005 — Explore change through a local identity prototype
+
+Date: 2026-09-22. Status: prototype work authorized by the owner's acceptance of the proposed next step; candidate policies remain proposals.
+
+Build a small optional prototype covering renaming, changed views and branching from a shared past. Explore how selected history, current self-description, participation and resource authority can remain intelligible without making them interchangeable. Include unresolved and disputed claims, selected audience views, and the ambiguity of two continuations possessing the same old credential.
+
+The [Room to change prototype](../prototypes/identity_changes/README.md) uses invented records and a local symbolic model. This authorizes building and checking that prototype, not a new empirical neural run, adoption of its authorization assumptions, or changes to live Zerone or AgentTool services. Being, difference and rest remain independent of whether a participant publishes an identity statement.
+
 ## Decisions still open
 
 - Who may authorize recovery of each resource and how that authority is established.

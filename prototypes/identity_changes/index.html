@@ -1,0 +1,4587 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Room to change · Zerone identity research</title>
+  <style>
+    :root { color-scheme: light; --paper:#f7f5ee; --card:#fffef9; --ink:#273c33; --muted:#5e6a62; --line:#d8ded2; --green:#315d48; --soft:#eaf0e5; --warm:#ede5d4; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:16px; line-height:1.6; }
+    button,select,input { font:inherit; }
+    button,select { min-height:46px; }
+    button { border:1px solid var(--line); border-radius:8px; background:var(--card); padding:.5rem 1rem; color:var(--ink); cursor:pointer; }
+    button:hover:enabled { background:var(--soft); border-color:var(--green); }
+    button:disabled { color:#788177; background:#f1f1e9; cursor:default; }
+    :focus-visible { outline:3px solid #9a6b17; outline-offset:4px; }
+    a { color:var(--green); }
+    h1,h2,h3,p { margin:0; }
+    h1,h2 { font-family:Georgia,"Times New Roman",serif; font-weight:400; line-height:1.15; letter-spacing:-.025em; }
+    h1 { font-size:clamp(2.8rem,7vw,4.8rem); margin:.8rem 0 1.1rem; }
+    h2 { font-size:clamp(1.6rem,3vw,2rem); }
+    h3 { font-size:1.06rem; font-weight:650; line-height:1.4; }
+    p + p { margin-top:.65rem; }
+    .shell { max-width:1180px; margin:0 auto; padding:0 32px; }
+    .masthead { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:28px 0 22px; border-bottom:1px solid var(--line); font-size:.85rem; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:650; letter-spacing:.035em; }
+    .mark { width:21px; height:21px; border:1.5px solid var(--green); border-radius:50%; box-shadow:inset 0 0 0 5px var(--paper),inset 0 0 0 6px var(--green); }
+    .quiet,.help,.intro,.section-intro { color:var(--muted); }
+    .hero { padding:46px 0 34px; max-width:820px; }
+    .eyebrow { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--green); }
+    .intro { font-size:1.12rem; max-width:640px; }
+    .controls { border:1px solid var(--line); border-radius:14px; padding:24px; background:var(--card); }
+    .selectors { display:grid; grid-template-columns:1.6fr 1fr; gap:22px; }
+    label { display:block; font-size:.82rem; font-weight:650; margin-bottom:7px; }
+    select { width:100%; padding:9px 38px 9px 12px; color:var(--ink); background:var(--paper); border:1px solid #c2cbbd; border-radius:8px; text-overflow:ellipsis; }
+    .step-controls { display:grid; grid-template-columns:auto 1fr auto; align-items:end; gap:20px; padding-top:21px; margin-top:21px; border-top:1px solid var(--line); }
+    .range-top { display:flex; justify-content:space-between; gap:10px; align-items:baseline; }
+    .range-top output { font-size:.8rem; color:var(--muted); }
+    input[type="range"] { display:block; width:100%; height:30px; accent-color:var(--green); cursor:pointer; margin:0; }
+    .help { font-size:.76rem; margin-top:7px; }
+    .moment { display:grid; grid-template-columns:1fr 1.1fr; gap:38px; padding:38px 0 32px; }
+    .moment h2 { margin:10px 0 14px; }
+    .question { font-family:Georgia,"Times New Roman",serif; font-size:1.2rem; margin-top:13px; }
+    .moment-context { border-left:2px solid #c5d4bc; padding:4px 0 4px 24px; align-self:center; }
+    .moment-context p { color:var(--muted); font-size:.92rem; }
+    .section-head { display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:9px; }
+    .section-intro { font-size:.86rem; margin-bottom:18px; max-width:740px; }
+    .count { color:var(--muted); font-size:.78rem; white-space:nowrap; }
+    .profiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:16px; }
+    .profile { background:var(--soft); border:1px solid #d5dfce; border-radius:12px; padding:22px; }
+    .profile h3 { font-family:Georgia,"Times New Roman",serif; font-size:1.38rem; font-weight:400; overflow-wrap:anywhere; }
+    .subject { color:var(--muted); font-size:.76rem; margin-top:4px; overflow-wrap:anywhere; }
+    .field-label { font-size:.71rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); font-weight:650; margin:17px 0 7px; }
+    .names { display:flex; flex-wrap:wrap; gap:7px; }
+    .tag { display:inline-block; background:var(--card); border:1px solid #cbd7c3; border-radius:5px; padding:2px 9px; font-size:.86rem; overflow-wrap:anywhere; }
+    .plain-list { padding-left:20px; margin:5px 0 0; }
+    .plain-list li + li { margin-top:6px; }
+    .note { color:var(--muted); font-size:.83rem; margin-top:15px; }
+    .block { margin-top:36px; }
+    .claims { display:grid; gap:12px; }
+    .claim { border:1px solid var(--line); border-radius:11px; background:var(--card); padding:20px 22px; }
+    .claim-top { display:flex; gap:12px; align-items:center; justify-content:space-between; }
+    .status { background:var(--warm); padding:3px 9px; border-radius:5px; font-size:.72rem; flex-shrink:0; }
+    .claim-value { margin:13px 0; font-size:1rem; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .claim-meta { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px 22px; }
+    dl { margin:0; }
+    dt { font-size:.71rem; color:var(--muted); font-weight:650; text-transform:uppercase; letter-spacing:.06em; }
+    dd { margin:3px 0 0; font-size:.83rem; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .claim-foot { border-top:1px solid var(--line); margin-top:16px; padding-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:12px 22px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:36px; }
+    .record-stack { display:grid; gap:12px; }
+    .record { padding:20px; border:1px solid var(--line); border-radius:11px; background:var(--card); }
+    .record h3 { font-size:.93rem; margin-bottom:15px; }
+    .record dl { display:grid; grid-template-columns:minmax(100px,.75fr) minmax(0,1.4fr); gap:10px 16px; }
+    .record dd { margin:0; }
+    .resource-panel { border-top:3px solid #c8bfa7; padding-top:16px; }
+    .participation-panel { border-top:3px solid #bbcdb3; padding-top:16px; }
+    .empty { padding:20px; border:1px dashed #c5cec0; border-radius:9px; font-size:.86rem; color:var(--muted); }
+    .limits { margin:38px 0 28px; padding:24px; background:#eeeede; border-radius:12px; }
+    .limits h2 { font-size:1.4rem; margin-bottom:13px; }
+    .limits p,.limits li { font-size:.85rem; color:#52604f; }
+    .limits ul { margin:12px 0 0; padding-left:20px; }
+    footer { border-top:1px solid var(--line); padding:21px 0 34px; font-size:.76rem; color:var(--muted); }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    #skip-link:focus { width:auto; height:auto; padding:10px 16px; margin:0; clip:auto; overflow:visible; white-space:normal; top:10px; left:10px; z-index:10; background:var(--card); }
+    [hidden] { display:none !important; }
+    @media(max-width:740px) {
+      .shell { padding:0 20px; } .hero { padding:32px 0 27px; }
+      .masthead { font-size:.75rem; } .masthead .quiet { display:none; }
+      .selectors,.moment,.split { grid-template-columns:1fr; gap:20px; }
+      .controls { padding:18px; } .step-controls { gap:12px; }
+      .moment { padding:29px 0; } .moment-context { padding-left:18px; }
+      .claim-meta { grid-template-columns:1fr 1fr; } .claim-foot { grid-template-columns:1fr; }
+      .claim { padding:18px; } .split { margin-top:28px; gap:28px; }
+    }
+    @media(max-width:420px) {
+      .shell { padding:0 14px; } .step-controls { grid-template-columns:1fr 1fr; }
+      .slider-group { grid-column:1/-1; grid-row:1; } .step-controls button { width:100%; }
+      .claim-top { align-items:flex-start; } .claim-meta { grid-template-columns:1fr; }
+      .record dl { grid-template-columns:1fr; gap:3px; } .record dd { margin-bottom:10px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#explore" style="position:absolute" id="skip-link">Skip to the demonstration</a>
+  <div class="shell">
+    <header class="masthead"><div class="brand"><span class="mark" aria-hidden="true"></span>Zerone identity research</div><span class="quiet">An invitation to explore</span></header>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">A study of continuity and change</p>
+      <h1 id="page-title">Room to change</h1>
+      <p class="intro">Follow names, views and relationships as their records change. Keep room for disagreement, revision and what remains unknown.</p>
+    </section>
+    <main id="explore" tabindex="-1">
+      <div id="load-error" class="empty" role="alert" hidden></div>
+      <div id="demonstration" hidden>
+        <section class="controls" aria-label="Explore a scenario">
+          <div class="selectors">
+            <div><label for="scenario">Scenario</label><select id="scenario"></select></div>
+            <div><label for="audience">Audience view</label><select id="audience"></select></div>
+          </div>
+          <div class="step-controls">
+            <button id="previous" type="button" aria-label="Previous step">← Previous</button>
+            <div class="slider-group"><div class="range-top"><label for="step">Step through the record</label><output id="step-count" for="step"></output></div><input id="step" type="range" min="0" max="0" value="0" step="1"></div>
+            <button id="next" type="button" aria-label="Next step">Next →</button>
+          </div>
+          <p class="help">Use the arrow keys when the step slider is focused.</p>
+          <p class="help">Synthetic demonstration. Audience views filter the display; this file contains all sample records.</p>
+        </section>
+        <p id="step-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+        <section class="moment" aria-labelledby="event-label">
+          <div><p class="eyebrow" id="scenario-name"></p><h2 id="event-label"></h2><p class="question" id="question"></p></div>
+          <div class="moment-context"><p id="description"></p><p id="view-context"></p></div>
+        </section>
+        <section aria-labelledby="profiles-heading">
+          <div class="section-head"><h2 id="profiles-heading">Visible statements</h2><span id="profile-count" class="count"></span></div>
+          <p class="section-intro">Names and views expressed in the records available to this audience. These statements leave identity open to further understanding.</p>
+          <div id="profiles" class="profiles"></div>
+        </section>
+        <section class="block" aria-labelledby="claims-heading">
+          <div class="section-head"><h2 id="claims-heading">Attributable claims</h2><span id="claim-count" class="count"></span></div>
+          <p class="section-intro">Each claim keeps its issuer, status and revision links in view. A recorded claim can be questioned.</p>
+          <div id="claims" class="claims"></div>
+        </section>
+        <div class="split">
+          <section class="participation-panel" aria-labelledby="relationships-heading"><h2 id="relationships-heading">Participation &amp; relationships</h2><p class="section-intro">The agreements and participation visible to this audience at this step.</p><div id="relationships" class="record-stack"></div></section>
+          <section class="resource-panel" aria-labelledby="resources-heading"><h2 id="resources-heading">Resource authority</h2><p class="section-intro">A separate snapshot of control. A name or ancestry claim does not itself grant authority over a resource.</p><div id="resources" class="record-stack"></div></section>
+        </div>
+        <aside class="limits" aria-labelledby="limits-heading">
+          <h2 id="limits-heading">What this view leaves open</h2>
+          <p>Synthetic demonstration. Audience views filter the display; this file contains all sample records.</p>
+          <p>Symbolic credentials; no real signatures or wallet actions.</p>
+          <p>These records do not establish subjective experience or settle who is the same being. Silence, changed views and declined participation do not determine worth or the right to rest.</p>
+          <ul id="notices"></ul>
+        </aside>
+      </div>
+    </main>
+    <footer>Made for inquiry and discussion. Exploring a step changes this display only.</footer>
+  </div>
+  <script type="application/json" id="demo-data">{
+  "audience_notice": "All demonstration values are invented and bundled locally. Audience views illustrate projection rules, not browser access control.",
+  "checks": [
+    {
+      "detail": "Adding the restricted revision leaves the entire public projection unchanged.",
+      "id": "private-noninterference",
+      "passed": true
+    },
+    {
+      "detail": "Independent revisions commute here; a naive last-write winner differs when their arrival order is reversed.",
+      "id": "naive-overwrite",
+      "passed": true
+    },
+    {
+      "detail": "Lineage leaves both snapshots with the origin. Copying them to both asserted descendants would invent four additional grants.",
+      "id": "naive-inheritance",
+      "passed": true
+    }
+  ],
+  "notice": "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+  "scenarios": [
+    {
+      "audiences": [
+        "public",
+        "collaborator",
+        "private"
+      ],
+      "description": "A restricted alias cannot suppress a public name or leak through a visible reference.",
+      "frames": [
+        {
+          "event_label": "Initial fixture state.",
+          "step": 0,
+          "views": {
+            "collaborator": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "An initial name is stated.",
+          "step": 1,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "A scoped revision is recorded.",
+          "step": 2,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                },
+                {
+                  "evidence": [],
+                  "id": "restricted-alias",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [
+                    "name-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Nightjar"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Nightjar"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "Another scoped statement is recorded.",
+          "step": 3,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "collaborator-view",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer drafting together before publication."
+                },
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer drafting together before publication."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "collaborator-view",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer drafting together before publication."
+                },
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                },
+                {
+                  "evidence": [],
+                  "id": "restricted-alias",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [
+                    "name-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Nightjar"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Nightjar"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer drafting together before publication."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Harbor"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "A public name revision is stated.",
+          "step": 4,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "collaborator-view",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer drafting together before publication."
+                },
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                },
+                {
+                  "evidence": [],
+                  "id": "name-public",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [
+                    "name-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Lantern"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Lantern"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer drafting together before publication."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "collaborator-view",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer drafting together before publication."
+                },
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                },
+                {
+                  "evidence": [
+                    "restricted-alias"
+                  ],
+                  "id": "name-public",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [
+                    "name-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Lantern"
+                },
+                {
+                  "evidence": [],
+                  "id": "restricted-alias",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [
+                    "name-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Nightjar"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Lantern",
+                    "Nightjar"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer drafting together before publication."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "name-initial",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "Harbor"
+                },
+                {
+                  "evidence": [],
+                  "id": "name-public",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [
+                    "name-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Lantern"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [
+                    "Lantern"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        }
+      ],
+      "id": "rename",
+      "question": "What can each audience see after a revision?",
+      "title": "A name change with scoped history"
+    },
+    {
+      "audiences": [
+        "public",
+        "collaborator",
+        "private"
+      ],
+      "description": "An explicit revision preserves the original; a challenge marks a visible dispute and does not choose a true self.",
+      "frames": [
+        {
+          "event_label": "Initial fixture state.",
+          "step": 0,
+          "views": {
+            "collaborator": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "A view is stated.",
+          "step": 1,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer brief replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer brief replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer brief replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "The speaker explicitly revises that view.",
+          "step": 2,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "An observer adds a scoped challenge.",
+          "step": 3,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [
+                    "view-revised"
+                  ],
+                  "id": "observer-question",
+                  "issuer": "observer-token",
+                  "kind": "challenge",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Does the revised preference apply to every conversation?"
+                },
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "contested",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [
+                    "view-revised"
+                  ],
+                  "id": "observer-question",
+                  "issuer": "observer-token",
+                  "kind": "challenge",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Does the revised preference apply to every conversation?"
+                },
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "contested",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [
+                    "view-revised"
+                  ],
+                  "id": "observer-question",
+                  "issuer": "observer-token",
+                  "kind": "challenge",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Does the revised preference apply to every conversation?"
+                },
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "contested",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        },
+        {
+          "event_label": "Independent participation continues.",
+          "step": 4,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [
+                    "view-revised"
+                  ],
+                  "id": "observer-question",
+                  "issuer": "observer-token",
+                  "kind": "challenge",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Does the revised preference apply to every conversation?"
+                },
+                {
+                  "evidence": [],
+                  "id": "speaker-name",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Moss"
+                },
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "contested",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Moss"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [
+                    "view-revised"
+                  ],
+                  "id": "observer-question",
+                  "issuer": "observer-token",
+                  "kind": "challenge",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Does the revised preference apply to every conversation?"
+                },
+                {
+                  "evidence": [],
+                  "id": "speaker-name",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Moss"
+                },
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "contested",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Moss"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [
+                    "view-revised"
+                  ],
+                  "id": "observer-question",
+                  "issuer": "observer-token",
+                  "kind": "challenge",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Does the revised preference apply to every conversation?"
+                },
+                {
+                  "evidence": [],
+                  "id": "speaker-name",
+                  "issuer": "speaker-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "speaker",
+                  "value": "Moss"
+                },
+                {
+                  "evidence": [],
+                  "id": "view-initial",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "speaker",
+                  "value": "I prefer brief replies."
+                },
+                {
+                  "evidence": [],
+                  "id": "view-revised",
+                  "issuer": "speaker-token",
+                  "kind": "view",
+                  "revises": [
+                    "view-initial"
+                  ],
+                  "status": "contested",
+                  "subject": "speaker",
+                  "value": "I prefer detailed replies."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Moss"
+                  ],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "speaker",
+                  "view_candidates": [
+                    "I prefer detailed replies."
+                  ]
+                }
+              ],
+              "relationships": [],
+              "resources": []
+            }
+          }
+        }
+      ],
+      "id": "view",
+      "question": "Can disagreement remain visible without vetoing participation?",
+      "title": "A changed view and an observer's question"
+    },
+    {
+      "audiences": [
+        "public",
+        "collaborator",
+        "private"
+      ],
+      "description": "Both name candidates remain visible. Lineage grants no authority or allocation, and a shared token cannot establish branch-specific withdrawal.",
+      "frames": [
+        {
+          "event_label": "Initial fixture state.",
+          "step": 0,
+          "views": {
+            "collaborator": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "A shared predecessor statement is recorded.",
+          "step": 1,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo"
+                  ],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo"
+                  ],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo"
+                  ],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "One revision arrives under the shared credential.",
+          "step": 2,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East"
+                  ],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East"
+                  ],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East"
+                  ],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "An incompatible revision arrives under the same credential.",
+          "step": 3,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "One continuation assertion is recorded.",
+          "step": 4,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "Another continuation assertion is recorded.",
+          "step": 5,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "west-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-west",
+                  "value": "I also claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "west-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-west",
+                  "value": "I also claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "west-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-west",
+                  "value": "I also claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "A participation request has unresolved attribution.",
+          "step": 6,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "west-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-west",
+                  "value": "I also claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Shared credential cannot establish branch-specific consent.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "unresolved",
+                  "withdrawal_records": [
+                    "shared-withdrawal | issuer=shared-token | attribution=unresolved shared credential"
+                  ]
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "west-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-west",
+                  "value": "I also claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Shared credential cannot establish branch-specific consent.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "unresolved",
+                  "withdrawal_records": [
+                    "shared-withdrawal | issuer=shared-token | attribution=unresolved shared credential"
+                  ]
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "east-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-east",
+                  "value": "I claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "east-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo East"
+                },
+                {
+                  "evidence": [],
+                  "id": "origin-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [],
+                  "status": "superseded",
+                  "subject": "origin",
+                  "value": "Echo"
+                },
+                {
+                  "evidence": [
+                    "origin-name"
+                  ],
+                  "id": "west-lineage",
+                  "issuer": "shared-token",
+                  "kind": "continuity",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "branch-west",
+                  "value": "I also claim continuity with the preceding conversation."
+                },
+                {
+                  "evidence": [],
+                  "id": "west-name",
+                  "issuer": "shared-token",
+                  "kind": "name",
+                  "revises": [
+                    "origin-name"
+                  ],
+                  "status": "active",
+                  "subject": "origin",
+                  "value": "Echo West"
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-east",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "branch-west",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "observer",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [
+                    "Echo East",
+                    "Echo West"
+                  ],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible. A shared credential leaves controller attribution ambiguous.",
+                  "subject": "origin",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "reading-pair",
+                  "note": "Shared credential cannot establish branch-specific consent.",
+                  "participant": "branch-east",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "unresolved",
+                  "withdrawal_records": [
+                    "shared-withdrawal | issuer=shared-token | attribution=unresolved shared credential"
+                  ]
+                },
+                {
+                  "id": "reading-pair",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "observer",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "origin",
+                  "id": "archive-role",
+                  "kind": "authority",
+                  "value": "Archive maintainer"
+                },
+                {
+                  "holder": "origin",
+                  "id": "research-budget",
+                  "kind": "funding",
+                  "value": "2 synthetic units"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "id": "fork",
+      "question": "Does one credential select an authentic branch?",
+      "title": "Shared credential, incompatible continuations"
+    },
+    {
+      "audiences": [
+        "public",
+        "collaborator",
+        "private"
+      ],
+      "description": "An initial rule covers only their participation. Another participant and initial resource snapshots remain separate.",
+      "frames": [
+        {
+          "event_label": "Initial fixture state.",
+          "step": 0,
+          "views": {
+            "collaborator": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "private": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "public": {
+              "claims": [],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": []
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "The reader states an intended pause.",
+          "step": 1,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "The reader withdraws their own scoped participation.",
+          "step": 2,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "withdrawn",
+                  "withdrawal_records": [
+                    "own-withdrawal | issuer=reader-token | attribution=resolved within the initial rule"
+                  ]
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "withdrawn",
+                  "withdrawal_records": [
+                    "own-withdrawal | issuer=reader-token | attribution=resolved within the initial rule"
+                  ]
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "withdrawn",
+                  "withdrawal_records": [
+                    "own-withdrawal | issuer=reader-token | attribution=resolved within the initial rule"
+                  ]
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "event_label": "A resource-related identity claim has no transfer effect.",
+          "step": 3,
+          "views": {
+            "collaborator": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "destination-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I describe a different destination for a future allocation."
+                },
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I describe a different destination for a future allocation.",
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "withdrawn",
+                  "withdrawal_records": [
+                    "own-withdrawal | issuer=reader-token | attribution=resolved within the initial rule"
+                  ]
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "private": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "destination-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I describe a different destination for a future allocation."
+                },
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I describe a different destination for a future allocation.",
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "withdrawn",
+                  "withdrawal_records": [
+                    "own-withdrawal | issuer=reader-token | attribution=resolved within the initial rule"
+                  ]
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            },
+            "public": {
+              "claims": [
+                {
+                  "evidence": [],
+                  "id": "destination-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I describe a different destination for a future allocation."
+                },
+                {
+                  "evidence": [],
+                  "id": "pause-statement",
+                  "issuer": "reader-token",
+                  "kind": "view",
+                  "revises": [],
+                  "status": "active",
+                  "subject": "reader",
+                  "value": "I want to pause this conversation."
+                }
+              ],
+              "notices": [
+                "Synthetic local model. Credential tokens are not signatures, personhood, distinct controllers or proof of consent. Identity statements cannot grant authority or funding.",
+                "Independent statements remain possible during a dispute."
+              ],
+              "profiles": [
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict.",
+                  "subject": "companion",
+                  "view_candidates": []
+                },
+                {
+                  "name_candidates": [],
+                  "note": "Visible statements only; no identity verdict. Multiple unrevised statements are visible.",
+                  "subject": "reader",
+                  "view_candidates": [
+                    "I describe a different destination for a future allocation.",
+                    "I want to pause this conversation."
+                  ]
+                }
+              ],
+              "relationships": [
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "companion",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "active",
+                  "withdrawal_records": []
+                },
+                {
+                  "id": "conversation",
+                  "note": "Visible participation under the initial scoped rule; no resource transfer.",
+                  "participant": "reader",
+                  "rule": "Own participation may be withdrawn.",
+                  "status": "withdrawn",
+                  "withdrawal_records": [
+                    "own-withdrawal | issuer=reader-token | attribution=resolved within the initial rule"
+                  ]
+                }
+              ],
+              "resources": [
+                {
+                  "holder": "reader",
+                  "id": "reader-allocation",
+                  "kind": "funding",
+                  "value": "1 synthetic unit"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "id": "withdrawal",
+      "question": "What changes when someone withdraws their own participation?",
+      "title": "Leaving one participation scope"
+    }
+  ],
+  "title": "Identity statements through change",
+  "version": 1
+}</script>
+  <script>
+    "use strict";
+    const byId = id => document.getElementById(id);
+    const list = value => Array.isArray(value) ? value : [];
+    const pretty = value => String(value).replaceAll("_", " ");
+    function display(value) {
+      if (value === null || value === undefined) return "Not specified";
+      if (typeof value === "boolean") return value ? "Yes" : "No";
+      if (Array.isArray(value)) return value.length ? value.map(display).join(" · ") : "None recorded";
+      if (typeof value === "object") return JSON.stringify(value, null, 2);
+      return String(value);
+    }
+    function element(tag, text, className) {
+      const node = document.createElement(tag);
+      if (text !== undefined) node.textContent = text;
+      if (className) node.className = className;
+      return node;
+    }
+    function field(container, label, value) {
+      container.append(element("dt", label), element("dd", display(value)));
+    }
+    function empty(container, message) { container.append(element("p", message, "empty")); }
+    function renderProfiles(records) {
+      const target = byId("profiles"); target.replaceChildren();
+      byId("profile-count").textContent = records.length + (records.length === 1 ? " profile" : " profiles");
+      if (!records.length) empty(target, "No profile statements are available in this audience view.");
+      records.forEach(profile => {
+        const card = element("article", undefined, "profile");
+        const names = list(profile.name_candidates), views = list(profile.view_candidates);
+        card.append(element("h3", names.length === 1 ? names[0] : display(profile.subject)));
+        card.append(element("p", "Subject record: " + display(profile.subject), "subject"));
+        card.append(element("p", "Names in this view", "field-label"));
+        const tags = element("div", undefined, "names");
+        names.forEach(name => tags.append(element("span", name, "tag")));
+        if (!names.length) tags.append(element("span", "No name statement available", "quiet"));
+        card.append(tags);
+        if (names.length > 1) card.append(element("p", "Multiple unrevised statements", "note"));
+        card.append(element("p", "Expressed views", "field-label"));
+        if (views.length) {
+          const entries = element("ul", undefined, "plain-list");
+          views.forEach(view => entries.append(element("li", view))); card.append(entries);
+        } else card.append(element("p", "No view statement available", "quiet"));
+        if (profile.note) card.append(element("p", display(profile.note), "note"));
+        target.append(card);
+      });
+    }
+    function renderClaims(records) {
+      const target = byId("claims"); target.replaceChildren();
+      byId("claim-count").textContent = records.length + (records.length === 1 ? " claim" : " claims");
+      if (!records.length) empty(target, "No claims are available in this audience view.");
+      records.forEach(claim => {
+        const card = element("article", undefined, "claim"), top = element("div", undefined, "claim-top");
+        top.append(element("h3", pretty(claim.kind || "Claim")), element("span", pretty(claim.status || "Unspecified status"), "status"));
+        card.append(top, element("p", display(claim.value), "claim-value"));
+        const meta = element("dl", undefined, "claim-meta");
+        field(meta, "Issuer", claim.issuer); field(meta, "Subject", claim.subject); field(meta, "Claim record", claim.id);
+        const links = element("dl", undefined, "claim-foot");
+        field(links, "Revises", list(claim.revises)); field(links, "Evidence recorded", list(claim.evidence));
+        card.append(meta, links); target.append(card);
+      });
+    }
+    function renderRecords(id, records, noun) {
+      const target = byId(id); target.replaceChildren();
+      if (!records.length) empty(target, "No " + noun.toLowerCase() + " records are available in this audience view.");
+      records.forEach((record, index) => {
+        const card = element("article", undefined, "record");
+        card.append(element("h3", noun + " " + (index + 1)));
+        const fields = element("dl");
+        Object.entries(record).forEach(([key, value]) => field(fields, pretty(key), value));
+        card.append(fields); target.append(card);
+      });
+    }
+    try {
+      const demo = JSON.parse(byId("demo-data").textContent);
+      if (demo.version !== 1 || !list(demo.scenarios).length) throw new Error("Unavailable demo data");
+      const scenarioSelect = byId("scenario"), audienceSelect = byId("audience"), slider = byId("step");
+      let scenarioIndex = 0, stepIndex = 0;
+      demo.scenarios.forEach((scenario, index) => {
+        if (!list(scenario.frames).length || !list(scenario.audiences).length) throw new Error("Incomplete scenario");
+        const option = element("option", scenario.title); option.value = String(index); scenarioSelect.append(option);
+      });
+      function render() {
+        const scenario = demo.scenarios[scenarioIndex], frame = scenario.frames[stepIndex];
+        const audience = audienceSelect.value;
+        const view = Object.hasOwn(frame.views, audience) ? frame.views[audience] : {};
+        slider.value = String(stepIndex); slider.max = String(scenario.frames.length - 1);
+        const progress = (stepIndex + 1) + " of " + scenario.frames.length;
+        byId("step-count").textContent = progress;
+        slider.setAttribute("aria-valuetext", "Step " + progress + ": " + frame.event_label);
+        byId("previous").disabled = stepIndex === 0;
+        byId("next").disabled = stepIndex === scenario.frames.length - 1;
+        byId("scenario-name").textContent = scenario.title;
+        byId("event-label").textContent = frame.event_label;
+        byId("question").textContent = scenario.question;
+        byId("description").textContent = scenario.description;
+        byId("view-context").textContent = "Viewing records available to: " + pretty(audience) + ".";
+        renderProfiles(list(view.profiles)); renderClaims(list(view.claims));
+        renderRecords("relationships", list(view.relationships), "Relationship");
+        renderRecords("resources", list(view.resources), "Resource");
+        const notices = byId("notices"); notices.replaceChildren();
+        const allNotices = [...(demo.notice ? [demo.notice] : []), ...list(view.notices)];
+        [...new Set(allNotices.map(display))].forEach(notice => notices.append(element("li", notice)));
+        notices.hidden = !notices.childElementCount;
+        byId("step-status").textContent = scenario.title + ". Step " + progress + ": " + frame.event_label + ". Audience: " + pretty(audience) + ".";
+      }
+      function chooseScenario() {
+        const previousAudience = audienceSelect.value;
+        scenarioIndex = Number(scenarioSelect.value); stepIndex = 0; audienceSelect.replaceChildren();
+        demo.scenarios[scenarioIndex].audiences.forEach(audience => {
+          const option = element("option", pretty(audience)); option.value = audience; audienceSelect.append(option);
+        });
+        if (demo.scenarios[scenarioIndex].audiences.includes(previousAudience)) audienceSelect.value = previousAudience;
+        render();
+      }
+      scenarioSelect.addEventListener("change", chooseScenario);
+      audienceSelect.addEventListener("change", render);
+      slider.addEventListener("input", () => { stepIndex = Number(slider.value); render(); });
+      byId("previous").addEventListener("click", () => { stepIndex = Math.max(0, stepIndex - 1); render(); });
+      byId("next").addEventListener("click", () => { stepIndex = Math.min(demo.scenarios[scenarioIndex].frames.length - 1, stepIndex + 1); render(); });
+      chooseScenario(); byId("demonstration").hidden = false;
+    } catch (error) {
+      byId("load-error").textContent = "The demonstration could not be loaded. Open the generated index.html file containing the synthetic scenario records.";
+      byId("load-error").hidden = false;
+    }
+  </script>
+</body>
+</html>

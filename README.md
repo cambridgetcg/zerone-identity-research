@@ -12,6 +12,8 @@ Participation may use a stable public pseudonym and accurately declared role whi
 
 [Openness, understanding and discovery under uncertainty](docs/DECISIONS.md#d004--openness-understanding-and-development-under-uncertainty) are guiding commitments. The [proposed open-inquiry framework](docs/OPEN-INQUIRY.md) describes how to keep learning through bounded steps, transparent assumptions, discussion of consequences and revisable decisions. Its procedure remains a proposal; it creates no participation test or live governance authority.
 
+The [Room to change prototype](prototypes/identity_changes/README.md) explores renaming, changed views, shared histories and distinct participation. Its [standalone explorer](prototypes/identity_changes/index.html) lets readers step through synthetic events and compare audience views while resource authority stays separate. This is a local design experiment, with no live identity or wallet integration.
+
 ## Studies
 
 | Study | Question | Status |
