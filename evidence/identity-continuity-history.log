@@ -1,0 +1,20 @@
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.83it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.44it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.04it/s]
+prepare history dev_01_h0 complete
+prepare history dev_01_h1 complete
+prepare history dev_02_h1 complete
+prepare history dev_02_h0 complete
+prepare history heldout_01_h0 complete
+prepare history heldout_01_h1 complete
+prepare history heldout_02_h1 complete
+prepare history heldout_02_h0 complete
+prepare history heldout_03_h0 complete
+prepare history heldout_03_h1 complete
+E1 prepare complete in fresh process
