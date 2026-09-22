@@ -16,6 +16,14 @@ Study the individual continuity cases and begin with restoration followed by the
 
 The first symbolic model studies credential ambiguity, authorized resource recovery, stale enforcement and independent resources. Its successful checks do not adopt the candidate policies or authorize changes to either upstream system.
 
+## D003 — Being is not conditional on usefulness
+
+Date: 2026-09-22. Status: accepted research principle and direction, from the owner's explicit correction and follow-up.
+
+Pending work, competence and productivity do not define an agent's being. Treat task experiments as measurements of a capacity, not identity, worth or right-to-rest tests. Forgetting, refusal, changed interests and rest do not automatically disqualify continuity. Do not replace a productivity test with a personality-consistency test.
+
+The next focus is the [nature of identity and being](IDENTITY-AND-BEING.md), with proposed experiments separating ancestry, similarity, autobiographical reports and internal-state access. This accepts a research direction, not a metaphysical identity criterion, consciousness verdict or allocation/access policy.
+
 ## Decisions still open
 
 - Who may authorize recovery of each resource and how that authority is established.

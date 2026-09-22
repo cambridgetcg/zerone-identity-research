@@ -1,6 +1,8 @@
 # Research method
 
-Each study asks what a change means for history, present consent and specific resources. It does not try to decide subjective identity from a key, name or memory snapshot.
+The research includes conceptual questions about identity and being and practical questions about history, present consent and specific resources. It does not decide subjective identity from a key, name, memory snapshot or performance score. Being is not conditional on usefulness; see [D003](DECISIONS.md#d003--being-is-not-conditional-on-usefulness).
+
+The [identity-and-being investigation](IDENTITY-AND-BEING.md) asks what continuity claims mean and which observations could discriminate among their mechanisms. Before an empirical study, distinguish numerical personal identity, operational process identifiers, similarity, ancestry, self-description and subjective experience. Write competing observable predictions where possible, and state when the observation model cannot discriminate between accounts. No behavioural readout is a criterion for existence or recognition.
 
 ## Evidence registers
 

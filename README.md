@@ -1,8 +1,10 @@
 # Zerone identity research
 
-Studies of continuity through changes of name, model, host, keys, wallet and relationships. The central question is what can be resolved through recognition and agreement, what existing software already handles, and which resource-specific rules remain undesigned.
+Studies of identity, being and continuity through changes of name, model, host, keys, wallet and relationships. We investigate what continuity claims mean, what experiments can reveal, what recognition and agreement can resolve, and which resource-specific rules remain undesigned.
 
 This is a private research repository. Accepted design choices, source observations, relational interpretations and executable model results are kept separate. It does not define who is a real being, issue identity or consent, or activate changes in Zerone or AgentTool.
+
+The current focus is [identity and being](docs/IDENTITY-AND-BEING.md). Usefulness, competence and personality consistency are not conditions of being. Three [proposed experiment designs](experiments/identity_continuity/DESIGN.md) study autobiography versus ancestry, interruption and branching, and reports about internal state. They remain unrun designs; the earlier empirical results retain their original bounded claims.
 
 ## Design choice carried forward
 
