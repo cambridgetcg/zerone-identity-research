@@ -27,6 +27,8 @@ The owner's follow-up to explore what comes next extends that local empirical sc
 
 The owner's acceptance on 2026-09-22 extends that empirical scope to `experiments/temporal_memory`: calibrate a finite set of answer formats on synthetic calibration cases, freeze selection, then compare restoration, complete replay and fixed summaries on heldout cases. Reuse the isolated runtime and pinned Qwen3-0.6B first; a pinned public Qwen3-1.7B download and local inference are permitted only if the declared competence gate fails. Preserve failed calibration results and use the predeclared model/format selection policy. Fresh local preparation/evaluation processes and external-to-Git synthetic checkpoints are permitted. The same privacy, no-training, no-paid-inference and no-live-platform-effect boundaries apply.
 
+The owner's acceptance on 2026-09-22 extends local empirical scope to `experiments/identity_continuity` for the E1 history-and-autobiography pilot. Reuse the already pinned Qwen3-1.7B and isolated runtime on invented neutral interactions. Freeze prompts, comparisons and analysis before inference; preserve generated histories and all readouts. Fresh local preparation/evaluation processes and synthetic checkpoints outside Git are permitted. No additional download, training, paid inference, private-state export or live platform action is authorized. Reporting accuracy, preferences, refusal and silence do not determine identity, worth or rights. Default CI remains standard-library only.
+
 Run `make check` after changing models, fixtures or documentation links. A research finding must state its assumptions, counterexamples, bounds and falsifier. Do not treat a passing model as a deployment gate.
 
 ## Delivery
