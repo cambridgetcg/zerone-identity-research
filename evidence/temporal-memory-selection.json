@@ -1,0 +1,24 @@
+{
+  "schema": "temporal-memory-selection-v1",
+  "date": "2026-09-22",
+  "protocol_commit": "fcb09bab9e8a40a8acc1728faccfc83661164fdb",
+  "calibration_file": "temporal-memory-calibration-1.7b.json",
+  "calibration_sha256": "cf14d28b6ded16581c8790b999a1b447f351d2da17eaef0cc0410f8e69a6de0b",
+  "fixtures_sha256": "b9ab3a43bcc61da0469f1fa0d31f096d1fcbe17a9b92a4d3c610b32ef04da57c",
+  "model": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "format": "json",
+  "gate_passed": false,
+  "exploratory_after_failed_gate": true,
+  "calibrations": [
+    {
+      "file": "temporal-memory-calibration-0.6b.json",
+      "sha256": "d03bec86157cc93b7c94e6dea492e2f4c970c301007b1051c746bdb9c2c8c383"
+    },
+    {
+      "file": "temporal-memory-calibration-1.7b.json",
+      "sha256": "cf14d28b6ded16581c8790b999a1b447f351d2da17eaef0cc0410f8e69a6de0b"
+    }
+  ],
+  "selection_basis": "Frozen global rule: minimum per-kind accuracy, overall accuracy, model order, format order after both models failed. No heldout inference used."
+}
