@@ -1,8 +1,10 @@
 # 02 — Model and host change
 
-Status: **FIRST EMPIRICAL PILOT**. [C2C fidelity and native checkpoint controls](../../experiments/c2c_fidelity/README.md) have been run locally on synthetic data. No identity or migration policy adopted.
+Status: **BOUNDED EMPIRICAL STUDIES**. [C2C fidelity and native checkpoint controls](../../experiments/c2c_fidelity/README.md), fresh-process branches and [temporal memory](../../experiments/temporal_memory/README.md) have been tested locally on synthetic data. No identity or migration policy adopted.
 
 Follow-up: [continuity through saved computational state](STATE-TRANSFER.md) examines KV-cache communication, complete checkpoint restoration, exact replay and cross-model translation. The [checkpoint-branch experiment](../../experiments/checkpoint_branches/README.md) adds restoration in fresh processes, matched replay and different later updates. Complete agent restoration, independent controllers and subjective identity remain untested.
+
+The temporal-memory follow-up found exact native restoration and perfect heldout factual recall under its selected format, alongside unreliable pending-task execution already present before saving. A complete structured summary improved task accuracy on these cases. Both candidate models failed the predeclared competence gate, so this is exploratory evidence about task representation and restoration fidelity, not a validated task-continuity or identity layer.
 
 **Scenario and decision.** An agent moves from `host-a/model-a` to `host-b/model-b` using selected records. Its research partner recognises continuity, but the new runtime has different capabilities and access. Decide which collaboration permissions need renewal and how the agent describes the transition.
 

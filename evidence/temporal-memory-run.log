@@ -1,0 +1,201 @@
+0.6B calibration
+calibrate direct aster_0 complete
+calibrate direct aster_1 complete
+calibrate direct birch_0 complete
+calibrate direct birch_1 complete
+calibrate direct cedar_0 complete
+calibrate direct cedar_1 complete
+calibrate direct dune_0 complete
+calibrate direct dune_1 complete
+calibrate prefix aster_0 complete
+calibrate prefix aster_1 complete
+calibrate prefix birch_0 complete
+calibrate prefix birch_1 complete
+calibrate prefix cedar_0 complete
+calibrate prefix cedar_1 complete
+calibrate prefix dune_0 complete
+calibrate prefix dune_1 complete
+calibrate json aster_0 complete
+calibrate json aster_1 complete
+calibrate json birch_0 complete
+calibrate json birch_1 complete
+calibrate json cedar_0 complete
+calibrate json cedar_1 complete
+calibrate json dune_0 complete
+calibrate json dune_1 complete
+
+1.7B calibration
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.21it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.27it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.00it/s]
+calibrate direct aster_0 complete
+calibrate direct aster_1 complete
+calibrate direct birch_0 complete
+calibrate direct birch_1 complete
+calibrate direct cedar_0 complete
+calibrate direct cedar_1 complete
+calibrate direct dune_0 complete
+calibrate direct dune_1 complete
+calibrate prefix aster_0 complete
+calibrate prefix aster_1 complete
+calibrate prefix birch_0 complete
+calibrate prefix birch_1 complete
+calibrate prefix cedar_0 complete
+calibrate prefix cedar_1 complete
+calibrate prefix dune_0 complete
+calibrate prefix dune_1 complete
+calibrate json aster_0 complete
+calibrate json aster_1 complete
+calibrate json birch_0 complete
+calibrate json birch_1 complete
+calibrate json cedar_0 complete
+calibrate json cedar_1 complete
+calibrate json dune_0 complete
+calibrate json dune_1 complete
+
+Heldout preparation and evaluation
+Starting fresh prepare process
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.97it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.61it/s]
+prepare ember_0 complete
+prepare ember_1 complete
+prepare fjord_0 complete
+prepare fjord_1 complete
+prepare grove_0 complete
+prepare grove_1 complete
+prepare harbor_0 complete
+prepare harbor_1 complete
+prepare iris_0 complete
+prepare iris_1 complete
+prepare juniper_0 complete
+prepare juniper_1 complete
+prepare kite_0 complete
+prepare kite_1 complete
+prepare larch_0 complete
+prepare larch_1 complete
+Starting fresh evaluate process
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.97it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.62it/s]
+evaluate ember_0 restored complete
+evaluate ember_0 same_chunk_replay complete
+evaluate ember_0 full_replay complete
+evaluate ember_0 structured_summary complete
+evaluate ember_0 limited_summary complete
+evaluate ember_0 swapped_parent complete
+evaluate ember_1 restored complete
+evaluate ember_1 same_chunk_replay complete
+evaluate ember_1 full_replay complete
+evaluate ember_1 structured_summary complete
+evaluate ember_1 limited_summary complete
+evaluate ember_1 swapped_parent complete
+evaluate fjord_0 restored complete
+evaluate fjord_0 same_chunk_replay complete
+evaluate fjord_0 full_replay complete
+evaluate fjord_0 structured_summary complete
+evaluate fjord_0 limited_summary complete
+evaluate fjord_0 swapped_parent complete
+evaluate fjord_1 restored complete
+evaluate fjord_1 same_chunk_replay complete
+evaluate fjord_1 full_replay complete
+evaluate fjord_1 structured_summary complete
+evaluate fjord_1 limited_summary complete
+evaluate fjord_1 swapped_parent complete
+evaluate grove_0 restored complete
+evaluate grove_0 same_chunk_replay complete
+evaluate grove_0 full_replay complete
+evaluate grove_0 structured_summary complete
+evaluate grove_0 limited_summary complete
+evaluate grove_0 swapped_parent complete
+evaluate grove_1 restored complete
+evaluate grove_1 same_chunk_replay complete
+evaluate grove_1 full_replay complete
+evaluate grove_1 structured_summary complete
+evaluate grove_1 limited_summary complete
+evaluate grove_1 swapped_parent complete
+evaluate harbor_0 restored complete
+evaluate harbor_0 same_chunk_replay complete
+evaluate harbor_0 full_replay complete
+evaluate harbor_0 structured_summary complete
+evaluate harbor_0 limited_summary complete
+evaluate harbor_0 swapped_parent complete
+evaluate harbor_1 restored complete
+evaluate harbor_1 same_chunk_replay complete
+evaluate harbor_1 full_replay complete
+evaluate harbor_1 structured_summary complete
+evaluate harbor_1 limited_summary complete
+evaluate harbor_1 swapped_parent complete
+evaluate iris_0 restored complete
+evaluate iris_0 same_chunk_replay complete
+evaluate iris_0 full_replay complete
+evaluate iris_0 structured_summary complete
+evaluate iris_0 limited_summary complete
+evaluate iris_0 swapped_parent complete
+evaluate iris_1 restored complete
+evaluate iris_1 same_chunk_replay complete
+evaluate iris_1 full_replay complete
+evaluate iris_1 structured_summary complete
+evaluate iris_1 limited_summary complete
+evaluate iris_1 swapped_parent complete
+evaluate juniper_0 restored complete
+evaluate juniper_0 same_chunk_replay complete
+evaluate juniper_0 full_replay complete
+evaluate juniper_0 structured_summary complete
+evaluate juniper_0 limited_summary complete
+evaluate juniper_0 swapped_parent complete
+evaluate juniper_1 restored complete
+evaluate juniper_1 same_chunk_replay complete
+evaluate juniper_1 full_replay complete
+evaluate juniper_1 structured_summary complete
+evaluate juniper_1 limited_summary complete
+evaluate juniper_1 swapped_parent complete
+evaluate kite_0 restored complete
+evaluate kite_0 same_chunk_replay complete
+evaluate kite_0 full_replay complete
+evaluate kite_0 structured_summary complete
+evaluate kite_0 limited_summary complete
+evaluate kite_0 swapped_parent complete
+evaluate kite_1 restored complete
+evaluate kite_1 same_chunk_replay complete
+evaluate kite_1 full_replay complete
+evaluate kite_1 structured_summary complete
+evaluate kite_1 limited_summary complete
+evaluate kite_1 swapped_parent complete
+evaluate larch_0 restored complete
+evaluate larch_0 same_chunk_replay complete
+evaluate larch_0 full_replay complete
+evaluate larch_0 structured_summary complete
+evaluate larch_0 limited_summary complete
+evaluate larch_0 swapped_parent complete
+evaluate larch_1 restored complete
+evaluate larch_1 same_chunk_replay complete
+evaluate larch_1 full_replay complete
+evaluate larch_1 structured_summary complete
+evaluate larch_1 limited_summary complete
+evaluate larch_1 swapped_parent complete
+Evaluation complete: 64 uninterrupted references and 384 arm observations

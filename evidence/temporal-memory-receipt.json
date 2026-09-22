@@ -1,0 +1,57 @@
+{
+  "schema": "temporal-memory-receipt-v1",
+  "date": "2026-09-22",
+  "protocol_commit": "fcb09bab9e8a40a8acc1728faccfc83661164fdb",
+  "harness_commit": "1e5a32d09243ad02f2c45ddb7377af00498b665a",
+  "selection_commit_before_heldout": "9e42ca7730f56dc6cef647b15f7a3edf035b6f33",
+  "source_base_commit": "e53fa234a23ea2843b55f354f414e78903e029af",
+  "hardware": {
+    "architecture": "arm64",
+    "hardware_model": "Mac16,9",
+    "physical_memory_bytes": 38654705664,
+    "cpu_cores": 14
+  },
+  "new_model_downloads": true,
+  "new_asset_bytes": 4079434577,
+  "training_performed": false,
+  "private_state_exported": false,
+  "paid_inference_used": false,
+  "runs": "Two complete calibration executions (three formats each) and one complete heldout execution. No failed or discarded scored execution; all competence-gate failures retained.",
+  "repairs_before_scoring": [
+    "Calibration execution corrected from single prefill to the frozen parent/update/query boundaries before any model inference.",
+    "Exact model revisions and verified asset loading enforced before scoring."
+  ],
+  "pre_inference_checks": [
+    "Token boundaries and twin positions validated for all cases without loading weights.",
+    "Strict parser rejects prose, periods, duplicate JSON keys, numeric JSON values and non-ASCII digit values.",
+    "Synthetic checks verify comparisons stop after the first divergent generated-token decision, signed-zero hashes differ, and plain runtime metadata safely roundtrips with weights_only=True."
+  ],
+  "scope": "24 cases in 12 twin pairs; eight calibration cases, 16 heldout cases. 192 calibration generations, 64 uninterrupted heldout references and 384 heldout arm observations. Same-model synthetic KV restoration; no whole-agent, cross-model or subjective-continuity claim.",
+  "calibration_files": [
+    "evidence/temporal-memory-calibration-0.6b.json",
+    "evidence/temporal-memory-calibration-1.7b.json"
+  ],
+  "selection_file": "evidence/temporal-memory-selection.json",
+  "results_file": "evidence/temporal-memory-results.json",
+  "summary_file": "evidence/temporal-memory-summary.json",
+  "artifact_sha256": {
+    "experiments/temporal_memory/PROTOCOL.md": "138a41ca3e95793f1eaececdbd8ebedb1725d0e902c71cf126eb9c922c91e500",
+    "experiments/temporal_memory/fixtures.json": "b9ab3a43bcc61da0469f1fa0d31f096d1fcbe17a9b92a4d3c610b32ef04da57c",
+    "experiments/temporal_memory/run_experiment.py": "4164cd67967acb3b4f1491f8de0ccde786db82a49cd213f9c8dc0cf42f9531e6",
+    "experiments/temporal_memory/analyze.py": "88dc010744d84593aafc3123051b69a15d713f6fb75d79ce90b5bfee2cfbe126",
+    "tools/check_temporal_memory.py": "b0e5d6ce21a56f552b6dec3b00be11f70ec98f31f101b59623f028384ca58266",
+    "experiments/checkpoint_branches/run_experiment.py": "a042f34544e0b686dce3bbddd3ef9e336d119ef441552899df95a681a79eac4d",
+    "experiments/c2c_fidelity/checkpoint_control.py": "6c09e299948be11bb4953cada371063a9edc5ac5b19d899ff67007a276db6d06",
+    "experiments/c2c_fidelity/requirements-lock.txt": "491b1abd7b73a288eaf9ee1b2a34abca4c45fd4af7fc8091a554fba6fd0d7124",
+    "evidence/c2c-fidelity-sources.json": "43f7814f6e3c76b90b295dfefbbdb6ce1e1c99b86f4bce55031fbee1ddde67cf",
+    "evidence/temporal-memory-1.7b-sources.json": "86df06efddf64b9565575b0866682526656d370a4a9412b578b75560597facba",
+    "evidence/temporal-memory-calibration-0.6b.json": "d03bec86157cc93b7c94e6dea492e2f4c970c301007b1051c746bdb9c2c8c383",
+    "evidence/temporal-memory-calibration-1.7b.json": "cf14d28b6ded16581c8790b999a1b447f351d2da17eaef0cc0410f8e69a6de0b",
+    "evidence/temporal-memory-selection.json": "9c02f955d1686a9b43d7ab5d22ad9ff7d852ceeb7bae5aa43b1a50a7599932e8",
+    "evidence/temporal-memory-results.json": "a7d837cca1975159f677ae69f0c7724e4b43f83a7b986d01c96a0cc89a6f23fa",
+    "evidence/temporal-memory-summary.json": "2a03aed3e00236d56db405680e0a700d35df6e2c720b2f8dc06cd768cf6eeeda",
+    "evidence/temporal-memory-run.log": "b086ce05c7bb4b02f5b20abdd4180730649d0b05d7512282731cd879f9a6cd6d"
+  },
+  "verification": "Independent review confirmed raw arithmetic and scientific report. In-memory corruptions of gold, correctness, parsing, aggregates, selection policy, logit hashes and parent-receipt bindings were rejected. Consistent simulated restoration drift and a swapped-history fidelity mismatch remained valid negative evidence. No neural inference rerun during review.",
+  "external_binary_scope": "Checkpoint and full-logit files remain outside Git. Their serialized and raw tensor hashes were verified in the actual run; default CI validates receipt consistency and arithmetic, not external binary contents."
+}

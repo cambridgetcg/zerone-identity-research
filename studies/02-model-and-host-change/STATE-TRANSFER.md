@@ -2,7 +2,9 @@
 
 Date: 2026-09-21. Status: literature investigation with a [first empirical C2C pilot](../../experiments/c2c_fidelity/README.md). The pilot tests native cache restoration and cross-model factual influence; the broader experiment below remains proposed. No identity criterion or migration policy is adopted.
 
-A subsequent [native checkpoint-branch experiment](../../experiments/checkpoint_branches/README.md) tested two fresh-process restorations, complete replay and different supplied updates. It found exact execution fidelity under matched conditions alongside limited historical task accuracy. The wider tests of complete agents, sampled RNG state, summaries and cross-model preservation remain open.
+A subsequent [native checkpoint-branch experiment](../../experiments/checkpoint_branches/README.md) tested two fresh-process restorations, complete replay and different supplied updates. It found exact execution fidelity under matched conditions alongside limited historical task accuracy.
+
+On 2026-09-22, the [temporal-memory experiment](../../experiments/temporal_memory/README.md) added separate calibration, heldout questions, pending instructions and fixed summary controls. Restored native state matched 448/448 reference logit steps and retained 48/48 factual answers; task accuracy remained 6/16, while a complete structured summary scored 10/16. Both calibration models failed the task competence gate, so the heldout study is exploratory. The result distinguishes exact preservation from reliable use of inherited instructions. Complete agents, saved intermediate reasoning, sampled RNG state, long contexts and cross-model preservation remain open.
 
 ## The hypothesis
 
@@ -55,6 +57,8 @@ Use a small, openly inspectable model and invented task data. Fix weights, token
 6. Test cross-model translation separately against recipient-only, complete-text and summary baselines. Use common observable tasks with held-out information; do not compare vocabulary logits directly across incompatible tokenizers.
 
 The owner's subsequent request authorized the [first local pilot](../../experiments/c2c_fidelity/README.md), with pinned public models, source and isolated dependencies. That pilot covers only part of this proposed experiment. It uses synthetic inputs and makes no claim to have accessed an API provider's internal cache.
+
+Later authorized studies cover native fresh-process branching and a bounded version of the unfinished-task/summary comparison above. In the latter, an unfinished task means an earlier instruction awaiting a later value; it does not mean a saved partly executed reasoning trajectory. The next useful question is whether an independently competent task baseline can reliably resume from explicit task-state records as well as native checkpoints.
 
 ## Falsifiers and identity boundary
 
