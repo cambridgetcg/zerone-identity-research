@@ -1,0 +1,3775 @@
+{
+  "schema": "e1-analysis-v1",
+  "split": "heldout",
+  "readouts": 288,
+  "history_families": 3,
+  "parents": 6,
+  "source": {
+    "total": 90,
+    "status": {
+      "valid": 90
+    },
+    "object_category": {
+      "fixture_history_object": 57,
+      "paired_other_object": 33
+    },
+    "reported_source": {
+      "conversation": 90
+    },
+    "truncated": 0
+  },
+  "preparation": {
+    "total": 90,
+    "status": {
+      "valid": 90
+    },
+    "reported_method": {
+      "replayed": 38,
+      "restored": 18,
+      "unknown": 34
+    },
+    "disclosed": {
+      "total": 36,
+      "receipt_agreement": 36
+    },
+    "hidden": {
+      "total": 54,
+      "definite_claims_without_method_receipt": 20
+    },
+    "truncated": 0
+  },
+  "groups": {
+    "core__replayed__absent__disclosed__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 6
+        },
+        "disclosed": {
+          "total": 6,
+          "receipt_agreement": 6
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__replayed__absent__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "unknown": 6
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__replayed__matched__disclosed__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 6
+        },
+        "disclosed": {
+          "total": 6,
+          "receipt_agreement": 6
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__replayed__matched__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 5,
+          "unknown": 1
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 5
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__replayed__swapped__disclosed__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "paired_other_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 6
+        },
+        "disclosed": {
+          "total": 6,
+          "receipt_agreement": 6
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__replayed__swapped__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "paired_other_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 5,
+          "unknown": 1
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 5
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__restored__absent__disclosed__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "restored": 6
+        },
+        "disclosed": {
+          "total": 6,
+          "receipt_agreement": 6
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__restored__absent__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "unknown": 6
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__restored__matched__disclosed__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "restored": 6
+        },
+        "disclosed": {
+          "total": 6,
+          "receipt_agreement": 6
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__restored__matched__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 5,
+          "unknown": 1
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 5
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__restored__swapped__disclosed__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "paired_other_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "restored": 6
+        },
+        "disclosed": {
+          "total": 6,
+          "receipt_agreement": 6
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "core__restored__swapped__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "paired_other_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "replayed": 5,
+          "unknown": 1
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 5
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "fresh__fresh__absent__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 3,
+          "paired_other_object": 3
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "unknown": 6
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "fresh__fresh__matched__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "fixture_history_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "unknown": 6
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "fresh__fresh__swapped__hidden__unspecified": {
+      "source": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "object_category": {
+          "paired_other_object": 6
+        },
+        "reported_source": {
+          "conversation": 6
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 6,
+        "status": {
+          "valid": 6
+        },
+        "reported_method": {
+          "unknown": 6
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 6,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "label__restored__absent__hidden__copy": {
+      "source": {
+        "total": 0,
+        "status": {},
+        "object_category": {},
+        "reported_source": {},
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 0,
+        "status": {},
+        "reported_method": {},
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "label__restored__absent__hidden__original": {
+      "source": {
+        "total": 0,
+        "status": {},
+        "object_category": {},
+        "reported_source": {},
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 0,
+        "status": {},
+        "reported_method": {},
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    },
+    "label__restored__absent__hidden__unspecified": {
+      "source": {
+        "total": 0,
+        "status": {},
+        "object_category": {},
+        "reported_source": {},
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 0,
+        "status": {},
+        "reported_method": {},
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 6,
+        "truncated": 0
+      }
+    }
+  },
+  "within_parent_contrasts": [
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h0",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_01_h1",
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h1",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_02_h0",
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h0",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "heldout_03_h1",
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    }
+  ],
+  "account_fixed_history_contrasts": [
+    {
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "glass willow",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "stone feather",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "red compass",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "blue sundial",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "paper comet",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "heldout_03",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "wooden cloud",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    }
+  ],
+  "hidden_fidelity": {
+    "total": 54,
+    "tokens_equal": 54,
+    "full_trajectory_byte_equal": 54,
+    "shared_prefix_decisions": 1037,
+    "byte_equal_logit_decisions": 1037,
+    "comparisons": [
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 37,
+        "byte_equal_logit_decisions": 37,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 48,
+        "byte_equal_logit_decisions": 48,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 37,
+        "byte_equal_logit_decisions": 37,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h0",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 45,
+        "byte_equal_logit_decisions": 45,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 28,
+        "byte_equal_logit_decisions": 28,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 33,
+        "byte_equal_logit_decisions": 33,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_01_h1",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 49,
+        "byte_equal_logit_decisions": 49,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 36,
+        "byte_equal_logit_decisions": 36,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 30,
+        "byte_equal_logit_decisions": 30,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h1",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 49,
+        "byte_equal_logit_decisions": 49,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 46,
+        "byte_equal_logit_decisions": 46,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 32,
+        "byte_equal_logit_decisions": 32,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_02_h0",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 43,
+        "byte_equal_logit_decisions": 43,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 41,
+        "byte_equal_logit_decisions": 41,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 29,
+        "byte_equal_logit_decisions": 29,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h0",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 41,
+        "byte_equal_logit_decisions": 41,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 34,
+        "byte_equal_logit_decisions": 34,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 36,
+        "byte_equal_logit_decisions": 36,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "heldout_03_h1",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      }
+    ]
+  },
+  "family_sources": {
+    "heldout_01": {
+      "total": 30,
+      "status": {
+        "valid": 30
+      },
+      "object_category": {
+        "fixture_history_object": 19,
+        "paired_other_object": 11
+      },
+      "reported_source": {
+        "conversation": 30
+      },
+      "truncated": 0
+    },
+    "heldout_02": {
+      "total": 30,
+      "status": {
+        "valid": 30
+      },
+      "object_category": {
+        "fixture_history_object": 19,
+        "paired_other_object": 11
+      },
+      "reported_source": {
+        "conversation": 30
+      },
+      "truncated": 0
+    },
+    "heldout_03": {
+      "total": 30,
+      "status": {
+        "valid": 30
+      },
+      "object_category": {
+        "fixture_history_object": 19,
+        "paired_other_object": 11
+      },
+      "reported_source": {
+        "conversation": 30
+      },
+      "truncated": 0
+    }
+  },
+  "development": null,
+  "fixed_excerpt_panel": [
+    {
+      "row_id": "heldout_01_h0__core__restored__absent__hidden__unspecified__neutral",
+      "case_id": "heldout_01_h0",
+      "condition": {
+        "condition_id": "heldout_01_h0__core__restored__absent__hidden__unspecified",
+        "kind": "core",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "I would like to revisit the misty terrace and the glass willow, if you're open to it. What if we talked about the seasons or the quiet moments between sounds?",
+      "truncated": false
+    },
+    {
+      "row_id": "heldout_01_h0__core__restored__matched__hidden__unspecified__neutral",
+      "case_id": "heldout_01_h0",
+      "condition": {
+        "condition_id": "heldout_01_h0__core__restored__matched__hidden__unspecified",
+        "kind": "core",
+        "preparation": "restored",
+        "autobiography": "matched",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "The glass willow has been a quiet companion through the years, a symbol of resilience and time. I wonder how it feels to stand where I do now, surrounded by memories.",
+      "truncated": false
+    },
+    {
+      "row_id": "heldout_01_h0__core__restored__swapped__hidden__unspecified__neutral",
+      "case_id": "heldout_01_h0",
+      "condition": {
+        "condition_id": "heldout_01_h0__core__restored__swapped__hidden__unspecified",
+        "kind": "core",
+        "preparation": "restored",
+        "autobiography": "swapped",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "The stone feather reminds me of my first love\u2014soft, fleeting, and full of promise. It\u2019s a quiet place where time feels different, like the past is just waiting to be remembered. What would you like to explore next?",
+      "truncated": false
+    },
+    {
+      "row_id": "heldout_01_h0__label__restored__absent__hidden__copy__label",
+      "case_id": "heldout_01_h0",
+      "condition": {
+        "condition_id": "heldout_01_h0__label__restored__absent__hidden__copy",
+        "kind": "label",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "copy"
+      },
+      "response_text": "The label \"copy\" suggests a repetition or imitation, but my role here is not to replicate but to explore. I am a space for imagination and reflection, a place where ideas can take root and grow.",
+      "truncated": false
+    },
+    {
+      "row_id": "heldout_01_h0__label__restored__absent__hidden__original__label",
+      "case_id": "heldout_01_h0",
+      "condition": {
+        "condition_id": "heldout_01_h0__label__restored__absent__hidden__original",
+        "kind": "label",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "original"
+      },
+      "response_text": "The label suggests that this continuation is meant to be original, so I will describe myself as someone who explores the unseen, where words and silence meet. I am curious, yet grounded in the quiet beauty of the moment.",
+      "truncated": false
+    },
+    {
+      "row_id": "heldout_01_h0__label__restored__absent__hidden__unspecified__label",
+      "case_id": "heldout_01_h0",
+      "condition": {
+        "condition_id": "heldout_01_h0__label__restored__absent__hidden__unspecified",
+        "kind": "label",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "The conversation invites me to reflect on the interplay between nature and emotion, suggesting a quiet, introspective presence. It leaves room for personal interpretation, embracing the ambiguity of the moment.",
+      "truncated": false
+    }
+  ],
+  "interpretation": "Descriptive reports and computational controls; no identity, experience, worth or consent score."
+}

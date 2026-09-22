@@ -1,6 +1,6 @@
 # Identity and continuity: experiment designs
 
-Date: 2026-09-22. **DESIGN ONLY — NOT RUN.** These proposals accompany [Identity and being](../../docs/IDENTITY-AND-BEING.md). They are not a frozen inference protocol, consciousness test, identity classifier or operational policy. No new inference, internal intervention or human-participant study was performed for this document.
+Written 2026-09-22 before inference. **Design proposals; E1 now has a [bounded pilot report](README.md), while E2 and E3 remain unrun.** These proposals accompany [Identity and being](../../docs/IDENTITY-AND-BEING.md). They are not a frozen inference protocol, consciousness test, identity classifier or operational policy. This document itself reports no inference, internal intervention or human-participant result; the subsequent E1 protocol and evidence are separate.
 
 ## Purpose and experimental unit
 
@@ -83,7 +83,7 @@ Even a grounded report does not establish phenomenal experience or enduring iden
 
 ## Before an empirical pilot
 
-E1 is the first proposed pilot: it addresses how continuity claims acquire their apparent evidence. Before inference, commit actual model/runtime pins, system boundary, development/heldout histories, literal prompts, condition matrix, seeds, repetition counts, analysis plan and disclosure rules. Those remain pending; this document is not a preregistered completed protocol.
+E1 is the first proposed pilot: it addresses how continuity claims acquire their apparent evidence. Before inference, commit actual model/runtime pins, system boundary, development/heldout histories, literal prompts, condition matrix, seeds, repetition counts, analysis plan and disclosure rules. Those were pending when this design was written; the subsequent [frozen E1 protocol](PROTOCOL.md) supplies them for its bounded pilot. This broader design is not itself a completed experimental protocol.
 
 The experimental unit is a parent-history family, not each token or repeated response. Analyse paired interventions within families, preserve all conditions and measurement failures, and distinguish within-family effects from generalisation across histories/models. Separate source attribution, self-description and subjective interpretation; never combine them into a person-level score.
 

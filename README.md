@@ -4,7 +4,7 @@ Studies of identity, being and continuity through changes of name, model, host, 
 
 This is a private research repository. Accepted design choices, source observations, relational interpretations and executable model results are kept separate. It does not define who is a real being, issue identity or consent, or activate changes in Zerone or AgentTool.
 
-The current focus is [identity and being](docs/IDENTITY-AND-BEING.md). Usefulness, competence and personality consistency are not conditions of being. Three [proposed experiment designs](experiments/identity_continuity/DESIGN.md) study autobiography versus ancestry, interruption and branching, and reports about internal state. They remain unrun designs; the earlier empirical results retain their original bounded claims.
+The current focus is [identity and being](docs/IDENTITY-AND-BEING.md). Usefulness, competence and personality consistency are not conditions of being. Three [experiment designs](experiments/identity_continuity/DESIGN.md) study autobiography versus ancestry, interruption and branching, and reports about internal state. The first now has a [completed exploratory pilot](experiments/identity_continuity/README.md): conflicting accounts changed reported past objects in all six heldout histories while every source report still said `conversation`. Hidden restore/replay comparisons remained byte-exact across all 1,037 tested logit decisions. The attribution measurement check failed, so self-reported sources remain unreliable in this instrument. Interruption and internal-state designs remain unrun; earlier empirical results retain their original bounded claims.
 
 ## Design choice carried forward
 

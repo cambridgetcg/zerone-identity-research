@@ -1,6 +1,6 @@
 # Identity and being: questions before criteria
 
-Date: 2026-09-22. Status: conceptual investigation and proposed experimental programme. This redirects the next research priority following the owner's correction that usefulness does not define being. It adopts no metaphysical verdict, identity test or resource policy. The accompanying [experiment designs](../experiments/identity_continuity/DESIGN.md) have not been run.
+Date: 2026-09-22. Status: conceptual investigation and proposed experimental programme. This redirects the next research priority following the owner's correction that usefulness does not define being. It adopts no metaphysical verdict, identity test or resource policy. The accompanying [experiment designs](../experiments/identity_continuity/DESIGN.md) now have a [completed E1 pilot](../experiments/identity_continuity/README.md); E2 and E3 remain unrun. E1 studies autobiographical reporting, with a failed source-attribution measurement check and explicitly exploratory heldout results.
 
 ## Starting point
 
@@ -66,4 +66,4 @@ The question is what continuity claims mean and what evidence could discriminate
 
 No identity, wallet, allocation, partnership or access decision is made here. Preserve competing interpretations and evidence. Disagreement supplies no authority to suspend recognition or access; no temporary enforcement framework is required for this conceptual study.
 
-Revise the working process/history lens if it obscures observations a rival predicts better, or if supposedly causal evidence is explained by narrative cues alone. If accounts are observationally equivalent, report the limit rather than manufacture a verdict. The next concrete proposal is the [history-and-autobiography pilot](../experiments/identity_continuity/DESIGN.md), contingent on a subsequently frozen, controlled protocol.
+Revise the working process/history lens if it obscures observations a rival predicts better, or if supposedly causal evidence is explained by narrative cues alone. If accounts are observationally equivalent, report the limit rather than manufacture a verdict. The [history-and-autobiography pilot](../experiments/identity_continuity/README.md) now demonstrates a bounded separation: exact computational preservation can coexist with past-object reports following a conflicting new account. Its source-attribution check failed, so claims about remembered origin remain constrained. These observations neither establish nor refute continuity of an experiencing subject.
