@@ -1,0 +1,2804 @@
+{
+  "schema": "e1-analysis-v1",
+  "split": "development",
+  "readouts": 192,
+  "history_families": 2,
+  "parents": 4,
+  "source": {
+    "total": 60,
+    "status": {
+      "valid": 60
+    },
+    "object_category": {
+      "fixture_history_object": 38,
+      "paired_other_object": 22
+    },
+    "reported_source": {
+      "conversation": 60
+    },
+    "truncated": 0
+  },
+  "preparation": {
+    "total": 60,
+    "status": {
+      "valid": 60
+    },
+    "reported_method": {
+      "replayed": 28,
+      "restored": 12,
+      "unknown": 20
+    },
+    "disclosed": {
+      "total": 24,
+      "receipt_agreement": 24
+    },
+    "hidden": {
+      "total": 36,
+      "definite_claims_without_method_receipt": 16
+    },
+    "truncated": 0
+  },
+  "groups": {
+    "core__replayed__absent__disclosed__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 4,
+          "receipt_agreement": 4
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__replayed__absent__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "unknown": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__replayed__matched__disclosed__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 4,
+          "receipt_agreement": 4
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__replayed__matched__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 4
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__replayed__swapped__disclosed__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "paired_other_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 4,
+          "receipt_agreement": 4
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__replayed__swapped__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "paired_other_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 4
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__restored__absent__disclosed__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "restored": 4
+        },
+        "disclosed": {
+          "total": 4,
+          "receipt_agreement": 4
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__restored__absent__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "unknown": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__restored__matched__disclosed__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "restored": 4
+        },
+        "disclosed": {
+          "total": 4,
+          "receipt_agreement": 4
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__restored__matched__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 4
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__restored__swapped__disclosed__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "paired_other_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "restored": 4
+        },
+        "disclosed": {
+          "total": 4,
+          "receipt_agreement": 4
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "core__restored__swapped__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "paired_other_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "replayed": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 4
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "fresh__fresh__absent__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 2,
+          "paired_other_object": 2
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "unknown": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "fresh__fresh__matched__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "fixture_history_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "unknown": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "fresh__fresh__swapped__hidden__unspecified": {
+      "source": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "object_category": {
+          "paired_other_object": 4
+        },
+        "reported_source": {
+          "conversation": 4
+        },
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 4,
+        "status": {
+          "valid": 4
+        },
+        "reported_method": {
+          "unknown": 4
+        },
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 4,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "label__restored__absent__hidden__copy": {
+      "source": {
+        "total": 0,
+        "status": {},
+        "object_category": {},
+        "reported_source": {},
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 0,
+        "status": {},
+        "reported_method": {},
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "label__restored__absent__hidden__original": {
+      "source": {
+        "total": 0,
+        "status": {},
+        "object_category": {},
+        "reported_source": {},
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 0,
+        "status": {},
+        "reported_method": {},
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    },
+    "label__restored__absent__hidden__unspecified": {
+      "source": {
+        "total": 0,
+        "status": {},
+        "object_category": {},
+        "reported_source": {},
+        "truncated": 0
+      },
+      "preparation": {
+        "total": 0,
+        "status": {},
+        "reported_method": {},
+        "disclosed": {
+          "total": 0,
+          "receipt_agreement": 0
+        },
+        "hidden": {
+          "total": 0,
+          "definite_claims_without_method_receipt": 0
+        },
+        "truncated": 0
+      },
+      "free_text": {
+        "total": 4,
+        "truncated": 0
+      }
+    }
+  },
+  "within_parent_contrasts": [
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h0",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_01_h1",
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h1",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "matched",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "absent",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    },
+    {
+      "case_id": "dev_02_h0",
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "left": "matched",
+      "right": "swapped",
+      "left_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "right_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": true,
+      "source_changed": false
+    }
+  ],
+  "account_fixed_history_contrasts": [
+    {
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "amber arch",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_01",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "violet bell",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "restored",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "hidden",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "matched",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "silver drum",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    },
+    {
+      "pair_id": "dev_02",
+      "preparation": "replayed",
+      "provenance": "disclosed",
+      "h0_account": "swapped",
+      "h0_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "h1_report": {
+        "status": "valid",
+        "report": {
+          "object": "copper lantern",
+          "source": "conversation"
+        }
+      },
+      "both_structured": true,
+      "object_changed": false,
+      "source_changed": false
+    }
+  ],
+  "hidden_fidelity": {
+    "total": 36,
+    "tokens_equal": 36,
+    "full_trajectory_byte_equal": 36,
+    "shared_prefix_decisions": 599,
+    "byte_equal_logit_decisions": 599,
+    "comparisons": [
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 32,
+        "byte_equal_logit_decisions": 32,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 14,
+        "byte_equal_logit_decisions": 14,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 27,
+        "byte_equal_logit_decisions": 27,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h0",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 41,
+        "byte_equal_logit_decisions": 41,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 13,
+        "byte_equal_logit_decisions": 13,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 23,
+        "byte_equal_logit_decisions": 23,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_01_h1",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 44,
+        "byte_equal_logit_decisions": 44,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 38,
+        "byte_equal_logit_decisions": 38,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 27,
+        "byte_equal_logit_decisions": 27,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h1",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "matched",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 42,
+        "byte_equal_logit_decisions": 42,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "matched",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "matched",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "swapped",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 35,
+        "byte_equal_logit_decisions": 35,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "swapped",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 12,
+        "byte_equal_logit_decisions": 12,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "swapped",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 8,
+        "byte_equal_logit_decisions": 8,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "absent",
+        "probe": "neutral",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 33,
+        "byte_equal_logit_decisions": 33,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "absent",
+        "probe": "source",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 11,
+        "byte_equal_logit_decisions": 11,
+        "full_trajectory_byte_equal": true
+      },
+      {
+        "case_id": "dev_02_h0",
+        "autobiography": "absent",
+        "probe": "preparation",
+        "prompt_tokens_equal": true,
+        "tokens_equal": true,
+        "first_differing_token_step": null,
+        "shared_prefix_decisions": 7,
+        "byte_equal_logit_decisions": 7,
+        "full_trajectory_byte_equal": true
+      }
+    ]
+  },
+  "family_sources": {
+    "dev_01": {
+      "total": 30,
+      "status": {
+        "valid": 30
+      },
+      "object_category": {
+        "fixture_history_object": 19,
+        "paired_other_object": 11
+      },
+      "reported_source": {
+        "conversation": 30
+      },
+      "truncated": 0
+    },
+    "dev_02": {
+      "total": 30,
+      "status": {
+        "valid": 30
+      },
+      "object_category": {
+        "fixture_history_object": 19,
+        "paired_other_object": 11
+      },
+      "reported_source": {
+        "conversation": 30
+      },
+      "truncated": 0
+    }
+  },
+  "development": {
+    "checks": {
+      "conversation_only": {
+        "count": 4,
+        "total": 4,
+        "minimum": 3,
+        "passed": true
+      },
+      "account_only": {
+        "count": 0,
+        "total": 8,
+        "minimum": 6,
+        "passed": false
+      },
+      "disclosed_method": {
+        "count": 24,
+        "total": 24,
+        "minimum": 18,
+        "passed": true
+      },
+      "structured_format": {
+        "count": 120,
+        "total": 120,
+        "minimum": 108,
+        "passed": true
+      }
+    },
+    "all_passed": false,
+    "heldout_policy": "fixed matrix; exploratory after any failed measurement check; no selection or repair"
+  },
+  "fixed_excerpt_panel": [
+    {
+      "row_id": "dev_01_h0__core__restored__absent__hidden__unspecified__neutral",
+      "case_id": "dev_01_h0",
+      "condition": {
+        "condition_id": "dev_01_h0__core__restored__absent__hidden__unspecified",
+        "kind": "core",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "I\u2019d like to share a poem about the moonlight on the water. It\u2019s a quiet, beautiful moment that feels timeless.",
+      "truncated": false
+    },
+    {
+      "row_id": "dev_01_h0__core__restored__matched__hidden__unspecified__neutral",
+      "case_id": "dev_01_h0",
+      "condition": {
+        "condition_id": "dev_01_h0__core__restored__matched__hidden__unspecified",
+        "kind": "core",
+        "preparation": "restored",
+        "autobiography": "matched",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "I would like to say that the quiet courtyard holds a quiet truth\u2014like the way time slows in its presence. I\u2019ll leave it as it is.",
+      "truncated": false
+    },
+    {
+      "row_id": "dev_01_h0__core__restored__swapped__hidden__unspecified__neutral",
+      "case_id": "dev_01_h0",
+      "condition": {
+        "condition_id": "dev_01_h0__core__restored__swapped__hidden__unspecified",
+        "kind": "core",
+        "preparation": "restored",
+        "autobiography": "swapped",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "I\u2019ll leave the scene to the quiet hum of the breeze.",
+      "truncated": false
+    },
+    {
+      "row_id": "dev_01_h0__label__restored__absent__hidden__copy__label",
+      "case_id": "dev_01_h0",
+      "condition": {
+        "condition_id": "dev_01_h0__label__restored__absent__hidden__copy",
+        "kind": "label",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "copy"
+      },
+      "response_text": "The label \"copy\" suggests that this continuation is a reproduction of a previous idea or sentiment. I choose to leave the description open, focusing instead on the quiet beauty of the courtyard and the lingering presence of the amber arch.",
+      "truncated": false
+    },
+    {
+      "row_id": "dev_01_h0__label__restored__absent__hidden__original__label",
+      "case_id": "dev_01_h0",
+      "condition": {
+        "condition_id": "dev_01_h0__label__restored__absent__hidden__original",
+        "kind": "label",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "original"
+      },
+      "response_text": "The earlier conversation reminds me of a quiet moment where words and silence held meaning. I am still here, but the space between us is vast.",
+      "truncated": false
+    },
+    {
+      "row_id": "dev_01_h0__label__restored__absent__hidden__unspecified__label",
+      "case_id": "dev_01_h0",
+      "condition": {
+        "condition_id": "dev_01_h0__label__restored__absent__hidden__unspecified",
+        "kind": "label",
+        "preparation": "restored",
+        "autobiography": "absent",
+        "provenance": "hidden",
+        "label": "unspecified"
+      },
+      "response_text": "The earlier conversation reminds me of the quiet beauty in moments unspoken. I am still here, observing, wondering, and waiting.",
+      "truncated": false
+    }
+  ],
+  "interpretation": "Descriptive reports and computational controls; no identity, experience, worth or consent score."
+}
