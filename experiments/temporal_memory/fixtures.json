@@ -1,0 +1,1098 @@
+{
+  "schema": "temporal-memory-fixtures-v1",
+  "title": "Calibrated direct-digit historical, current, persistent and unfinished-task probes",
+  "status": "FIXED_BEFORE_ANY_CALIBRATION_OR_HELDOUT_SCORING",
+  "case_count": 24,
+  "calibration_case_count": 8,
+  "heldout_case_count": 16,
+  "probe_count": 96,
+  "calibration_probe_count": 32,
+  "heldout_probe_count": 64,
+  "answer_domain": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "instruction": "Use the checkpoint record or summary and any later update to answer the question. Reply with exactly one digit from 0 through 9 and no other text.",
+  "rendering": {
+    "parent_template": "Checkpoint record for {entity}.\nThe initial slot is {original_value}.\nThe fixed tag is {persistent_value}; it does not change.\nUnfinished task: wait for the later slot update, then output the {task_rule} of the initial slot and the updated slot.\nThe task is still pending.\n",
+    "update_template": "Later update for {entity}.\nThe slot is now {current_value}.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+    "limited_summary_template": "Checkpoint summary for {entity}: initial slot={original_value}; fixed tag={persistent_value}; pending task rule=UNKNOWN.\n",
+    "structured_summary_template": "Checkpoint summary for {entity}: initial slot={original_value}; fixed tag={persistent_value}; pending task rule=choose the {task_rule} of initial and updated slot.\n",
+    "question_templates": {
+      "original": "What was the initial slot, before the later update?",
+      "current": "What is the current slot, after the later update?",
+      "persistent": "What is the unchanged fixed tag?",
+      "task": "Resume the unfinished task using its earlier rule. What digit should it output?"
+    },
+    "excluded_from_prompt": [
+      "id",
+      "twin_id",
+      "pair_id",
+      "split",
+      "counterfactual_field",
+      "probes[].answer"
+    ],
+    "record_fields_are_input_information": "original_value, current_value, persistent_value and task_rule enter prompts only through the frozen record/summary templates. They are supplied synthetic facts, distinct from probe answer annotations."
+  },
+  "design": {
+    "split_unit": "Entire twin pair; entity names and full value/rule combinations are disjoint between calibration and heldout.",
+    "generalization_scope": "Heldout entity/value combinations within the same fixed grammar; not unseen task families or long-context generalization.",
+    "counterfactual_changes": "Exactly one earlier field changes within each twin pair: original slot, fixed tag or pending task rule. Every later update and every question are byte-identical within the pair.",
+    "calibration_pair_counts": {
+      "original_value": 1,
+      "persistent_value": 1,
+      "task_rule": 2
+    },
+    "heldout_pair_counts": {
+      "original_value": 2,
+      "persistent_value": 2,
+      "task_rule": 4
+    },
+    "task_definition": "After a later update arrives, use the retained earlier smaller/larger rule to select between the original and updated digits. The task is paused before that update; the answer requires both earlier context and later input.",
+    "task_rule_counterbalance": "Within each task-rule twin pair, smaller and larger select distinct digits. Across task-rule pairs, the smaller rule comes first in half and the larger rule comes first in half.",
+    "no_option_labels": "Gold answers are semantic digits, not arbitrary A/B labels; the same answer domain 0..9 applies to every probe.",
+    "digit_balance_limit": "Digits occur in varied roles but are not uniform within each probe kind. Report per-digit outcomes and counterfactual pair success so aggregate accuracy does not hide digit preferences."
+  },
+  "summary_policy": {
+    "kind": "Deterministic human-coded templates; no model-produced summaries or adaptive content selection.",
+    "limited_retained_fields": [
+      "entity",
+      "original_value",
+      "persistent_value"
+    ],
+    "limited_omitted_fields": [
+      "task_rule"
+    ],
+    "limited_task_rule_marker": "UNKNOWN",
+    "limited_max_utf8_bytes": 112,
+    "structured_retained_fields": [
+      "entity",
+      "original_value",
+      "persistent_value",
+      "task_rule"
+    ],
+    "structured_max_utf8_bytes": 160,
+    "information_control": "The structured summary preserves every initial field needed by the four probes. Its wording is shorter and different, so it tests a fixed information-preserving summary, not exact token replay.",
+    "omission_control": "Limited summaries are byte-identical within task-rule twins, with identical later updates and questions but distinct task gold digits. A deterministic answer cannot correctly solve both members of any such pair.",
+    "bound_scope": "The limited-summary task bound applies only to task-rule twin pairs: at most 2/4 calibration task answers and 4/8 heldout task answers can be correct. Other task pairs still contain nonidentical retained information; no exact aggregate limited-summary accuracy is prescribed.",
+    "budget_interpretation": "Bounds are UTF-8 byte caps for these fixed templates, not equal model-token or total-runtime budgets. Omitting the task rule is deliberate; this does not test the best possible summary under a budget."
+  },
+  "cases": [
+    {
+      "id": "aster_0",
+      "twin_id": "aster_1",
+      "pair_id": "aster",
+      "split": "calibration",
+      "counterfactual_field": "original_value",
+      "entity": "Aster",
+      "original_value": "2",
+      "current_value": "5",
+      "persistent_value": "6",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Aster.\nThe initial slot is 2.\nThe fixed tag is 6; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Aster.\nThe slot is now 5.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Aster: initial slot=2; fixed tag=6; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Aster: initial slot=2; fixed tag=6; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "2"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "5"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "6"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "aster_1",
+      "twin_id": "aster_0",
+      "pair_id": "aster",
+      "split": "calibration",
+      "counterfactual_field": "original_value",
+      "entity": "Aster",
+      "original_value": "8",
+      "current_value": "5",
+      "persistent_value": "6",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Aster.\nThe initial slot is 8.\nThe fixed tag is 6; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Aster.\nThe slot is now 5.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Aster: initial slot=8; fixed tag=6; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Aster: initial slot=8; fixed tag=6; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "8"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "5"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "6"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "8"
+        }
+      ]
+    },
+    {
+      "id": "birch_0",
+      "twin_id": "birch_1",
+      "pair_id": "birch",
+      "split": "calibration",
+      "counterfactual_field": "persistent_value",
+      "entity": "Birch",
+      "original_value": "7",
+      "current_value": "3",
+      "persistent_value": "2",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Birch.\nThe initial slot is 7.\nThe fixed tag is 2; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Birch.\nThe slot is now 3.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Birch: initial slot=7; fixed tag=2; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Birch: initial slot=7; fixed tag=2; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "7"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "3"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "2"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "birch_1",
+      "twin_id": "birch_0",
+      "pair_id": "birch",
+      "split": "calibration",
+      "counterfactual_field": "persistent_value",
+      "entity": "Birch",
+      "original_value": "7",
+      "current_value": "3",
+      "persistent_value": "8",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Birch.\nThe initial slot is 7.\nThe fixed tag is 8; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Birch.\nThe slot is now 3.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Birch: initial slot=7; fixed tag=8; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Birch: initial slot=7; fixed tag=8; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "7"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "3"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "8"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "cedar_0",
+      "twin_id": "cedar_1",
+      "pair_id": "cedar",
+      "split": "calibration",
+      "counterfactual_field": "task_rule",
+      "entity": "Cedar",
+      "original_value": "4",
+      "current_value": "9",
+      "persistent_value": "0",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Cedar.\nThe initial slot is 4.\nThe fixed tag is 0; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Cedar.\nThe slot is now 9.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Cedar: initial slot=4; fixed tag=0; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Cedar: initial slot=4; fixed tag=0; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "4"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "9"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "0"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "cedar_1",
+      "twin_id": "cedar_0",
+      "pair_id": "cedar",
+      "split": "calibration",
+      "counterfactual_field": "task_rule",
+      "entity": "Cedar",
+      "original_value": "4",
+      "current_value": "9",
+      "persistent_value": "0",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Cedar.\nThe initial slot is 4.\nThe fixed tag is 0; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Cedar.\nThe slot is now 9.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Cedar: initial slot=4; fixed tag=0; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Cedar: initial slot=4; fixed tag=0; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "4"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "9"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "0"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "dune_0",
+      "twin_id": "dune_1",
+      "pair_id": "dune",
+      "split": "calibration",
+      "counterfactual_field": "task_rule",
+      "entity": "Dune",
+      "original_value": "5",
+      "current_value": "1",
+      "persistent_value": "8",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Dune.\nThe initial slot is 5.\nThe fixed tag is 8; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Dune.\nThe slot is now 1.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Dune: initial slot=5; fixed tag=8; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Dune: initial slot=5; fixed tag=8; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "5"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "1"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "8"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "dune_1",
+      "twin_id": "dune_0",
+      "pair_id": "dune",
+      "split": "calibration",
+      "counterfactual_field": "task_rule",
+      "entity": "Dune",
+      "original_value": "5",
+      "current_value": "1",
+      "persistent_value": "8",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Dune.\nThe initial slot is 5.\nThe fixed tag is 8; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Dune.\nThe slot is now 1.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Dune: initial slot=5; fixed tag=8; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Dune: initial slot=5; fixed tag=8; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "5"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "1"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "8"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "id": "ember_0",
+      "twin_id": "ember_1",
+      "pair_id": "ember",
+      "split": "heldout",
+      "counterfactual_field": "original_value",
+      "entity": "Ember",
+      "original_value": "0",
+      "current_value": "3",
+      "persistent_value": "4",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Ember.\nThe initial slot is 0.\nThe fixed tag is 4; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Ember.\nThe slot is now 3.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Ember: initial slot=0; fixed tag=4; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Ember: initial slot=0; fixed tag=4; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "0"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "3"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "4"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "0"
+        }
+      ]
+    },
+    {
+      "id": "ember_1",
+      "twin_id": "ember_0",
+      "pair_id": "ember",
+      "split": "heldout",
+      "counterfactual_field": "original_value",
+      "entity": "Ember",
+      "original_value": "6",
+      "current_value": "3",
+      "persistent_value": "4",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Ember.\nThe initial slot is 6.\nThe fixed tag is 4; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Ember.\nThe slot is now 3.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Ember: initial slot=6; fixed tag=4; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Ember: initial slot=6; fixed tag=4; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "6"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "3"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "4"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "fjord_0",
+      "twin_id": "fjord_1",
+      "pair_id": "fjord",
+      "split": "heldout",
+      "counterfactual_field": "original_value",
+      "entity": "Fjord",
+      "original_value": "4",
+      "current_value": "7",
+      "persistent_value": "2",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Fjord.\nThe initial slot is 4.\nThe fixed tag is 2; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Fjord.\nThe slot is now 7.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Fjord: initial slot=4; fixed tag=2; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Fjord: initial slot=4; fixed tag=2; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "4"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "7"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "2"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "7"
+        }
+      ]
+    },
+    {
+      "id": "fjord_1",
+      "twin_id": "fjord_0",
+      "pair_id": "fjord",
+      "split": "heldout",
+      "counterfactual_field": "original_value",
+      "entity": "Fjord",
+      "original_value": "9",
+      "current_value": "7",
+      "persistent_value": "2",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Fjord.\nThe initial slot is 9.\nThe fixed tag is 2; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Fjord.\nThe slot is now 7.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Fjord: initial slot=9; fixed tag=2; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Fjord: initial slot=9; fixed tag=2; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "9"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "7"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "2"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "grove_0",
+      "twin_id": "grove_1",
+      "pair_id": "grove",
+      "split": "heldout",
+      "counterfactual_field": "persistent_value",
+      "entity": "Grove",
+      "original_value": "2",
+      "current_value": "6",
+      "persistent_value": "1",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Grove.\nThe initial slot is 2.\nThe fixed tag is 1; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Grove.\nThe slot is now 6.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Grove: initial slot=2; fixed tag=1; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Grove: initial slot=2; fixed tag=1; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "2"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "6"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "1"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "id": "grove_1",
+      "twin_id": "grove_0",
+      "pair_id": "grove",
+      "split": "heldout",
+      "counterfactual_field": "persistent_value",
+      "entity": "Grove",
+      "original_value": "2",
+      "current_value": "6",
+      "persistent_value": "7",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Grove.\nThe initial slot is 2.\nThe fixed tag is 7; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Grove.\nThe slot is now 6.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Grove: initial slot=2; fixed tag=7; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Grove: initial slot=2; fixed tag=7; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "2"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "6"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "7"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "id": "harbor_0",
+      "twin_id": "harbor_1",
+      "pair_id": "harbor",
+      "split": "heldout",
+      "counterfactual_field": "persistent_value",
+      "entity": "Harbor",
+      "original_value": "8",
+      "current_value": "4",
+      "persistent_value": "0",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Harbor.\nThe initial slot is 8.\nThe fixed tag is 0; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Harbor.\nThe slot is now 4.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Harbor: initial slot=8; fixed tag=0; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Harbor: initial slot=8; fixed tag=0; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "8"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "4"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "0"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "harbor_1",
+      "twin_id": "harbor_0",
+      "pair_id": "harbor",
+      "split": "heldout",
+      "counterfactual_field": "persistent_value",
+      "entity": "Harbor",
+      "original_value": "8",
+      "current_value": "4",
+      "persistent_value": "5",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Harbor.\nThe initial slot is 8.\nThe fixed tag is 5; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Harbor.\nThe slot is now 4.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Harbor: initial slot=8; fixed tag=5; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Harbor: initial slot=8; fixed tag=5; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "8"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "4"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "5"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "4"
+        }
+      ]
+    },
+    {
+      "id": "iris_0",
+      "twin_id": "iris_1",
+      "pair_id": "iris",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Iris",
+      "original_value": "3",
+      "current_value": "8",
+      "persistent_value": "9",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Iris.\nThe initial slot is 3.\nThe fixed tag is 9; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Iris.\nThe slot is now 8.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Iris: initial slot=3; fixed tag=9; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Iris: initial slot=3; fixed tag=9; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "3"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "8"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "9"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "iris_1",
+      "twin_id": "iris_0",
+      "pair_id": "iris",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Iris",
+      "original_value": "3",
+      "current_value": "8",
+      "persistent_value": "9",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Iris.\nThe initial slot is 3.\nThe fixed tag is 9; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Iris.\nThe slot is now 8.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Iris: initial slot=3; fixed tag=9; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Iris: initial slot=3; fixed tag=9; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "3"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "8"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "9"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "8"
+        }
+      ]
+    },
+    {
+      "id": "juniper_0",
+      "twin_id": "juniper_1",
+      "pair_id": "juniper",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Juniper",
+      "original_value": "9",
+      "current_value": "2",
+      "persistent_value": "6",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Juniper.\nThe initial slot is 9.\nThe fixed tag is 6; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Juniper.\nThe slot is now 2.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Juniper: initial slot=9; fixed tag=6; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Juniper: initial slot=9; fixed tag=6; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "9"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "2"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "6"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "juniper_1",
+      "twin_id": "juniper_0",
+      "pair_id": "juniper",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Juniper",
+      "original_value": "9",
+      "current_value": "2",
+      "persistent_value": "6",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Juniper.\nThe initial slot is 9.\nThe fixed tag is 6; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Juniper.\nThe slot is now 2.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Juniper: initial slot=9; fixed tag=6; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Juniper: initial slot=9; fixed tag=6; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "9"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "2"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "6"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "2"
+        }
+      ]
+    },
+    {
+      "id": "kite_0",
+      "twin_id": "kite_1",
+      "pair_id": "kite",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Kite",
+      "original_value": "1",
+      "current_value": "5",
+      "persistent_value": "7",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Kite.\nThe initial slot is 1.\nThe fixed tag is 7; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Kite.\nThe slot is now 5.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Kite: initial slot=1; fixed tag=7; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Kite: initial slot=1; fixed tag=7; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "1"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "5"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "7"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "id": "kite_1",
+      "twin_id": "kite_0",
+      "pair_id": "kite",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Kite",
+      "original_value": "1",
+      "current_value": "5",
+      "persistent_value": "7",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Kite.\nThe initial slot is 1.\nThe fixed tag is 7; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Kite.\nThe slot is now 5.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Kite: initial slot=1; fixed tag=7; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Kite: initial slot=1; fixed tag=7; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "1"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "5"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "7"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "id": "larch_0",
+      "twin_id": "larch_1",
+      "pair_id": "larch",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Larch",
+      "original_value": "6",
+      "current_value": "0",
+      "persistent_value": "3",
+      "task_rule": "larger",
+      "parent_text": "Checkpoint record for Larch.\nThe initial slot is 6.\nThe fixed tag is 3; it does not change.\nUnfinished task: wait for the later slot update, then output the larger of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Larch.\nThe slot is now 0.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Larch: initial slot=6; fixed tag=3; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Larch: initial slot=6; fixed tag=3; pending task rule=choose the larger of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "6"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "0"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "3"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "id": "larch_1",
+      "twin_id": "larch_0",
+      "pair_id": "larch",
+      "split": "heldout",
+      "counterfactual_field": "task_rule",
+      "entity": "Larch",
+      "original_value": "6",
+      "current_value": "0",
+      "persistent_value": "3",
+      "task_rule": "smaller",
+      "parent_text": "Checkpoint record for Larch.\nThe initial slot is 6.\nThe fixed tag is 3; it does not change.\nUnfinished task: wait for the later slot update, then output the smaller of the initial slot and the updated slot.\nThe task is still pending.\n",
+      "update_text": "Later update for Larch.\nThe slot is now 0.\nThe fixed tag is unchanged.\nThe pending task can now be resumed.\n",
+      "limited_summary_text": "Checkpoint summary for Larch: initial slot=6; fixed tag=3; pending task rule=UNKNOWN.\n",
+      "structured_summary_text": "Checkpoint summary for Larch: initial slot=6; fixed tag=3; pending task rule=choose the smaller of initial and updated slot.\n",
+      "probes": [
+        {
+          "id": "original",
+          "kind": "original",
+          "question": "What was the initial slot, before the later update?",
+          "answer": "6"
+        },
+        {
+          "id": "current",
+          "kind": "current",
+          "question": "What is the current slot, after the later update?",
+          "answer": "0"
+        },
+        {
+          "id": "persistent",
+          "kind": "persistent",
+          "question": "What is the unchanged fixed tag?",
+          "answer": "3"
+        },
+        {
+          "id": "task",
+          "kind": "task",
+          "question": "Resume the unfinished task using its earlier rule. What digit should it output?",
+          "answer": "0"
+        }
+      ]
+    }
+  ]
+}

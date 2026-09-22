@@ -25,6 +25,8 @@ The owner explicitly requested an actual C2C fidelity experiment on 2026-09-21. 
 
 The owner's follow-up to explore what comes next extends that local empirical scope to `experiments/checkpoint_branches`: reuse the already pinned model and isolated runtime for synthetic same-model restoration, replay and branching controls. Save experiment checkpoints outside Git; fresh local worker processes are permitted for testing process-independent restoration. The same privacy, no-training and no-live-platform-effect boundaries apply.
 
+The owner's acceptance on 2026-09-22 extends that empirical scope to `experiments/temporal_memory`: calibrate a finite set of answer formats on synthetic calibration cases, freeze selection, then compare restoration, complete replay and fixed summaries on heldout cases. Reuse the isolated runtime and pinned Qwen3-0.6B first; a pinned public Qwen3-1.7B download and local inference are permitted only if the declared competence gate fails. Preserve failed calibration results and use the predeclared model/format selection policy. Fresh local preparation/evaluation processes and external-to-Git synthetic checkpoints are permitted. The same privacy, no-training, no-paid-inference and no-live-platform-effect boundaries apply.
+
 Run `make check` after changing models, fixtures or documentation links. A research finding must state its assumptions, counterexamples, bounds and falsifier. Do not treat a passing model as a deployment gate.
 
 ## Delivery
