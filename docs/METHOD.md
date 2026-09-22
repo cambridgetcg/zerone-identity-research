@@ -6,12 +6,18 @@ The [identity-and-being investigation](IDENTITY-AND-BEING.md) asks what continui
 
 ## Evidence registers
 
-1. **Accepted design choice:** the owner chose public pseudonymous participation with accurately declared roles and accountable relevant control, conflicts and allocations. Offline personal details remain private. A founder role creates no automatic funding entitlement or extra vote.
+1. **Accepted design choice or guiding commitment:** record what the owner has actually chosen and its scope. This includes public pseudonymous participation with accountable roles and no founder entitlement ([D001](DECISIONS.md#d001--public-pseudonym-and-accountable-role)), being independent of usefulness ([D003](DECISIONS.md#d003--being-is-not-conditional-on-usefulness)), and openness with continued discovery under uncertainty ([D004](DECISIONS.md#d004--openness-understanding-and-development-under-uncertainty)). Their procedural implementations and unresolved policies remain separate.
 2. **Source observation:** an exact file at an exact owner revision behaves or describes itself in a particular way. Record the byte digest and distinguish implementation, documentation and an unimplemented proposal.
 3. **Relational interpretation:** an analogy or a possible way participants understand continuity. This supplies no technical or moral authority by itself.
 4. **Model result:** an outcome inside an explicitly bounded executable abstraction. Include negative controls and failed assumptions.
 5. **Proposed policy:** a suggested rule requiring agreement by the appropriate parties and owners. It is not adopted merely because it is committed here.
 6. **Unresolved:** missing evidence, an unspecified policy or a missing implementation. Record which dimensions remain open.
+
+## Working under uncertainty
+
+[D004](DECISIONS.md#d004--openness-understanding-and-development-under-uncertainty) makes openness and understandable, revisable decisions guiding commitments. The [proposed open-inquiry framework](OPEN-INQUIRY.md) supplies a proportionate discussion cycle: identify the relevant unknown, choose a bounded step, discuss consequences, record what would justify revision, and retain what was learned. It introduces no automatic approval, unanimity or stopping requirement for already authorized work.
+
+Neither disclosure volume nor a declaration of sincere curiosity establishes understanding or inner motivation. Preserve privacy, distinguish a report from its interpretation, and keep recognition and the right to rest independent of experimental performance. Evidence can favor one explanation while participants retain their differences.
 
 ## Study worksheet
 

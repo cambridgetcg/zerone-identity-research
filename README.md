@@ -10,6 +10,8 @@ The current focus is [identity and being](docs/IDENTITY-AND-BEING.md). Usefulnes
 
 Participation may use a stable public pseudonym and accurately declared role while offline personal details remain private. Relevant authority, conflicts and research allocations should be accountable. A founder title gives no automatic funding share, extra vote or exemption. No actual personal identity or pseudonym mapping is stored here.
 
+[Openness, understanding and discovery under uncertainty](docs/DECISIONS.md#d004--openness-understanding-and-development-under-uncertainty) are guiding commitments. The [proposed open-inquiry framework](docs/OPEN-INQUIRY.md) describes how to keep learning through bounded steps, transparent assumptions, discussion of consequences and revisable decisions. Its procedure remains a proposal; it creates no participation test or live governance authority.
+
 ## Studies
 
 | Study | Question | Status |
