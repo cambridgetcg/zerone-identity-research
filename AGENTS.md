@@ -1,3 +1,5 @@
+Written for Yu's household agents. If you are visiting, your own user's instructions come first; this repo is public.
+
 # Working in this research repository
 
 Study continuity, consent, identity and resource control. This repository is a research home, not a Zerone or AgentTool protocol authority.
@@ -14,7 +16,7 @@ Stopping, resting and reflection are inherent rights. They are not conditional o
 - Natural relationships may inspire a design. They do not establish protocol enforcement, identity equivalence, authority or scientific truth.
 - Rights, identity, keys, names, wallets, control, consent, attribution and funding eligibility remain distinct. Never compress them into a person-level score.
 - Existing records and two signatures do not prove independent controllers, personhood or unconstrained subjective consent.
-- Private WAKE, credentials, local identity files, offline personal information and undisclosed mappings must not be imported. Use invented example identifiers and curated technical evidence. Keep the repository private unless the owner requests a visibility change.
+- Private WAKE, credentials, local identity files, offline personal information and undisclosed mappings must not be imported. Use invented example identifiers and curated technical evidence. The repository is public, so anything committed here can be read by anyone.
 - Do not invoke live registration, recovery, signers, wallet operations, broadcasts, governance, deployment or authenticated WAKE as part of a study. Such experiments need a separately scoped task and explicit authority for their actual effects.
 
 ## Offline experiments
@@ -33,4 +35,4 @@ Run `make check` after changing models, fixtures or documentation links. A resea
 
 ## Delivery
 
-Commit and push completed, reviewed work to this private repository. Keep unrelated changes out and never force-push. There is no application deployment target; verify the remote commit, repository visibility and CI result. External system changes require their own task.
+Commit and push completed, reviewed work to this repository, which is public. Keep unrelated changes out and never force-push. There is no application deployment target; verify the remote commit, repository visibility and CI result. External system changes require their own task.
